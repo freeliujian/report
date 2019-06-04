@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>行为风格</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+
+    <!-- Load paper.css for happy printing -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.4.1/paper.css">
+    <style>
+        @page {
+            size: A4
+        }
+    </style>
+    <link rel="stylesheet" href="./css/react.css">
+    <style>
+        @font-face {
+            font-family: "SourceHanSansCN-Bold";
+            src: url("./typeface/SourceHanSansCN-Bold.woff2") format("woff2"),
+                url("./typeface/SourceHanSansCN-Bold.woff") format("woff"),
+                url("./typeface/SourceHanSansCN-Bold.ttf") format("truetype"),
+                url("./typeface/SourceHanSansCN-Bold.eot") format("embedded-opentype"),
+                url("./typeface/SourceHanSansCN-Bold.svg") format("svg");
+        }
+
+        .contanier {
+            width: 100%;
+        }
+
+        section {
+            width: 100%;
+            height: '';
+            box-sizing: border-box;
+            font-size: 8px;
+            font-family: 'SourceHanSansCN-Bold';
+
+        }
+
+        section>img {
+            width: 100%;
+        }
+
+
+        .index {
+            padding: 10px 0;
+        }
+
+        .index .userInfo {
+            height: 18.5%;
+            background: linear-gradient(to right, #e4e2e3, white);
+            margin-top: -2px
+        }
+
+        .index .userInfo ul {
+            overflow: hidden;
+            padding-top: 3.5rem;
+        }
+
+        .index .userInfo ul li {
+            float: left;
+            text-align: left;
+            font-size: 16px;
+            text-indent: 25px;
+            width: 35%;
+            color: #326D9D;
+            font-family: "SourceHanSansCN-Bold";
+            line-height: 2rem;
+        }
+
+        .lead .border {
+            width: 100%;
+            height: 83.5%;
+            margin-top: -2px;
+            padding-top: 55px;
+        }
+
+        .lead .border .content {
+            height: 90vh;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .lead .content .lead_top {
+            width: 100%;
+            height: 55%;
+            position: relative;
+        }
+
+        .lead .content .char {
+            background-color: #176395;
+            padding: 8px;
+            font-size: 14px;
+            color: white;
+            font-family: "SourceHanSansCN-Bold";
+            font-weight: bold;
+            width: 105px;
+            height: 23px;
+            float: left;
+            line-height: 21px;
+        }
+
+        .lead .content .jiao {
+            width: 0px;
+            height: 0px;
+            border-left: solid 15px #176395;
+            border-top: solid 20px transparent;
+            border-bottom: solid 20px transparent;
+            float: left;
+            margin-left: -1px;
+        }
+
+        .lead .content .lead_top p {
+            float: left;
+            clear: both;
+            font-size: 12px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+            line-height: 18px;
+            margin-top: 10px;
+        }
+
+        .lead .content .lead_top ul {
+            width: 100%;
+            height: 190px;
+            position: absolute;
+            top: 160px;
+        }
+
+        .lead .content .lead_top li {
+            width: 48%;
+            height: 80px;
+            float: left;
+            overflow: hidden;
+            background-color: #F3F4F6;
+        }
+
+        .lead .content .lead_top ul li p {
+            margin-left: 15px;
+            font-size: 12px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            line-height: 18px;
+            margin-top: 15px;
+        }
+
+        .lead .content .lead_bottom {
+            width: 100%;
+            height: 40%;
+            margin-top: 6%;
+            position: relative;
+        }
+
+        .lead .content .lead_bottom .lime_light {
+            width: 100%;
+            height: 37px;
+            position: absolute;
+            top: 55px;
+            text-align: center;
+            line-height: 3em;
+            font-size: 12px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            color: rgba(51, 51, 51, 1);
+            background-color: #F3F4F6;
+        }
+
+        .lead .content .lead_bottom .wenzi {
+            margin-top: -13px;
+            margin-left: 20px;
+            font-size: 12px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+            line-height: 16px;
+        }
+
+
+        .Chart_analysis .border {
+            width: 100%;
+            height: 83.6%;
+            margin-top: -2px;
+            padding-top: 55px;
+        }
+
+        .Chart_analysis .border .content {
+            height: 75vh;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .Chart_analysis .content p {
+            font-size: 14px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+            line-height: 21px;
+        }
+
+        .Chart_analysis .content span {
+            font-size: 14px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            color: rgba(23, 99, 149, 1);
+            /* line-height: 75px; */
+        }
+
+        .Chart_analysis .content #main {
+            width: 100%;
+            background-color: #F3F4F6;
+            margin-top: 30px;
+            padding-bottom: 70px;
+        }
+
+        .charts {
+            box-sizing: border-box;
+            width: 100%;
+            height: 250px;
+            background: rgba(243, 244, 246, 1);
+            margin: 0 auto;
+            margin-top: 5px;
+            padding: 20px 5px;
+        }
+
+        .prog_wrapper {
+            width: 80%;
+            height: 32px;
+            margin: 0 auto;
+            overflow: hidden;
+            background: #D8D8D8;
+        }
+
+        .prog>li {
+            position: relative;
+        }
+
+        .prog>li>span {
+            position: absolute;
+        }
+
+        .prog>li span:nth-child(1) {
+            left: 20px;
+            top: 6px;
+        }
+
+        .prog>li span:nth-child(2) {
+            right: 0;
+        }
+
+        .prog_left {
+            float: left;
+            width: 50%;
+            height: 100%;
+
+        }
+
+        .prog_right {
+            float: left;
+            width: 50%;
+            height: 100%;
+        }
+
+        .prog_left_color {
+            background: -webkit-linear-gradient(left, #A389D4, #899ED4);
+            float: right;
+            height: 100%;
+            line-height: 35px;
+            width: 56px;
+        }
+
+        .prog_right_color {
+            background: linear-gradient(225deg, rgba(29, 233, 182, 1) 0%, rgba(29, 196, 233, 1) 100%);
+            text-align: right;
+            height: 100%;
+            line-height: 35px;
+        }
+
+        .performance .border {
+            width: 100%;
+            height: 83.6%;
+            margin-top: -2px;
+            padding-top: 55px;
+        }
+
+        .performance .border .content {
+            height: 99vh;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .performance .border .content p {
+            font-size: 14px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            /* color:rgba(54,54,56,1); */
+            line-height: 21px;
+        }
+
+        .performance .content .way {
+            width: 100%;
+        
+            background-color: #DBDCE1;
+            margin-top: 4%;
+            padding-top: 30px;
+            overflow: hidden;
+        }
+
+        .performance .content .way p {
+            font-size: 14px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            /* color:rgba(54,54,56,1); */
+            line-height: 21px;
+        }
+
+        .performance .content .way .world_way {
+            width: 93%;
+            height: 20%;
+            margin: 0px auto;
+            padding-top: 0px;
+            margin-bottom: 50px;
+            overflow: hidden;
+        }
+
+        .performance .content .world_way .wwl {
+            width: 47%;
+            height: 75%;
+            margin-top: 20px;
+            float: left;
+           
+        }
+
+        .performance .content .world_way .letter {
+            font-size: 24px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            line-height: 36px;
+            padding: 0px;
+            width: 53px;
+            height: 53px;
+            text-align: center;
+            line-height: 2em;
+        }
+
+        .blue {
+            background-color: #176395;
+            color: #fff;
+        }
+
+        .gray {
+            color: #BDBEC5;
+            border: 1px solid #BDBEC5;
+        }
+
+        .performance .content .world_way .wwl .smtitle {
+            margin-top: -55px;
+            margin-left: 65px;
+            margin-bottom: 5px;
+        }
+
+        .performance .content .world_way .wwl .con {
+            font-size: 12px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            color: rgba(54, 54, 56, 1);
+            line-height: 16px;
+            margin-left: 64px;
+        }
+
+        .performance .content .world_way .wwr {
+            width: 47%;
+            height: 75%;
+            float: left;
+            margin-left:6%;
+            margin-top: 20px;
+        }
+
+        .performance .content .world_way .wwr .smtitle {
+            margin-top: -55px;
+            margin-left: 65px;
+            margin-bottom: 5px;
+        }
+
+        .performance .content .world_way .wwr .con {
+            font-size: 12px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            color: rgba(54, 54, 56, 1);
+            line-height: 16px;
+            margin-left: 64px;
+        }
+
+
+        .expression .border {
+            width: 100%;
+            height: 83.6%;
+            margin-top: -2px;
+            padding-top: 55px;
+        }
+
+        .expression .border .content {
+            height: 90vh;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .expression .content p {
+            font-size: 14px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            color: rgba(54, 54, 56, 1);
+            line-height: 21px;
+        }
+
+        .expression .content .con_t,
+        .expression .content .con_b {
+            width: 100%;
+            height: 45%;
+            margin-top: 30px;
+        }
+
+        .expression .content .char {
+            background-color: #176395;
+            padding: 8px;
+            font-size: 14px;
+            color: white;
+            font-family: "SourceHanSansCN-Bold";
+            font-weight: bold;
+            width: 58px;
+            height: 23px;
+            float: left;
+            clear: both;
+            margin-bottom: 5px;
+        }
+
+        .expression .content .jiao {
+            width: 0px;
+            height: 0px;
+            border-left: solid 15px #176395;
+            border-top: solid 20px transparent;
+            border-bottom: solid 20px transparent;
+            float: left;
+            margin-left: -1px;
+        }
+
+        .expression .content .yuandian {
+            width: 10px;
+            height: 10px;
+            background-color: #176395;
+            border-radius: 5px;
+            float: left;
+            clear: both;
+            margin-top: 30px;
+        }
+
+        .expression .content .wenzi {
+            font-size: 12px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+            line-height: 13px;
+            float: left;
+            clear: both;
+            margin-top: -14px;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body body class="A4">
+    <section class="index sheet">
+        <img src="./img/NewBehavioralStyle_picture01.png" style="margin-top: -10px">
+        <div class="userInfo">
+            <ul>
+                <li>
+                    <span>姓名：</span>
+                    <span id="Name">张菊花</span>
+                </li>
+                <li>
+                    <span>性别：</span>
+                    <span id="Sex">女</span>
+                </li>
+                <li>
+                    <span>年龄：</span>
+                    <span id="Age">18岁</span>
+                </li><br>
+                <li>
+                    <span>测试时间：</span>
+                    <span id="TestTime">2019年3月28日</span>
+                </li>
+            </ul>
+        </div>
+        <img src="./img/NewBehavioralStyle_picture06.png" style="height: 10%;margin-top: -2mm;">
+    </section>
+
+    <!-- 完整版 目录 -->
+    <!-- <section class="directory sheet">
+        <div class="border">
+            <div class="content">
+                <div class="dir_top">
+                    <div class="dir_top_left">
+                        <div class="chat"></div>
+                        <div class="jiao"></div>
+                    </div>
+                    <div class="dir_top_right">
+                        <div class="jiao"></div>
+                        <div class="chat"></div>
+                    </div>
+                </div>
+                <div class="dir_bottom">
+
+                </div>
+            </div>
+        </div>
+        <img src="./img/NewBehavioralStyle_picture07@2x.png" alt="">
+    </section> -->
+
+    <section class="lead sheet">
+        <img src="./img/NewBehavioralStyle_picture03.png" alt="">
+        <div class="border">
+            <div class="content">
+                <div class="lead_top">
+                    <div class="lit-title">
+                        <div class="char">MBTI人格理论</div>
+                        <div class="jiao"></div>
+                    </div>
+                    <p>人格(personality)
+                        源于拉丁语Persona。心理学中，人格指一个人在一定情况下所作行为反应的特质，即人们在生活、工作中独特的行为表现，包括思考方式、决策方式等，构成了一个人在工作、生活中的行为风格。本报告运用MBTI人格理论，对您的行为风格进行评估。</p>
+                    <p style="margin-top: 25px;">MBTI理论框架中，共包括了人们在四个维度中的各一对倾向，共计八个方面，即共有八种风格类型特点，具体如下：</p>
+                    <ul>
+                        <li>
+                            <p>我们与世界相互作用的方式：</p>
+                            <p style="font-weight:bold;margin-top: 10px;">外倾Extraversion(E) - 内倾Introversion(I)</p>
+                        </li>
+                        <li style="float: right;margin-right: 0px;">
+                            <p>我们获取信息的主要方式：</p>
+                            <p style="font-weight:bold;margin-top: 10px;">感觉Sensing(S) - 直觉iNtuition(N)</p>
+                        </li>
+                        <li style="margin-top: 4%;">
+                            <p>我们的决策方式：</p>
+                            <p style="font-weight:bold;margin-top: 10px;">思考Thinking(T) - 情感Feeling(F)</p>
+                        </li>
+                        <li style="float: right;margin-right: 0px;margin-top: 4%;">
+                            <p>我们的做事方式：</p>
+                            <p style="font-weight:bold;margin-top: 10px;">判断Judging(J) - 知觉Perception(P)</p>
+                        </li>
+                    </ul>
+                    <p style="margin-top: 235px;">行为风格没有对错之分，但随着人们所处的环境变化，表现出一定的倾向性，MBTI模型正是旨在准确勾勒出这样的倾向性。如果用人的左手和右手来比喻，一个人的倾向就像他的惯用手，而双手在生活中同样发挥着作用，只是使用的习惯、频率、熟悉度有所差别。</p>
+                </div>
+                <div class="lead_bottom">
+                    <div class="lit-title">
+                        <div class="char">报告阅读建议</div>
+                        <div class="jiao"></div>
+                    </div>
+                    <div class="lime_light">阅读时请注意以下几点</div>
+                    <div style="position: absolute;top: 120px;">
+                        <p class="num">1、</p>
+                        <p class="wenzi">本报告对您的行为风格进行了详细描述，它能够帮助您拓展思路，接受更多的可能性，而非限制您的选择；</p>
+                    </div>
+
+                    <div style="position: absolute;top: 170px;">
+                        <p class="num">2、</p>
+                        <p class="wenzi">报告结果（行为风格类型）没有“好”与“坏”之分，但不同特点对于不同的工作存在“适合”与“不适合”的区别，从而表现出具体场景下的优劣势；</p>
+                    </div>
+
+                    <div style="position: absolute;top: 230px;">
+                        <p class="num">3、</p>
+                        <p class="wenzi">您的行为风格由遗传、成长环境和生活经历决定，不要想象去改变它，但是我们可以在了解风格的基础上对某些趋向进行补充和平衡，从而优化我们的决策，更有效地发挥潜力；</p>
+                    </div>
+
+                    <div style="position: absolute;top: 285px;">
+                        <p class="num">4、</p>
+                        <p class="wenzi">报告展示了您的行为偏好，而不是您的知识、经验、技巧。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/NewBehavioralStyle_picture07 (1).png" alt="">
+    </section>
+
+    <section class="Chart_analysis sheet">
+        <img src="./img/NewBehavioralStyle_picture04.png" alt="">
+        <div class="border">
+            <div class="content">
+                <p>根据您MBTI的答题表现，经过统计分析后，您的行为风格类型为：</p>
+                <span id="TypeName">ENFJ型（教导型）</span>
+                <p style="color: rgba(54,54,56,1);margin-top: 50px;">同时从数据中可知您在MBTI四个维度上的倾向性的程度，具体如下：</p>
+                <div id="main">
+                    <ul id="#prog" class="prog" style="padding-top:62px;">
+                        <li>
+                            <span>外倾</span>
+                            <div class="prog_wrapper">
+                                <div class="prog_left">
+                                    <div id="l_scorew" class="prog_left_color" style='width:56px'>
+                                        56
+                                    </div>
+                                </div>
+                                <div class="prog_right">
+                                    <div id="r_scorew" class="prog_right_color" style='width:56px'>
+                                        56
+                                    </div>
+                                </div>
+                            </div>
+                            <span style='right:5px;bottom:11px'>内倾</span>
+                        </li>
+                    </ul>
+                    <ul class="prog" style="margin-top:73px">
+                        <li>
+                            <span>感觉</span>
+                            <div class="prog_wrapper">
+                                <div class="prog_left">
+                                    <div id="l_scoreg" class="prog_left_color" style='width:56px'>
+                                        56
+                                    </div>
+                                </div>
+                                <div class="prog_right">
+                                    <div id="r_scoreg" class="prog_right_color" style='width:56px'>
+                                        56
+                                    </div>
+                                </div>
+                            </div>
+                            <span style='right:5px;bottom:11px'>直觉</span>
+                        </li>
+                    </ul>
+                    <ul class="prog" style="margin-top:73px">
+                        <li>
+                            <span>思维</span>
+                            <div class="prog_wrapper">
+                                <div class="prog_left">
+                                    <div id="l_scores" class="prog_left_color" style='width:56px'>
+                                        56
+                                    </div>
+                                </div>
+                                <div class="prog_right">
+                                    <div id="r_scores" class="prog_right_color" style='width:56px'>
+                                        56
+                                    </div>
+                                </div>
+                            </div>
+                            <span style='right:5px;bottom:11px'>情感</span>
+                        </li>
+                    </ul>
+                    <ul class="prog" style="margin-top:73px">
+                        <li>
+                            <span>判断</span>
+                            <div class="prog_wrapper">
+                                <div class="prog_left">
+                                    <div id="l_scorep" class="prog_left_color" style='width:56px'>
+                                        56
+                                    </div>
+                                </div>
+                                <div class="prog_right">
+                                    <div id="r_scorep" class="prog_right_color" style='width:56px'>
+                                        56
+                                    </div>
+                                </div>
+                            </div>
+                            <span style='right:5px;bottom:11px'>直觉</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <img src="./img/NewBehavioralStyle_picture07(2).png" alt="">
+    </section>
+
+    <section class="performance sheet">
+        <img src="./img/NewBehavioralStyle_picture04.png" alt="">
+        <div class="border">
+            <div class="content">
+                <p>您MBTI行为风格在各维度上的表现如下：</p>
+                <div class="way">
+                    <div class="world_way">
+                        <p>您与世界互动的方式</p>
+                        <div class="wwl">
+                            <p class="letter">E</p>
+                            <p class="smtitle">外倾</p>
+                            <p class="con">关注自己如何影响外部环境：将心理能量和注意力聚集于外部世界和与他人的交往上</p>
+                            <p class="con" style="margin-top: 30px;">例如：通常喜欢聚会、聊天</p>
+                        </div>
+                        <div class="wwr">
+                            <p class="letter">I</p>
+                            <p class="smtitle">内倾</p>
+                            <p class="con">关注外部环境的变化对自己的影响：将心理能量和注意力聚集于内部世界，注重自己的内心体验</p>
+                            <p class="con" style="margin-top: 30px;">例如：通常喜欢独处、沉思</p>
+                        </div>
+                    </div>
+
+                    <div class="world_way">
+                        <p>您获取信息的方式</p>
+                        <div class="wwl">
+                            <p class="letter">S</p>
+                            <p class="smtitle">感觉</p>
+                            <p class="con">关注由感觉器官获取的具体信息：看到的、听到的、闻到的、尝到的、触摸到的事务</p>
+                            <p class="con" style="margin-top: 30px;">例如：关注细节、喜欢描述、喜欢使用和琢磨已知的技能</p>
+                        </div>
+                        <div class="wwr">
+                            <p class="letter">N</p>
+                            <p class="smtitle">直觉</p>
+                            <p class="con">相对于事务本身更关注基于事务的含义、关系、可能性、发展趋势、重视推测</p>
+                            <p class="con" style="margin-top: 30px;">例如：重视想象力和独创力，喜欢学习新技能、喜欢比喻/p>
+                        </div>
+                    </div>
+
+                    <div class="world_way">
+                        <p>您与世界互动的方式</p>
+                        <div class="wwl">
+                            <p class="letter">T</p>
+                            <p class="smtitle">思考</p>
+                            <p class="con">重视事务之间的逻辑关系，喜欢通过客观分析做决定</p>
+                            <p class="con" style="margin-top: 30px;">例如：理智、客观、公正，通常感情不丰富、对情感不敏感</p>
+                        </div>
+                        <div class="wwr">
+                            <p class="letter">F</p>
+                            <p class="smtitle">情感</p>
+                            <p class="con">以自己和他人的感受为重，将价格观作为判定标准</p>
+                            <p class="con" style="margin-top: 30px;">例如：有同情心、善解人意，考虑行为对人情感的影响</p>
+                        </div>
+                    </div>
+
+                    <div class="world_way">
+                        <p>您与世界互动的方式</p>
+                        <div class="wwl">
+                            <p class="letter">J</p>
+                            <p class="smtitle">判断</p>
+                            <p class="con">倾向于确定、不随时改变，喜欢计划，希望生活井然有序</p>
+                            <p class="con" style="margin-top: 30px;">重视结果，通常按部就班、有条理，喜欢在生活中想方设法管理和控制</p>
+                        </div>
+                        <div class="wwr">
+                            <p class="letter">P</p>
+                            <p class="smtitle">知觉</p>
+                            <p class="con">倾向于随时随信息的变化不断调整目标，喜欢留有余地</p>
+                            <p class="con" style="margin-top: 30px;">例如：重视过程，通常灵活多变，任事情自由发展</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/NewBehavioralStyle_picture07(3).png" alt="">
+    </section>
+
+    <section class="expression sheet">
+        <img src="./img/NewBehavioralStyle_picture05 (1).png" alt="">
+        <div class="border">
+            <div class="content">
+                <p>综合来讲，ENFJ型行为风格存在以下特征，供您参考，以帮助您更好了解自己。</p>
+                <div class="con_t" id="jiben">
+                    <div class="char">基本描述</div>
+                    <div class="jiao"></div>
+                    <!-- 渲染 -->
+                </div>
+                <div class="con_b" id="mangdian">
+                    <div class="char" style="width: 72px;">可能的盲点</div>
+                    <div class="jiao"></div>
+
+                    <!-- 渲染 -->
+                </div>
+            </div>
+        </div>
+        <img src="./img/NewBehavioralStyle_picture07(4).png" alt="">
+    </section>
+
+    <section class="footer sheet">
+        <img src="./img/NewBehavioralStyle_picture05 (2).png" alt="">
+    </section>
+</body>
+
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.2.1/echarts.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script>
+
+    
+    function GetQueryString(name){
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+        var r = window.location.search.substr(1).match(reg); //获取url中"?"符后的字符串并正则匹配
+        var context = ""; 
+        if (r != null) 
+            context = r[2]; 
+        reg = null; 
+        r = null; 
+        return context == null || context == "" || context == "undefined" ? "" : context; 
+    }
+
+    let people_result_id= this.GetQueryString('people_result_id');
+    
+    $.ajax({
+        url: 'http://admin.yx.iwedoing.com/api/client/v1/front/report/data/',
+        // url:'/user',
+        type: 'POST',
+        data: {
+            people_result_id: people_result_id,
+            report_type_id: 'NewBehavioralStyle'
+        },
+        dataType: 'json',
+        success: function (res) {
+
+            let data = res;
+            
+            if (data.code == 0) {
+                let result = data.detail.report_data.msg;
+                AddDom(result)
+                //_this.AddDom(result);
+            } else {
+                alert('请求数据有误')
+            }
+        }
+    })
+
+    function AddDom(data) {
+        $('#Name').text(data.personal.Name)
+        $('#Age').text(data.personal.Age)
+        $('#Sex').text(data.personal.Sex)
+        $('#TestTime').text(data.personal.TestTime)
+        $('#l_scorew').text(data.score.l_score[0])
+        $('#l_scoreg').text(data.score.l_score[1])
+        $('#l_scores').text(data.score.l_score[2])
+        $('#l_scorep').text(data.score.l_score[3])
+
+        $('#r_scorew').text(data.score.r_score[0])
+        $('#r_scoreg').text(data.score.r_score[1])
+        $('#r_scores').text(data.score.r_score[2])
+        $('#r_scorep').text(data.score.r_score[3])
+
+        $('#TypeName').text(data.style.content)
+
+        let TypeArr = [];
+        for (var i = 0; i < data.style.characteristics.length; i++) {
+
+            TypeArr.push(data.style.characteristics[i])
+        }
+
+        if (TypeArr[0] == 'E') {
+            $('.letter').eq(0).addClass('blue')
+            $('.letter').eq(1).addClass('gray')
+        } else {
+            $('.letter').eq(1).addClass('blue')
+            $('.letter').eq(0).addClass('gray')
+        }
+
+        if (TypeArr[1] == 'S') {
+            $('.letter').eq(2).addClass('blue')
+            $('.letter').eq(3).addClass('gray')
+        } else {
+            $('.letter').eq(3).addClass('blue')
+            $('.letter').eq(2).addClass('gray')
+        }
+
+        if (TypeArr[2] == 'T') {
+            $('.letter').eq(4).addClass('blue')
+            $('.letter').eq(5).addClass('gray')
+        } else {
+            $('.letter').eq(5).addClass('blue')
+            $('.letter').eq(4).addClass('gray')
+        }
+
+
+        if (TypeArr[3] == 'J') {
+            $('.letter').eq(6).addClass('blue')
+            $('.letter').eq(7).addClass('gray')
+        } else {
+            $('.letter').eq(7).addClass('blue')
+            $('.letter').eq(6).addClass('gray')
+        }
+
+        let fath = $('#jiben');
+
+        $.each(data.style.blindness, function (key, value) {
+            let yuandian = $('<p class="yuandian"></p>')
+            fath.append(yuandian)
+            let wenzi = $('<p class="wenzi">' + value + '</p>')
+            fath.append(wenzi)
+
+        })
+
+        let fath2 = $('#mangdian');
+
+        $.each(data.style.description, function (key, value) {
+            let yuandian = $('<p class="yuandian"></p>')
+            fath2.append(yuandian)
+            let wenzi = $('<p class="wenzi">' + value + '</p>')
+            fath2.append(wenzi)
+
+        })
+
+    }
+
+</script>

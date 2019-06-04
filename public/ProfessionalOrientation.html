@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>职业定向报告</title>
+    <!-- Normalize or reset CSS with your favorite library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+
+    <!-- Load paper.css for happy printing -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.4.1/paper.css">
+    <style>@page { size: A4 }</style>
+    <link rel="stylesheet" href="./css/react.css">
+    <style>
+        @font-face {
+		font-family: "SourceHanSansCN-Bold";
+		src: url("./typeface/SourceHanSansCN-Bold.woff2") format("woff2"),
+			url("./typeface/SourceHanSansCN-Bold.woff") format("woff"),
+			url("./typeface/SourceHanSansCN-Bold.ttf") format("truetype"),
+			url("./typeface/SourceHanSansCN-Bold.eot") format("embedded-opentype"),
+			url("./typeface/SourceHanSansCN-Bold.svg") format("svg");
+		}
+
+		.contanier{
+			width:100%;
+		}
+		section{
+			width: 100%;
+			height:'';
+			box-sizing: border-box;
+			font-size: 8px;
+            font-family: 'SourceHanSansCN-Bold';
+			
+		}
+		section>img{
+			width:100%;
+		}
+		.index {
+			padding:10px 0;
+		}
+
+        .index .userInfo {
+            height: 18%;
+            background: linear-gradient(to right, #e4e2e3, white);
+            margin-top: -2px;
+        }
+
+        .index .userInfo ul{
+            overflow: hidden;
+            padding-top: 3.5rem;
+		}
+
+		.index .userInfo ul li{
+            float: left;
+            text-align: left;
+            font-size: 16px;
+            text-indent: 25px;
+            width: 35%;
+            color: #6AB8C5;
+            font-family: "SourceHanSansCN-Bold";
+            line-height: 2rem;
+        }
+
+
+        .directory .explain {
+            background:rgba(255,255,255,1);
+            height: 90%;
+            margin-top: -10px;
+            position: relative;
+        }
+
+        .directory .explain ul {
+            width: 75%;
+            height: 55%;
+            margin: 0 auto;
+            position: absolute;
+            top: 13rem;
+            left: 0;
+            right: 0;
+        }
+
+        .directory .explain ul li {
+            display: inline-block;
+            clear: both;
+            width: 100%;
+            line-height: 3rem;
+            border-bottom: 1px solid #333333;
+            margin-top: 3rem;
+        }
+        
+        .directory .explain ul li .content {
+            float: left;
+        }
+
+        .directory .explain ul li .content span:nth-of-type(odd) {
+            font-size:40px;
+            font-family:SourceHanSansCN-Bold;
+            font-weight:bold;
+            color:rgba(106,184,197,1);
+            line-height:60px;
+        } 
+
+        .directory .explain ul li .content span:nth-of-type(even) {
+            font-size: 23px;
+            font-family:SourceHanSansCN-Regular;
+            font-weight: bold;
+            color: rgba(54,54,56,1);
+            line-height: 30px;
+            display: inline-block;
+        }
+
+        .directory .explain ul li p {
+            float: right;
+            width: 69px;
+            height: 91px;
+            background: rgba(106,184,197,1);
+            text-align: center;
+            line-height: 91px;
+            font-size: 40px;
+            font-family: "SourceHanSansCN-Bold";
+            font-weight: bold;
+            color: rgba(255,255,255,1);
+            line-height: 91px;
+            margin-top: 10px;
+        }   
+        
+        .introduction .border {
+            height: 89.3%;
+            margin-top: -2px;
+            position: relative;
+        }
+
+        .introduction .content {
+            width: 80%;
+            height: 90%;
+            margin: 0 auto;
+            position: absolute;
+            top: 2rem;
+            left: 0;
+            right: 0;   
+        }
+
+        .introduction .content p {
+            font-size:16px;
+            font-family: "SourceHanSansCN-Bold";
+            font-weight:bold;
+            color:rgba(51,51,51,1);
+            line-height:24px;
+            width: 92%;
+            margin: 0 auto; 
+            margin-bottom: 1rem;    
+        }
+
+        .introduction .content img {
+            width: 23rem;
+            margin-left: 9rem;
+            margin-top: 1rem;
+        }
+
+        .introduction .content  .lit-title {
+            margin-top: 2rem;
+            overflow: hidden;
+        }
+
+        .introduction .content .char{
+            background-color: #6AB8C5;
+            padding: 8px;
+            font-size: 14px;
+            color: white;
+            font-family: "SourceHanSansCN-Bold";
+            font-weight: bold;
+            width: 90px;
+            height: 23px;
+            float: left;
+		}
+
+        .introduction .content .jiao {
+            width: 0px;
+            height: 0px;
+            border-left: solid 15px #6AB8C5;
+            border-top: solid 20px transparent;
+            border-bottom: solid 20px transparent;
+            float: left;
+            margin-left: -1px;
+        }
+
+        .introduction .content .tit_list {
+            width: 85%;
+            margin-top: -40px
+        }
+
+
+
+        .results .border {
+            height: 88.5%;
+            margin-top: -2px;
+            position: relative;
+        }
+
+        .results .content {
+            width: 80%;
+            height: 60%;
+            margin: 0 auto;
+            position: absolute;
+            top: 4rem;
+            left: 0;
+            right: 0;  
+        }
+
+        .results .content p {
+            font-size:16px;
+            font-family:SourceHanSansCN-Regular;
+            font-weight:400;
+            color:rgba(51,51,51,1);
+            line-height:24px;
+            margin-top: 1rem;
+            color: #333;
+        }
+
+        .results .content .histogram {
+            margin-top: 0.5rem;
+            width: 100%;
+            height: 63%;
+        }
+
+        .results .res_type {
+            width: 60%;
+            height: 15%;
+            margin-top: 1rem;
+            display: inline-block;
+            clear: both;
+            text-align: left;
+        }
+
+        .results .res_type .type_l {
+            float: left;
+            height: 100%;
+            background-color: hsla(189, 44%, 59%, 0.2);
+        }
+
+        .results .res_type .type_r {
+            float: right;
+            height: 100%;
+            background-color: hsla(189, 44%, 59%, 0.2);
+        }
+
+        .results .res_type span {
+            font-size: 16px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            color: rgba(51,51,51,1);
+            line-height: 3.5rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+
+        .results .res_type p {
+            font-size: 14px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            color: hsla(189, 44%, 59%, 1);
+            margin-left: 1rem;
+            margin-top: -0.7rem;
+            margin-right: 1rem;
+        }
+
+
+
+        .trait .border {
+            height: 88.5%;
+            margin-top: -2px;
+            position: relative;
+        }
+
+        .trait .content {
+            width: 80%;
+            height: 94%;
+            margin: 0 auto;
+            position: absolute;
+            top: 1rem;
+            left: 0;
+            right: 0;
+        }
+
+        .trait .border .content p {
+            font-size:16px;
+            font-family:SourceHanSansCN-Regular;
+            font-weight: bold;
+            color:rgba(51,51,51,1);
+            line-height:24px;
+        }
+
+        .trait .border .content p span {
+            color: rgba(106, 184, 197, 1);
+        }
+
+        .trait .border .content .trait_list {
+            background-color: rgba(243, 244, 246, 1);
+            margin-top: 0.5rem;
+            padding: 1rem 2rem;
+            padding-bottom: 4.25rem;
+        }
+
+        .trait .border .content .trait_list p {
+            font-size: 16px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            color: rgba(51,51,51,1);
+            line-height: 5px;
+        }
+
+        .trait .border .content .trait_list .sm_title {
+            margin-top: 2rem;
+        }
+
+        .trait .border .content .trait_list .yaundian {
+            width: 10px;
+            height: 10px;
+            border-radius: 5px;
+            background-color: rgba(106, 184, 197, 1);
+            margin-top: 1rem; 
+        }
+
+        .trait .border .content .trait_list .wenzi {
+            margin-top: -1rem;
+            margin-left: 1.5rem;
+            font-size: 16px;
+            margin-bottom: 0.5rem;
+            line-height: 28px;
+        }
+        .page{
+            background:url('./img/CO2019_picture07.png') no-repeat;
+            height:29px;
+            text-align: center;
+            line-height: 29px;
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body body class="A4">
+    <!-- <a href="https://url-to-pdf-api.herokuapp.com/api/render?url=http://blogtest.iwedoing.com:8090/ProfessionalOrientation.html?people_result_id=633807&emulateScreenMedia=false">1111111111</a> -->
+   
+    <section class="index sel sheet">
+        <img src="./img/CO2019_picture01.png" style="margin-top:-10px; ">
+        <div class="userInfo">
+            <ul>
+                <li>
+                    <span>姓名：</span>
+                    <span id="Name">张菊花</span>
+                </li>
+                <li>
+                    <span>性别：</span>
+                    <span id="Gender">女</span>
+                </li>
+                <li>
+                    <span>年龄：</span>
+                    <span id="Age">18岁</span>
+                </li><br>
+                <li>
+                    <span>测试时间：</span>
+                    <span id="Testtime"></span>
+                </li>
+            </ul>
+        </div>
+        <img src="./img/CO2019_picture06.png" style="height: 10%;margin-top: -0.5mm;">
+    </section>
+
+    <section class="directory sheet">
+        <img src="./img/CO2019_picture02.png" style="width: 101%; margin-top: -10px;" alt="">
+        <div class="explain">
+            <ul>
+                <li>
+                    <div class="content">
+                        <span>报告导语</span><br>
+                        <span>描述评估所采用的理论基础及报告阅读说明</span>
+                    </div>
+                    <p>1</p>
+                </li>
+                <li>
+                    <div class="content">
+                        <span>测评结果</span><br>
+                        <span>展示测评数据及职业锚类型</span>
+                    </div>
+                    <p>2</p>
+                </li>
+                <li>
+                    <div class="content">
+                        <span>特征解析</span><br>
+                        <span>展示个人职业锚特征，在工作类型、薪酬福利、<br>工作晋升、最佳认可方式方面展开说明</span>
+                    </div>
+                    <p>3</p>
+                </li>
+            </ul>
+        </div>
+        <img src="./img/CO2019_picture07.png" style="width: 101%" alt="">
+    </section>
+
+    <section class="introduction sheet">
+        <img src="./img/CO2019_picture021.png" style="width: 101%; margin-top: -10px;" alt="">
+        <div class="border">
+            <div class="content">
+                <p>
+                    职业定向又称为“职业锚”，是指个体在面临职业选择的时候，他无论如何都不会放弃的至关重要的东西或价值观，是通过自我反省而形成的内心深层次价值观、能力、动力的整合体，是以人们实际的生活经历、工作经历和他人的反馈为基础形成的，体现了“真实的自我”。换言之，“职业锚”就是一个人在职业中的核心价值观。
+                </p>
+                <p>
+                    职业锚理论，是由美国E.H.施恩（Edgar
+                    H.Schein）教授经过长达12年的研究与调查后提出的。经过不断的发展与完善，1990年，施恩将职业锚拓展为八种。此后相续开展的研究表明，以下八种职业锚可以概括所有的职业锚：
+                </p>
+                <img src="./img/CO2019_png01.png" alt="">
+
+                <div class="lit-title">
+                    <div class="char">
+                        报告阅读建议
+                    </div>
+                    <div class="jiao"></div>
+                </div><br><br>
+                <p>
+                    通过这份报告，您可以了解您的主要职业锚和辅助职业锚，帮助您反思自己的能力、动机与价值观，认清“真实的自我”。但阅读时请注意以下几点：
+                </p>
+
+                <p class="tit_num">1、</p>
+                <p class="tit_list">本报告对您的职业倾向进行了详细描述，它能够帮助您拓展思路，接受更多的可能性，而非限制您的选择；</p>
+
+                <p class="tit_num">2、</p>
+                <p class="tit_list">报告结果没有“好”与“坏”之分，但不同特点对于不同的工作存在“适合”与“不适合”的区别；</p>
+
+                <p class="tit_num">3、</p>
+                <p class="tit_list">每个人的职业不是固定不变的。职业锚，是个人稳定的职业贡献区和成长区。但是，这并不是意味着个人将停止变化和发展。每个人以职业锚为其稳定源，可以获得该职业工作的进一步发展，以及个人生物社会生命周期和家庭生命周期的成长、变化。此外，职业锚本身也可能变化，员工在职业生涯的中、后期可能会根据变化了的情况，重新选定自己的职业锚。</p>
+            </div>
+        </div>
+
+        <img src="./img/CO2019_picture071.png" style="width: 101%" alt="">
+    </section>
+
+    <section class="results sheet">
+        <img src="./img/CO2019_picture02 (2).png" alt="">
+        <div class="border">
+            <div class="content">
+                <p>下面是您的职业锚测评数据：</p>
+                <div id="main" class="histogram"></div>
+                <p>根据上图显示的您的测评数据，您的职业锚类型（即您在进行职业选择时最不愿意放弃的）是：</p>
+                <div class="res_type">
+                    <div class="type_l">
+                        <span>主导职业锚类型</span>
+                        <p id="MainTypes"></p>
+                    </div>
+                    <div class="type_r">
+                        <span>辅助职业锚类型</span>
+                        <p id="SubTypes"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/CO2019_picture07 (2).png" style="width: 101%" alt="">
+    </section>
+
+    <section class="trait sheet go">
+        <img src="./img/CO2019_picture02 2.png" alt="">
+        <div class="border">
+            <div class="content" id="MainTypes">
+                <p>您的主导职业锚：<span class="MainName" id="MainName"></span></p>
+                <!-- 渲染数据 -->
+                <div class="trait_list" id="trait_list"></div>
+            </div>
+        </div>
+        <div class="page"></div>
+        
+    </section>
+
+    
+
+    <section class="trait sheet go2">
+        <img src="./img/CO2019_picture02 3.png" alt="">
+        <div class="border">
+            <div class="content">
+                <p>您的辅导职业锚：<span class="MainName" id="MainName3"></span></p>
+                <!-- 渲染数据 -->
+                <div class="trait_list" id="trait_list_two"></div>
+            </div>
+        </div>
+        <div class="page"></div>
+        
+    </section>
+
+    <section class="sheet">
+        <img src="./img/CO2019_picture05.png">
+    </section>
+</body>
+
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.2.1/echarts.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+    var report = {
+        init(){
+            this.created();
+            
+        },
+        people_result_id:null,
+        created(){
+            let _this =this;
+            this.people_result_id= this.GetQueryString('people_result_id');
+
+            $.ajax({
+                url:'http://admin.yx.iwedoing.com/api/client/v1/front/report/data/',
+               
+                type:'POST',
+                data:{
+                    people_result_id:_this.people_result_id,
+                    report_type_id:'CO2019'
+                },
+                dataType:'json',
+                success:function(res){
+                    
+                    let data =res;
+                    console.log(res)
+                    if(data.code==0){
+                        let result = data.detail.report_data.msg;  
+                        _this.AddDom(result);
+                    }else{
+                        alert('请求数据有误')
+                    }
+                }
+            })
+        },
+        
+        // dealResult(father,data){
+
+        // },
+        GetQueryString(name){
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+            var r = window.location.search.substr(1).match(reg); //获取url中"?"符后的字符串并正则匹配
+            var context = ""; 
+            if (r != null) 
+                context = r[2]; 
+            reg = null; 
+            r = null; 
+            return context == null || context == "" || context == "undefined" ? "" : context; 
+        },
+        AddDom(data){
+            
+            $('#Gender').text(data.Gender)
+            $('#Name').text(data.Name)
+            $('#Testtime').text(data.TestTime)
+            $('#Age').text(data.Age)
+            $('#MainTypes').text(data.MainTypes)
+            $('#SubTypes').text(data.SubTypes)
+           
+            //创建数据信息
+            let dataMainType = [];
+            let dataMainRes = [];
+            let dataSubType = [];
+            let dataSubRes = [];
+            //储存数据信息
+            $.each(data.Main,function(key,value){
+                dataMainType.push(key)
+                dataMainRes.push(value)
+            })
+            $.each(data.Sub,function(key,value){
+                dataSubType.push(key)
+                dataSubRes.push(value)
+            })
+            
+            let fath = $('#trait_list');
+           
+            //第一循环，拿到JSON对象的的key和value值
+            $.each(dataMainRes[0],function(key,value){
+               
+                //fath.text($('.sheet').length-5)
+                let trait_list_name = $('<p class="trait_list_name">'+key+'</p>')
+                fath.append(trait_list_name)
+                //判断是否为第一列
+                if(key!='基本特征'){
+                    trait_list_name.addClass('sm_title');
+                }
+                //判断字典类型
+                //如果是字符串可以直接渲染
+                if(typeof(value)=='string'){
+                    
+                    let yuandian = $('<p class="yaundian"></p>')
+                    fath.append(yuandian)
+                    let wenzi = $('<p class="wenzi">'+value+'</p>')
+                    fath.append(wenzi)
+                }else if(typeof(value)=='object'){
+                    //如果数据是对象类型，循环渲染
+                    $.each(value,function(j,v){
+                        
+                        let yuandian = $('<p class="yaundian"></p>')
+                        fath.append(yuandian)
+                        let wenzi = $('<p class="wenzi">'+v+'</p>')
+                        fath.append(wenzi)
+                    })
+                }
+                
+            })
+            //判断是否有多个类型
+            if(dataMainRes.length>1){
+                //创建新的节点
+                var newSec =$(`<section class="trait sheet">
+                    <img src="./img/CO2019_picture02 2.png" alt="">
+                    <div class="border">
+                        <div class="content" id="MainTypes">
+                            <p>您的主导职业锚：<span class="MainName newMainName" id="MainName1"></span></p>
+                            
+                            <div class="trait_list " id="new_trait_list"></div>
+                        </div>
+                    </div>
+                    <div class="page"></div>
+                    
+                </section`)
+                //在后面添加
+                $('.go').after(newSec)
+                let fath3 = $('#new_trait_list');
+                console.log(dataMainType[1])
+                console.log($('#MainName1'))
+                $('#MainName1').text(dataMainType[1]);
+                $.each(dataMainRes[1],function(key,value){
+                    //第二次循环，拿到字典里面的标题和内容
+                    let trait_list_name = $('<p class="trait_list_name ">'+key+'</p>')
+                    fath3.append(trait_list_name)
+                    //判断是否为第一列
+                    if(key!='基本特征'){
+                        trait_list_name.addClass('sm_title');
+                    }
+                    //判断字典类型
+                    //如果是字符串可以直接渲染
+                    if(typeof(value)=='string'){
+                        
+                        let yuandian = $('<p class="yaundian"></p>')
+                        fath3.append(yuandian)
+                        let wenzi = $('<p class="wenzi">'+value+'</p>')
+                        fath3.append(wenzi)
+                    }else if(typeof(value)=='object'){
+                        //如果数据是对象类型，循环渲染
+                        $.each(value,function(j,v){
+                            
+                            let yuandian = $('<p class="yaundian"></p>')
+                            fath3.append(yuandian)
+                            let wenzi = $('<p class="wenzi">'+v+'</p>')
+                            fath3.append(wenzi)
+                        })
+                    }
+                    
+                })
+            }
+
+            let fath2 = $('#trait_list_two');
+            //第一循环，拿到JSON对象的的key和value值
+            $.each(dataSubRes[0],function(key,value){
+                //第二次循环，拿到字典里面的标题和内容
+                
+                let trait_list_name = $('<p class="trait_list_name">'+key+'</p>')
+                fath2.append(trait_list_name)
+                //判断是否为第一列
+                if(key!='基本特征'){
+                    trait_list_name.addClass('sm_title');
+                }
+                //判断字典类型
+                //如果是字符串可以直接渲染
+                if(typeof(value)=='string'){
+                    
+                    let yuandian = $('<p class="yaundian"></p>')
+                    fath2.append(yuandian)
+                    let wenzi = $('<p class="wenzi">'+value+'</p>')
+                    fath2.append(wenzi)
+                }else if(typeof(value)=='object'){
+                    //如果数据是对象类型，循环渲染
+                    $.each(value,function(j,v){
+                        
+                        let yuandian = $('<p class="yaundian"></p>')
+                        fath2.append(yuandian)
+                        let wenzi = $('<p class="wenzi">'+v+'</p>')
+                        fath2.append(wenzi)
+                    })
+                }
+                
+            })
+            if(dataSubRes.length>1){
+                var newSec =$(`<section class="trait sheet">
+                    <img src="./img/CO2019_picture02 2.png" alt="">
+                    <div class="border">
+                        <div class="content" id="MainTypes">
+                            <p>您的辅导职业锚：<span class="MainName" id='MainName2'></span></p>
+                            
+                            <div class="trait_list " id="new_trait_list2"></div>
+                        </div>
+                    </div>
+                    <div class="page"></div>
+                    
+                </section`)
+                $('.go2').after(newSec)
+                let fath4 = $('#new_trait_list2');
+                console.log(dataSubType[1])
+                
+                $('#MainName2').text(dataSubType[1]);
+                $.each(dataMainRes[1],function(key,value){
+                    //第二次循环，拿到字典里面的标题和内容
+                    let trait_list_name = $('<p class="trait_list_name ">'+key+'</p>')
+                    fath4.append(trait_list_name)
+                    //判断是否为第一列
+                    if(key!='基本特征'){
+                        trait_list_name.addClass('sm_title');
+                    }
+                    //判断字典类型
+                    //如果是字符串可以直接渲染
+                    if(typeof(value)=='string'){
+                        
+                        let yuandian = $('<p class="yaundian"></p>')
+                        fath4.append(yuandian)
+                        let wenzi = $('<p class="wenzi">'+value+'</p>')
+                        fath4.append(wenzi)
+                    }else if(typeof(value)=='object'){
+                        //如果数据是对象类型，循环渲染
+                        $.each(value,function(j,v){
+                            
+                            let yuandian = $('<p class="yaundian"></p>')
+                            fath4.append(yuandian)
+                            let wenzi = $('<p class="wenzi">'+v+'</p>')
+                            fath4.append(wenzi)
+                        })
+                    }
+                    
+                })
+            }
+            
+            $('#MainName').text(data.MainTypes[0])
+            $('#MainName3').text(data.SubTypes[1])
+           if($('.sheet').length==9){
+            $.each($('.sheet'),(key,index)=>{
+                if(key>3 &&key<9){
+                    $('.sheet').eq(key).children('.page').text("第"+(key-1)+"页")
+                    console.log(key)
+                }
+            })
+           }else if($('.sheet').length==7){
+                if(key>3 &&key<7){
+                    $('.sheet').eq(key).children('.page').text("第"+(key-1)+"页")
+                    console.log(key)
+                }
+           }else if($('.sheet').length==8){
+                if(key>3 &&key<8){
+                    $('.sheet').eq(key).children('.page').text("第"+(key-1)+"页")
+                    console.log(key)
+                }
+           }
+            
+
+
+            
+        //图标数据
+        var option = {
+                dataName:[],
+                data:[]
+            }
+            for(var i of data.Score){
+                option.dataName.push(i[0]);
+                option.data.push(i[1]);
+            }
+            this.AddEchart(option);
+        },
+        AddEchart(data){
+            // 基于准备好的dom，初始化echarts实例
+            var myChart = echarts.init(document.getElementById('main'));
+            // 指定图表的配置项和数据
+            var option = {
+
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        type: 'none'
+                    }
+                },
+                grid: {
+                    left: "20%"
+                },
+                animation: false,
+                xAxis: [
+                    {
+                        type: 'value',
+                        scale: true,
+                        show: false,
+                        splitLine: {
+                            show: false
+                        },
+                        min: 0 
+                    }
+                ],
+                yAxis: [{
+                    splitLine: {
+                        show: false
+                    },
+                    "axisTick": {       //y轴刻度线
+                        "show": false
+                    }, "axisLine": {       //y轴
+                        "show": false
+
+                    },
+                    data: data.dataName,
+                    type: 'category'
+                }],
+                series: [
+                    {
+                        type: 'bar',
+
+                        name: '总量',
+                        data: data.data,
+                        itemStyle: {
+                            normal: {
+                                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                    offset: 0,
+                                    color: '#1DE9B6'
+                                }, {
+                                    offset: 1,
+                                    color: '#1DC4E9'
+                                }]), label: {
+                                    show: true,		//开启显示
+                                    position: 'right',	//在上方显示
+                                    textStyle: {	    //数值样式
+                                        color: '#333333',
+                                        fontSize: 16
+                                    }
+                                }
+                            }
+                        },
+                        barCategoryGap: '50%',
+                    }
+                ]
+
+            };
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+        }
+    }
+   
+    report.init();
+
+
+</script>
