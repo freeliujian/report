@@ -14,15 +14,6 @@
     <style>@page { size: A4 }</style>
     <link rel="stylesheet" href="./css/react.css">
     <style>
-        @font-face {
-		font-family: "SourceHanSansCN-Bold";
-		src: url("./typeface/SourceHanSansCN-Bold.woff2") format("woff2"),
-			url("./typeface/SourceHanSansCN-Bold.woff") format("woff"),
-			url("./typeface/SourceHanSansCN-Bold.ttf") format("truetype"),
-			url("./typeface/SourceHanSansCN-Bold.eot") format("embedded-opentype"),
-			url("./typeface/SourceHanSansCN-Bold.svg") format("svg");
-		}
-
 		.contanier{
 			width:100%;
 		}
@@ -61,6 +52,7 @@
             color: #6AB8C5;
             font-family: "SourceHanSansCN-Bold";
             line-height: 2rem;
+            font-weight: bold;
         }
 
 
@@ -174,6 +166,7 @@
             width: 90px;
             height: 23px;
             float: left;
+            line-height: 1.5em;
 		}
 
         .introduction .content .jiao {
@@ -275,7 +268,7 @@
         }
 
         .trait .content {
-            width: 80%;
+            width: 85%;
             height: 94%;
             margin: 0 auto;
             position: absolute;
@@ -300,7 +293,7 @@
             background-color: rgba(243, 244, 246, 1);
             margin-top: 0.5rem;
             padding: 1rem 2rem;
-            padding-bottom: 4.25rem;
+            padding-bottom: 1.25rem;
         }
 
         .trait .border .content .trait_list p {
@@ -328,7 +321,7 @@
             margin-left: 1.5rem;
             font-size: 16px;
             margin-bottom: 0.5rem;
-            line-height: 28px;
+            line-height: 26px;
         }
         .page{
             background:url('./img/CO2019_picture07.png') no-repeat;
@@ -509,10 +502,11 @@
 
             $.ajax({
                 url:'http://admin.yx.iwedoing.com/api/client/v1/front/report/data/',
-               
+                // url:'/user',
                 type:'POST',
                 data:{
-                    people_result_id:_this.people_result_id,
+                    // people_result_id:636891,
+                    people_result_id:this.people_result_id,
                     report_type_id:'CO2019'
                 },
                 dataType:'json',
@@ -544,7 +538,7 @@
             return context == null || context == "" || context == "undefined" ? "" : context; 
         },
         AddDom(data){
-            
+          
             $('#Gender').text(data.Gender)
             $('#Name').text(data.Name)
             $('#Testtime').text(data.TestTime)
@@ -552,6 +546,7 @@
             $('#MainTypes').text(data.MainTypes)
             $('#SubTypes').text(data.SubTypes)
            
+            
             //创建数据信息
             let dataMainType = [];
             let dataMainRes = [];
@@ -566,7 +561,7 @@
                 dataSubType.push(key)
                 dataSubRes.push(value)
             })
-            
+            // console.log(dataMainType,dataMainRes,dataSubType,dataSubRes)
             let fath = $('#trait_list');
            
             //第一循环，拿到JSON对象的的key和value值
@@ -617,8 +612,8 @@
                 //在后面添加
                 $('.go').after(newSec)
                 let fath3 = $('#new_trait_list');
-                console.log(dataMainType[1])
-                console.log($('#MainName1'))
+                // console.log(dataMainType[1])
+                // console.log($('#MainName1'))
                 $('#MainName1').text(dataMainType[1]);
                 $.each(dataMainRes[1],function(key,value){
                     //第二次循环，拿到字典里面的标题和内容
@@ -650,10 +645,12 @@
                 })
             }
 
+
+
             let fath2 = $('#trait_list_two');
             //第一循环，拿到JSON对象的的key和value值
             $.each(dataSubRes[0],function(key,value){
-                //第二次循环，拿到字典里面的标题和内容
+                
                 
                 let trait_list_name = $('<p class="trait_list_name">'+key+'</p>')
                 fath2.append(trait_list_name)
@@ -696,10 +693,11 @@
                 </section`)
                 $('.go2').after(newSec)
                 let fath4 = $('#new_trait_list2');
-                console.log(dataSubType[1])
                 
+                console.log(dataSubRes)
                 $('#MainName2').text(dataSubType[1]);
-                $.each(dataMainRes[1],function(key,value){
+                $.each(dataSubRes[1],function(key,value){
+                    console.log(key,value)
                     //第二次循环，拿到字典里面的标题和内容
                     let trait_list_name = $('<p class="trait_list_name ">'+key+'</p>')
                     fath4.append(trait_list_name)
@@ -729,25 +727,31 @@
                 })
             }
             
-            $('#MainName').text(data.MainTypes[0])
-            $('#MainName3').text(data.SubTypes[1])
+            $('#MainName').text(dataMainType[0])
+            $('#MainName3').text(dataSubType[0])
+          
            if($('.sheet').length==9){
             $.each($('.sheet'),(key,index)=>{
+                
                 if(key>3 &&key<9){
                     $('.sheet').eq(key).children('.page').text("第"+(key-1)+"页")
-                    console.log(key)
+                    
                 }
             })
            }else if($('.sheet').length==7){
+            $.each($('.sheet'),(key,index)=>{
                 if(key>3 &&key<7){
                     $('.sheet').eq(key).children('.page').text("第"+(key-1)+"页")
-                    console.log(key)
+                   
                 }
+            }) 
            }else if($('.sheet').length==8){
+            $.each($('.sheet'),(key,index)=>{
                 if(key>3 &&key<8){
                     $('.sheet').eq(key).children('.page').text("第"+(key-1)+"页")
-                    console.log(key)
+                    
                 }
+            })  
            }
             
 
@@ -762,9 +766,11 @@
                 option.dataName.push(i[0]);
                 option.data.push(i[1]);
             }
+            
             this.AddEchart(option);
         },
         AddEchart(data){
+            
             // 基于准备好的dom，初始化echarts实例
             var myChart = echarts.init(document.getElementById('main'));
             // 指定图表的配置项和数据
@@ -801,7 +807,7 @@
                         "show": false
 
                     },
-                    data: data.dataName,
+                    data: data.dataName.reverse(),
                     type: 'category'
                 }],
                 series: [
@@ -809,7 +815,7 @@
                         type: 'bar',
 
                         name: '总量',
-                        data: data.data,
+                        data: data.data.reverse(),
                         itemStyle: {
                             normal: {
                                 color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
