@@ -129,7 +129,7 @@
         }
 
         .introduction .content {
-            width: 80%;
+            width: 90%;
             height: 90%;
             margin: 0 auto;
             position: absolute;
@@ -137,17 +137,15 @@
             left: 0;
             right: 0;   
         }
-        .DISC_content>li>p{
-            margin-bottom: 0!important;
-        }
+        
         .introduction .content p {
             font-size:12px;
             font-family: "SourceHanSansCN-Bold";
             font-weight:bold;
             color:rgba(51,51,51,1);
             line-height:24px;
-            width: 92%;
-            margin: 0 auto; 
+            width: 100%;
+           
             margin-bottom: 1rem;    
         }
 
@@ -163,27 +161,27 @@
         .DISC_content{
             width: 100%;
             overflow: hidden;
+            display: flex;    flex-wrap: wrap;    align-items: flex-start;    align-content: flex-start;    justify-content: space-between;
         }
         
         .DISC_content>li{
-            float:left;
-            width:300px;
-           
+            
+            
+            width:340px;
+            justify-content: space-between;
             padding:20px;
             margin-top:25px;
             background:#F3F4F6;
             box-sizing:border-box;
         }
         .DISC_theoty{
-            text-indent: 12px;
-            font-size:12px;
+            
             font-weight:bold;
             color:rgba(51,51,51,1);
             line-height:18px;
         }
         .Read_suggest{
-            width:95%;
-            margin:0 auto;
+            
             box-sizing:border-box;
             text-align: center;
             line-height: 37px;
@@ -191,6 +189,7 @@
             color:rgba(51,51,51,1);
             height:37px;
             font-size: 13px;
+            margin-bottom:24px; 
             background:rgba(243, 244, 246, 1);  
         }
         .introduction .content .char{
@@ -216,14 +215,20 @@
         }
 
         .introduction .content .tit_list {
-            width: 85%;
-            margin-top: -40px
+            width:98%;
+           margin-bottom: 30px;
+            margin-top: -40px;
+            margin-left: 25px;
+            float: left;
+
+        }
+        .tit_num{
+            float: left;
         }
 
 
-
         .results .border,.leading .border {
-            height: 85%;
+            height: 86.1%;
             margin-top: -2px;
             position: relative;
         }
@@ -347,6 +352,21 @@
             padding-top:15px;
 
         }
+
+        .leading .sm_title {
+            width: 100%;
+            height: 43px;
+        }
+
+        .leading .text {
+            height: 85px;
+        }
+        .leading .text2 {
+            height: 40px;
+        }
+        .leading .text3 {
+            height: 63px;
+        }
         .leading_content{
             width: 100%;
             overflow: hidden;
@@ -410,23 +430,25 @@
             font-size: 12px;
         }
         .explain_warpper{
-            width: 90%;
-            margin: 40px auto;
-            padding-bottom: 15px;
+            width: 95%;
+            margin: 25px auto;
+            padding-bottom: 50px;
             box-sizing: border-box;
             background: linear-gradient(180deg,rgba(240,241,245,1) 0%,rgba(219,220,225,1) 100%);
            overflow: hidden;
         }
         .explain_item{
+            overflow: hidden;
             padding: 15px 24px;
+            padding-bottom: 0;
             box-sizing: border-box;
             width:50%;
             float: left;
         }
-        .explain_item:nth-child(3),.explain_item:nth-child(4){
+        /* .explain_item:nth-child(3),.explain_item:nth-child(4){
             padding: 0px 24px;
             
-        }
+        } */
         .explain_letter{
             width:53px;
             height:53px;
@@ -434,7 +456,7 @@
             color:white;
             line-height: 53px;
             text-align: center;
-            font-size:24px;
+            font-size:24px !important;
             font-weight: 600;
             margin-bottom: 20px;
         }
@@ -443,11 +465,11 @@
          
             font-weight:400;
             color:rgba(54,54,56,1);
-            line-height:22px;
+            line-height:20px;
         }
         .explain_content>p{
             font-weight:bold;
-            margin-top:12px;
+            margin-top:20px;
             margin-bottom: 8px;
         }
     </style>
@@ -491,7 +513,7 @@
                     <div class="jiao"></div>
                     </div><br><br><br><br>
                     <p>
-                        本测评是格略集团心理管理研究院基于威廉·马斯顿博士 DISC 人类行为语言理论、融合格略已有的能力模型和行为风格理论，依据“任务导向-人际导向”和“外向-内向”两个维度将您倾向幸福的行为特征分为四种类型，分别为：
+                        本测评是格略咨询基于威廉·马斯顿博士 DISC 人类行为语言理论、融合格略已有的能力模型和行为风格理论，将您在职业中的主导行为特征分为四种类型，分别为：
                     </p>
                      <ul class="DISC_content">
                          <li>
@@ -502,7 +524,7 @@
                                 代表在自认为不友好的环境中主动出击
                              </p>
                          </li>
-                         <li style="margin-left:10px;">
+                         <li>
                             <div class="DISC_theoty">
                                     I-影响性（Influence）
                             </div>
@@ -510,6 +532,8 @@
                                     代表在自认为友好的环境中主动表现
                             </p>
                         </li>
+                    </ul>
+                    <ul class="DISC_content">
                         <li>
                             <div class="DISC_theoty">
                                     S-稳定性（Steadiness）
@@ -518,7 +542,7 @@
                                     代表在自认为友好的环境中顺势而为
                             </p>
                         </li>
-                        <li style="margin-left:10px;">
+                        <li>
                             <div class="DISC_theoty">
                                     C-遵从性（Compliance）
                             </div>
@@ -526,7 +550,7 @@
                                     代表在自认为不友好的环境中被动顺应
                             </p>
                         </li>
-                     </ul>
+                    </ul>
                    
                 <div class="lit-title">
                     <div class="char">
@@ -709,19 +733,29 @@
                         D
                     </div>
                     <div class="explain_content">
-                        考量一个人如何解决问题和应对挑战
-                        <p>强度</p>
+                        <p class="sm_title">考量一个人如何解决问题和应对挑战</p> 
+                        <p style="margin-top: 16px;">强度：</p>
                         
-                        D 值越高，在试图解决困难和障碍方面所表现出的积极性和进取心就越强。
-                        <br/> 
-                        D 值越低，则说明此人在做出决策前越倾向于多搜集信息。 
+                        <div class="text">
+                            D 值越高，在试图解决困难和障碍方面所表现出的积极性和进取心就越强。<br/>
+                        
+                            D 值越低，则说明此人在做出决策前越倾向于多搜集信息。 
+                        </div>
+                        
                         <p>当处于对抗性环境中时：</p>
-                        <br/>
-                        D 值高的人则会显得非常进取、积极。
+                        
+                        <div class="text2">
+                            D 值高的人则会显得非常进取、积极。
+                        </div>
+                        
+                        <!-- &#9702  &#176 -->
                         <p>情感：</p>
-                        D 因素用以考量一个人的易怒情感。<br/>
-                        D 值极高者极易生气发怒； <br/>
-                        D 值极低者不易生气发怒。 
+                        <div class="text3">
+                            D 因素用以考量一个人的易怒情感。<br/>
+                            D 值极高者极易生气发怒； <br/>
+                            D 值极低者不易生气发怒。 
+                        </div>
+                        
                     </div>    
                     
                 </div>
@@ -730,19 +764,29 @@
                         C
                     </div>
                     <div class="explain_content">
-                            待和制定的规章制度如考量一个人对他人的期待如何做出反应 
-                        <p>强度</p>
+                        <p>考量一个人对他人的期待和制定的规章制度如何做出反应</p> 
+                        <p>强度：</p>
                         
-                        C 值越高，表明此人越能够遵守他人制定的规章制度。
-                        <br/> 
-                        C 值越低，表明此人更愿意挑战规章制度并寻求独立。 
+                        <div class="text">
+                            C 值越高，表明此人越能够遵守他人制定的规章制度。
+                            <br/> 
+                            C 值越低，表明此人更愿意挑战规章制度并寻求独立。 
+                        </div>
+                        
+                       
                         <p>当处于对抗性环境中时：</p>
-                        <br/>
-                        C 值越高的人则更容易反应消极。
+                        
+                        <div class="text2">
+                            C 值越高的人则更容易反应消极。
+                        </div>
+                        
                         <p>情感：</p>
-                        C 因素用以考量一个人的恐惧感； <br/>
-                        C 值越高，说明此人的恐惧动因越强； <br/>
-                        C 值越低，说明此人越无所畏惧。
+                        <div class="text3">
+                            C 因素用以考量一个人的恐惧感； <br/>
+                            C 值越高，说明此人的恐惧动因越强； <br/>
+                            C 值越低，说明此人越无所畏惧。
+                        </div>
+                        
                     </div>    
                     
                 </div>
@@ -751,19 +795,28 @@
                         I
                     </div>
                     <div class="explain_content">
-                            考量一个人影响和说服他人的能力
-                        <p>强度</p>
+                        <p>考量一个人影响和说服他人的能力</p>    
+                        <p>强度：</p>
                         
-                        I 值越高，在影响他人的思维方式方面，就越善于言辞，具有说服力。
-                        <br/> 
-                        I 值越低，越倾向于用数据和事实来说明问题。
+                        <div class="text">
+                            I 值越高，在影响他人的思维方式方面，就越善于言辞，具有说服力。
+                            <br/> 
+                            I 值越低，越倾向于用数据和事实来说明问题。
+                        </div>
+                        
                         <p>当处于对抗性环境中时：</p>
-                        <br/>
-                        I 值越高的人反应越积极，且倾向于通过协商达成共识
+                        
+                        <div class="text2">
+                            I 值越高的人反应越积极，且倾向于通过协商达成共识
+                        </div>
+                        
                         <p>情感：</p>
-                        I 因素用以考量一个人的乐观情感； <br/>
-                        I 值极高者情绪非常乐观； <br/>
-                        I 值低者则倾向于悲观。
+                        <div class="text3">
+                            I 因素用以考量一个人的乐观情感； <br/>
+                            I 值极高者情绪非常乐观； <br/>
+                            I 值低者则倾向于悲观。
+                        </div>
+                        
                     </div>    
                     
                 </div>
@@ -772,19 +825,29 @@
                         S
                     </div>
                     <div class="explain_content">
-                            考量一个人开展工作、承担责任的快慢
-                        <p>强度</p>
+                        <p>考量一个人开展工作、承担责任的快慢</p>    
+                        <p>强度：</p>
                         
-                        S 值越高，越倾向于一次有始有终地完成某件任务。同样，他们对变化有较强的抵触心理。
-                        <br/> 
-                        S 值越低，工作节奏越快，希望变化的愿望越强烈。
+                        <div class="text">
+                            S 值越高，越倾向于一次有始有终地完成某件任务。同样，他们对变化有较强的抵触心理。
+                            <br/> 
+                            S 值越低，工作节奏越快，希望变化的愿望越强烈。
+                        </div>
+                       
+                       
                         <p>当处于对抗性环境中时：</p>
-                        <br/>
-                        S 值越高的人反应越消极。
+                        
+                        <div class="text2">
+                            S 值越高的人反应越消极。
+                        </div>
+                       
                         <p>情感：</p>
-                        S 用以考量一个人是否缺乏情绪；  <br/>
-                        S 值越高，越少情绪化，内心越难解读； <br/>
-                        S 值越低，越情绪化，而且也越善于表达。
+                        <div class="text3">
+                            S 用以考量一个人是否缺乏情绪；  <br/>
+                            S 值越高，越少情绪化，内心越难解读； <br/>
+                            S 值越低，越情绪化，而且也越善于表达。
+                        </div>
+                        
                     </div>    
                     
                 </div>
@@ -803,8 +866,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src="http://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
-<script src="js/jquery-1.8.3.min.js"></script>
-<script src="js/index.js"></script>
+
 
 
 <script type="text/javascript">
@@ -819,18 +881,18 @@
             let _this = this;
             this.people_result_id= this.GetQueryString('people_result_id');
             $.ajax({
-                url:'http://admin.yx.iwedoing.com/api/client/v1/front/report/data/',
-                
+                // url:'http://admin.yx.iwedoing.com/api/client/v1/front/report/data/',
+                url:'http://assess.admin.iwedoing.com/api/client/v1/front/report/data/',
                 type:'POST',
                 data:{
-                    // people_result_id: this.people_result_id,
-                    people_result_id:636856,
+                    people_result_id: this.people_result_id,
+                    // people_result_id:636856,
                     report_type_id:'DISC_NEW'
                 },
                 dataType:'json',
                 success:function(res){
                     let data =res;
-                    console.log(res)
+                    // console.log(res)
                     if(data.code==0){
                         let data = res.detail.report_data
                         _this.AddDom(data);
@@ -851,7 +913,7 @@
             return context == null || context == "" || context == "undefined" ? "" : context; 
         },
         AddDom(data){
-            console.log(data.disc)
+            // console.log(data.disc)
             this.sampleCharts(data.msg.ChartSelfImage_Indicator);
             this.maskwork(data.msg.ChartWorkMask_Indicator);
             this.selfIm(data.msg.ChartSelfImage_Indicator);
@@ -864,7 +926,7 @@
             $('.sample_char').eq(0).text(data.disc.ChartSelfImage_Indicator[1][1])
             $('.sample_char').eq(1).text(data.disc.ChartSelfImage_Indicator[1][3])
             $('.sample_char').eq(2).text(data.disc.ChartSelfImage_Indicator[1][5])
-            console.log(data.disc.ChartWorkMask_Indicator.hasOwnProperty("下移位"))
+            // console.log(data.disc.ChartWorkMask_Indicator.hasOwnProperty("下移位"))
             if(data.disc.ChartWorkMask_Indicator.hasOwnProperty("下移位")){
 
             }
@@ -963,7 +1025,7 @@
         },
         selfIm:function(res){
             let arr = this.CraetenewArr(res)
-            console.log(arr)
+            // console.log(arr)
             $.each(res,(key,item)=>{   
                 $('.leading_item_table_char3').eq(key).text(item.score)
             })
@@ -1086,7 +1148,7 @@
         sampleCharts:function(res){
            
             let arr = this.CraetenewArr(res);
-            console.log(arr)
+            // console.log(arr)
             let Data = {
                 title: {
                     text: null

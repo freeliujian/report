@@ -770,11 +770,12 @@
     let people_result_id= this.GetQueryString('people_result_id');
     
     $.ajax({
-        url: 'http://admin.yx.iwedoing.com/api/client/v1/front/report/data/',
+        // url: 'http://admin.yx.iwedoing.com/api/client/v1/front/report/data/',
+        url:'http://assess.admin.iwedoing.com/api/client/v1/front/report/data/',
         type: 'POST',
         data: {
             // people_result_id:30255,
-            people_result_id: this.people_result_id,
+            people_result_id: people_result_id,
             report_type_id: 'NewBehavioralStyle'
         },
         dataType: 'json',

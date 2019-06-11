@@ -1,0 +1,2303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>中高层管理-180</title>
+    <!-- Normalize or reset CSS with your favorite library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+
+    <!-- Load paper.css for happy printing -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.4.1/paper.css">
+    <style>
+        @page {
+            size: A4
+        }
+    </style>
+    <link rel="stylesheet" href="./css/react.css">
+    <style>
+        .contanier {
+            width: 100%;
+        }
+
+        section {
+            width: 100%;
+            height: '';
+            box-sizing: border-box;
+            font-size: 8px;
+            font-family: 'SourceHanSansCN-Bold';
+
+        }
+
+        section>img {
+            width: 100%;
+        }
+
+        .index {
+            padding: 10px 0;
+        }
+
+        .index .userInfo {
+            height: 18%;
+            background: linear-gradient(to right, #e4e2e3, white);
+            margin-top: -2px;
+        }
+
+        .index .userInfo ul {
+            overflow: hidden;
+            padding-top: 3.5rem;
+        }
+
+        .index .userInfo ul li {
+            float: left;
+            text-align: left;
+            font-size: 16px;
+            text-indent: 25px;
+            width: 35%;
+            color: #D3964B;
+            font-family: "SourceHanSansCN-Bold";
+            line-height: 2rem;
+        }
+
+        .directory .explain {
+            background: rgba(255, 255, 255, 1);
+            height: 90%;
+            margin-top: -10px;
+            position: relative;
+        }
+
+        .directory .explain ul {
+            width: 75%;
+            height: 55%;
+            margin: 0 auto;
+            position: absolute;
+            top: 13rem;
+            left: 0;
+            right: 0;
+        }
+
+        .directory .explain ul li {
+            display: inline-block;
+            clear: both;
+            width: 100%;
+            line-height: 3rem;
+            border-bottom: 1px solid #333333;
+            margin-top: 3rem;
+        }
+
+        .directory .explain ul li .content {
+            float: left;
+        }
+
+        .directory .explain ul li .content span:nth-of-type(odd) {
+            font-size: 40px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            color: #D3964B;
+            line-height: 60px;
+        }
+
+        .directory .explain ul li .content span:nth-of-type(even) {
+            font-size: 23px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: bold;
+            color: #363638;
+            line-height: 30px;
+            display: inline-block;
+        }
+
+        .directory .explain ul li p {
+            float: right;
+            width: 69px;
+            height: 91px;
+            background: #D3964B;
+            text-align: center;
+            line-height: 91px;
+            font-size: 40px;
+            font-family: "SourceHanSansCN-Bold";
+            font-weight: bold;
+            color: #FFFFFF;
+            line-height: 91px;
+            margin-top: 10px;
+        }
+
+        .instructions .border {
+            height: 88.5%;
+            margin-top: -2px;
+            position: relative;
+        }
+
+        .instructions .border .content {
+            width: 75%;
+            height: 70%;
+            margin: 0 auto;
+            position: absolute;
+            top: 3rem;
+            left: 0;
+            right: 0;
+        }
+
+        .instructions .content .char {
+            background-color: #D3964B;
+            padding: 8px;
+            font-size: 14px;
+            color: white;
+            font-family: "SourceHanSansCN-Bold";
+            font-weight: bold;
+            height: 23px;
+            float: left;
+        }
+
+        .instructions .content .jiao {
+            width: 0px;
+            height: 0px;
+            border-left: solid 15px #D3964B;
+            border-top: solid 20px transparent;
+            border-bottom: solid 20px transparent;
+            float: left;
+            margin-left: -1px;
+        }
+
+        .instructions .content ul {
+            width: 100%;
+            height: 88.4%;
+            margin-top: 80px;
+        }
+
+        .instructions .content ul li {
+            width: 100%;
+            height: 28%;
+            margin-bottom: 40px;
+        }
+
+        .instructions .content ul li .bigimg {
+            float: left;
+            overflow: hidden;
+        }
+
+        .instructions .content ul li .icon {
+            float: left;
+            margin-left: 20px;
+            margin-top: 17px;
+        }
+
+        .instructions .content li p {
+            margin-top: -155px;
+            margin-left: 202px;
+            font-size: 16px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+            line-height: 24px;
+            float: right;
+            text-indent: 1.8em;
+        }
+
+
+        .management .border {
+            height: 88.5%;
+            margin-top: -2px;
+            position: relative;
+        }
+
+        .management .border .content {
+            width: 80%;
+            height: 90%;
+            margin: 0 auto;
+            position: absolute;
+            top: 3rem;
+            left: 0;
+            right: 0;
+        }
+
+        .management .content .char {
+            background-color: #D3964B;
+            padding: 8px;
+            font-size: 14px;
+            color: white;
+            font-family: "SourceHanSansCN-Bold";
+            font-weight: bold;
+            height: 23px;
+            float: left;
+        }
+
+        .management .content .jiao {
+            width: 0px;
+            height: 0px;
+            border-left: solid 15px #D3964B;
+            border-top: solid 20px transparent;
+            border-bottom: solid 20px transparent;
+            float: left;
+            margin-left: -1px;
+        }
+
+        .management .content .con_big {
+            width: 100%;
+            height: 93%;
+            margin-top: 60px;
+        }
+
+        .management .content .con_big .con_top {
+            width: 100%;
+            height: 57%;
+            margin-bottom: 25px;
+        }
+
+        .management .content .con_big p {
+            font-size: 16px;
+            font-family: PingFangSC-Regular;
+            font-weight: 400;
+            color: rgba(211, 150, 75, 1);
+            line-height: 22px;
+        }
+
+        .management .content .con_top img {
+            margin-top: 20px;
+            margin-left: 130px;
+        }
+
+        .management .content .con_big .con_bom {
+            width: 100%;
+            height: 40%;
+            margin-bottom: 0px;
+        }
+
+        .management .content .report_chart {
+            background-color: #F3F4F6;
+            width: 100%;
+            height: 80%
+        }
+
+
+        .score .border {
+            height: 88.5%;
+            margin-top: -2px;
+            position: relative;
+        }
+
+        .score .border .content {
+            width: 80%;
+            height: 60%;
+            margin: 0 auto;
+            position: absolute;
+            top: 4rem;
+            left: 0;
+            right: 0;
+        }
+
+        .score .content p {
+            font-size: 16px;
+            font-family: PingFangSC-Regular;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+            line-height: 22px;
+        }
+
+        .score .content .con_top {
+            width: 100%;
+            margin-bottom: 6%;
+        }
+
+        .score .content .con_bom {
+            width: 100%;
+        }
+
+        .score .content table {
+            width: 100%;
+            background-color: #fff;
+            font-size: 14px;
+            font-family: PingFangSC-Medium;
+            font-weight: 500;
+            color: rgba(0, 0, 0, 0.85);
+            line-height: 45px;
+            margin-top: 20px;
+        }
+
+        .score .content table tr:nth-child(1) {
+            background-color: #ECECED;
+            border-bottom: none;
+        }
+
+        .score .content table tr {
+            border-bottom: 1px solid #E8E8E8;
+        }
+
+        .score .content table tr td {
+            padding-left: 30px;
+        }
+
+        .score .content .con_bom th {
+            padding-left: 25px;
+        }
+
+        .score .content .con_bom td {
+            padding-left: 34px;
+        }
+
+
+        .overview .border {
+            height: 88.5%;
+            margin-top: -2px;
+            position: relative;
+        }
+
+        .overview .border .content {
+            width: 80%;
+            height: 76%;
+            margin: 0 auto;
+            position: absolute;
+            top: 4rem;
+            left: 0;
+            right: 0;
+        }
+
+        .overview .content .char {
+            background-color: #D3964B;
+            padding: 8px;
+            font-size: 14px;
+            color: white;
+            font-family: "SourceHanSansCN-Bold";
+            font-weight: bold;
+            height: 23px;
+            float: left;
+        }
+
+        .overview .content .jiao {
+            width: 0px;
+            height: 0px;
+            border-left: solid 15px #D3964B;
+            border-top: solid 20px transparent;
+            border-bottom: solid 20px transparent;
+            float: left;
+            margin-left: -1px;
+        }
+
+        .overview .content p {
+            font-size: 16px;
+            font-family: PingFangSC-Regular;
+            font-weight: 400;
+            color: rgba(211, 150, 75, 1);
+            line-height: 22px;
+        }
+
+        .overview .content .con_top {
+            width: 100%;
+            height: 46%;
+            margin-top: 65px;
+            margin-bottom: 5%;
+        }
+
+        .overview .content .con_top .scanning {
+            width: 100%;
+            height: 80%;
+            background-color: #F3F4F6;
+        }
+
+        .overview .content .con_bom {
+            width: 100%;
+            height: 40%;
+        }
+
+        .overview .content .con_bom .ProsCons {
+            width: 100%;
+            height: 30%;
+            background-color: #E8E8E8;
+            margin-top: 22px;
+        }
+
+        .overview .content .ProsCons .pc_top {
+            width: 100%;
+            height: 50%;
+            border-bottom: 1px solid #c2c2c2;
+            display: inline-block;
+        }
+
+        .overview .content .ProsCons .pc_top .pctop_l {
+            width: 50%;
+            height: 100%;
+            float: left;
+            overflow: hidden;
+        }
+
+        .overview .content .ProsCons p {
+            font-size: 14px;
+            font-family: PingFangSC-Medium;
+            font-weight: bold;
+            color: rgba(0, 0, 0, 0.85);
+            line-height: 3em;
+            margin-left: 15px;
+        }
+
+        .overview .content .ProsCons .pc_top .pctop_r {
+            width: 50%;
+            height: 100%;
+            float: left;
+            overflow: hidden;
+        }
+
+        .overview .content .ProsCons .pc_bom {
+            width: 100%;
+            height: 50%;
+            display: inline-block;
+        }
+
+        .overview .content .ProsCons .pc_bom .pcbom_l {
+            width: 50%;
+            height: 100%;
+            float: left;
+            overflow: hidden;
+        }
+
+        .overview .content .ProsCons .pc_bom .pcbom_r {
+            width: 50%;
+            height: 100%;
+            float: left;
+            overflow: hidden;
+        }
+
+
+        .selfAssessment .border {
+            height: 88.5%;
+            margin-top: -2px;
+            position: relative;
+        }
+
+        .selfAssessment .border .content {
+            width: 87%;
+            height: 88%;
+            margin: 0 auto;
+            position: absolute;
+            top: 4rem;
+            left: 0;
+            right: 0;
+        }
+
+        .selfAssessment .content .char {
+            background-color: #D3964B;
+            padding: 8px;
+            font-size: 14px;
+            color: white;
+            font-family: "SourceHanSansCN-Bold";
+            font-weight: bold;
+            height: 23px;
+            float: left;
+        }
+
+        .selfAssessment .content .jiao {
+            width: 0px;
+            height: 0px;
+            border-left: solid 15px #D3964B;
+            border-top: solid 20px transparent;
+            border-bottom: solid 20px transparent;
+            float: left;
+            margin-left: -1px;
+        }
+
+        .selfAssessment .content .con_cen {
+            width: 100%;
+            height: 85%;
+            margin-top: 65px;
+        }
+
+        .selfAssessment .content .con_cen p {
+            font-size: 16px;
+            font-family: PingFangSC-Regular;
+            font-weight: 400;
+            color: rgba(211, 150, 75, 1);
+            line-height: 22px;
+            margin-bottom: 10px;
+        }
+
+        .selfAssessment .content .con_cen ul {
+            width: 100%;
+            height: 48%;
+            margin-bottom: 35px;
+        }
+
+        .selfAssessment .content .con_cen ul li {
+            width: 100%;
+            height: 18%;
+            position: relative;
+            border-left: 1px solid rgba(236, 236, 237, 1);
+            border-right: 1px solid rgba(236, 236, 237, 1);
+            vertical-align: top;
+            overflow: hidden;
+        }
+        .middle{
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 11px;
+        }
+        .height {
+            /* height: 25%; */
+        }
+        .selfAssessment .content .con_cen ul>li:nth-child(1) {
+            width: 100%;
+            height: 27%;
+            background-color: #f3f4f6;
+        }
+
+        .selfAssessment .content .con_cen ul li:nth-child(1) span {
+            font-size: 16px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            color: rgba(51, 51, 51, 1);
+            line-height: 24px;
+            position: absolute;
+            top: 18px;
+            left: 15px;
+            overflow: hidden;
+        }
+
+        .selfAssessment .content .con_cen ul li:nth-of-type(even) {
+            background-color: #f3f4f6;
+        }
+
+        .selfAssessment .content .con_cen ul li:nth-of-type(even) img {
+
+        }
+
+        .selfAssessment .content .con_cen .progress {
+            width: 67%;
+            height: 30px;
+            margin-top: 0px;
+            position: absolute;
+            top: 15px;
+            right: 0px;
+            overflow: hidden;
+        }
+
+        .selfAssessment .content .con_cen i {
+            float: left;
+            overflow: hidden;
+            margin-left: 9px;
+            margin-right: 5px;
+            font-size: 14px;
+            margin-top: 6px;
+            color: rgba(51, 51, 51, 1);
+        }
+
+        .selfAssessment .content .con_cen i:nth-of-type() {
+            margin-top: -23px;
+            margin-right: 15px;
+            float: right;
+            overflow: hidden;
+        }
+
+        .selfAssessment .content .color_r {
+            background-color: rgba(211, 75, 75, 1) !important;
+        }
+
+        .selfAssessment .content .color_y {
+            background-color: rgba(240, 175, 48, 1) !important;
+        }
+
+        .selfAssessment .content .color_g {
+            background-color: rgba(75, 211, 140, 1) !important;
+        }
+
+        .selfAssessment .content .con_cen .progress ul li {
+            background-color: rgba(196, 195, 195, 1);
+        }
+
+        .selfAssessment .content .con_cen .progress ul {
+            width: 93%;
+            height: 100%;
+        }
+
+        .selfAssessment .content .con_cen .progress ul li {
+            width: 18%;
+            float: left;
+            height: 100%;
+            margin-right: 1px;
+        }
+
+        .selfAssessment .content .con_cen ul li .font_size {
+           font-size: 14px;
+        }
+
+        .selfAssessment .content .con_cen ul li p {
+            display: inline-block;
+            padding-top: 10px;
+            color: rgba(51, 51, 51, 1);
+            width: 93%;
+          padding-left: 15px;
+        }
+
+
+        .heReview .border {
+            height: 88.5%;
+            margin-top: -2px;
+            position: relative;
+        }
+
+        .heReview .border .content {
+            width: 80%;
+            height: 90%;
+            margin: 0 auto;
+            position: absolute;
+            top: 1.5rem;
+            left: 0;
+            right: 0;
+        }
+
+        .heReview .content .char {
+            background-color: #D3964B;
+            padding: 8px;
+            font-size: 14px;
+            color: white;
+            font-family: "SourceHanSansCN-Bold";
+            font-weight: bold;
+            height: 23px;
+            float: left;
+        }
+
+        .heReview .content .jiao {
+            width: 0px;
+            height: 0px;
+            border-left: solid 15px #D3964B;
+            border-top: solid 20px transparent;
+            border-bottom: solid 20px transparent;
+            float: left;
+            margin-left: -1px;
+        }
+
+        .heReview .content .con_cen {
+            width: 100%;
+            height: 95%;
+            margin-top: 65px;
+        }
+
+        .heReview .content .con_cen p {
+            font-size: 16px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: bold;
+            color: rgba(51, 51, 51, 1);
+            line-height: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .heReview .content .con_cen table {
+            width: 100%;
+            height: 93%;
+            border: 1px solid #e8e8e8;
+        }
+
+        .heReview .content .con_cen tr {
+            border: 1px solid #e8e8e8;
+        }
+
+        .heReview .content .con_cen th {
+            border: 1px solid #e8e8e8;
+            font-size: 14px;
+            font-family: PingFangSC-Medium;
+            font-weight: bold;
+            color: rgba(0, 0, 0, 0.85);
+            line-height: 35px;
+            background-color: rgba(236, 236, 237, 1);
+        }
+
+        .heReview .content .con_cen td {
+            border: 1px solid #e8e8e8;
+            font-size: 14px;
+            font-family: PingFangSC-Regular;
+            font-weight: 400;
+            color: rgba(0, 0, 0, 0.65);
+            line-height: 21px;
+        }
+
+        .heReview .content .con_cen td:nth-child(1) {
+            padding-left: 15px;
+        }
+
+        .heReview .content .con_cen tr td:nth-child(3) {
+            text-align: center;
+        }
+
+        .heReview .content .con_cen tr td pre {
+            border-bottom: 1px solid #e8e8e8;
+            line-height: 26px;
+            margin-top: 0px;
+            padding: 6px;
+            width: 97%;
+            height: 25%;
+        }
+
+        .heReview .content .con_cen tr td:nth-child(3n) pre {
+            width: 90%;
+        }
+
+        .heReview .content .con_cen tr td pre:nth-child(4) {
+            border: none;
+        }
+
+        .heReview .content .con_cen tr td pre:nth-of-type(even) {
+            background-color: #f3f4f6;
+        }
+
+
+        .contrast .border {
+            height: 88.5%;
+            margin-top: -2px;
+            position: relative;
+        }
+
+        .contrast .border .content {
+            width: 80%;
+            height: 90%;
+            margin: 0 auto;
+            position: absolute;
+            top: 3rem;
+            left: 0;
+            right: 0;
+        }
+
+        .contrast .content .char {
+            background-color: #D3964B;
+            padding: 8px;
+            font-size: 14px;
+            color: white;
+            font-family: "SourceHanSansCN-Bold";
+            font-weight: bold;
+            height: 23px;
+            float: left;
+        }
+
+        .contrast .content .jiao {
+            width: 0px;
+            height: 0px;
+            border-left: solid 15px #D3964B;
+            border-top: solid 20px transparent;
+            border-bottom: solid 20px transparent;
+            float: left;
+            margin-left: -1px;
+        }
+
+        .contrast .content p {
+            margin-top: 10%;
+            font-size: 16px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+            line-height: 24px;
+            margin-bottom: 4%;
+        }
+
+        .contrast .content .line {
+            width: 100%;
+            height: 8px;
+            background-color: rgba(243, 244, 246, 1);
+            margin-top: 20px;
+        }
+
+        .contrast .content .sm_title {
+            font-size: 16px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            color: rgba(120, 120, 120, 1);
+            line-height: 24px;
+            margin: -12px 240px;
+            width: 152px;
+        }
+
+        .contrast .content .sm_title .zjiao {
+            width: 0;
+            height: 0;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-top: 11px solid rgba(211, 150, 75, 1);
+            float: left;
+            margin-right: 9px;
+            margin-top: 8px;
+        }
+
+        .contrast .content .con_bom {
+            width: 100%;
+            height: 36%;
+            margin-top: 3%;
+        }
+
+        .contrast .content .con_bom .results {
+            width: 48%;
+            height: 47%;
+            background-color: rgba(236, 236, 237, 1);
+            float: left;
+            margin-bottom: 3%;
+        }
+
+        .contrast .content .con_bom .results p {
+            margin-top: 15px;
+            margin-left: 20px;
+            font-size: 16px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            color: rgba(211, 150, 75, 1);
+            line-height: 24px;
+        }
+
+        .contrast .content .con_bom .results pre {
+            margin-top: 15px;
+            margin-left: 20px;
+        }
+
+        .contrast .content .con_bom .results .zw {
+            font-size: 16px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            color: rgba(120, 120, 120, 1);
+            line-height: 18px;
+        }
+
+        .contrast .content .con_bom .results .cont {
+            align-items: center;
+            height: 100px;
+            width: 100%;
+            column-count: 1;
+        }
+
+        .contrast .content .con_bom .results .con {
+            font-size: 16px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: bold;
+            color: rgba(51, 51, 51, 1);
+            line-height: 23px;
+            margin-left: 19px;
+            width: 22%;
+            height: 23%;
+        }
+
+        .contrast .content .con_bom .results .cont li:nth-child(5) {
+            margin-left: -210px;
+        }
+
+        .contrast .content .con_bom .results .cont li:nth-child(6) {
+            margin-left: -210px;
+        }
+
+        .contrast .content .con_bom .results .cont li:nth-child(7) {
+            margin-left: -210px;
+        }
+
+        .contrast .content .con_bom .results .cont li:nth-child(8) {
+            margin-left: -210px;
+        }
+
+        .contrast .content .con_bom .results .cont li:nth-child(9) {
+            margin-left: -438px;
+        }
+
+        .contrast .content .con_bom .results .cont li:nth-child(10) {
+            margin-left: -438px;
+        }
+
+
+        .advic .border {
+            height: 88.5%;
+            margin-top: -2px;
+            position: relative;
+        }
+
+        .advic .border .content {
+            width: 80%;
+            height: 70%;
+            margin: 0 auto;
+            position: absolute;
+            top: 3rem;
+            left: 0;
+            right: 0;
+        }
+
+        .advic .content p {
+            font-size: 16px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+            line-height: 24px;
+            margin-bottom: 20px;
+        }
+
+        .advic .content td p {
+            font-size: 14px;
+            font-family: PingFangSC-Regular;
+            font-weight: 400;
+            color: rgba(0, 0, 0, 0.65);
+            line-height: 21px;
+            padding-left: 16px;
+            width: 93%;
+            padding-top: 5px;
+        }
+
+        .advic .content table {
+            width: 100%;
+            height: 90%;
+        }
+
+        .advic .content table tr:nth-child(1) {
+            height: 7%;
+            font-size: 14px;
+            font-family: PingFangSC-Medium;
+            font-weight: bold;
+            color: rgba(0, 0, 0, 0.85);
+            line-height: 21px;
+            border: 1px solid #e8e8e8;
+            background-color: rgba(236, 236, 237, 1);
+        }
+
+        .advic .content table tr td {
+            border: 1px solid #e8e8e8;
+        }
+
+        .advic .content table tr td:nth-child(2) {
+            width: 80%;
+            border: 1px solid #e8e8e8;
+        }
+
+        .advic .content table tr td:nth-child(1) {
+            font-size: 14px;
+            font-family: PingFangSC-Regular;
+            font-weight: 400;
+            color: rgba(0, 0, 0, 0.65);
+            line-height: 21px;
+            padding-left: 20px;
+            border: 1px solid #e8e8e8;
+        }
+
+        .advic .content table tr td .num {
+            float: left;
+            overflow: hidden;
+            margin-top: 11px;
+            
+        }
+
+        .advic .content table tr td .wenzi {
+            float: left;
+            margin-top: -48px;
+            overflow: hidden;
+            margin-left: 17px;
+        }
+    </style>
+</head>
+
+<body body class="A4">
+    <section class="index sheet">
+        <img src="./img/TheHighLevel_picture01.png" style="margin-top:-10px;">
+        <div class="userInfo">
+            <ul>
+                <li>
+                    <span>姓名：</span>
+                    <span id="Name">张菊花</span>
+                </li>
+                <li>
+                    <span>性别：</span>
+                    <span id="Gender">女</span>
+                </li>
+                <li>
+                    <span>年龄：</span>
+                    <span id="Age">18岁</span>
+                </li><br>
+                <li>
+                    <span>测试时间：</span>
+                    <span id="TestTime"></span>
+                </li>
+            </ul>
+        </div>
+        <img src="./img/TheHighLevel_picture06.png" style="height: 10%;margin-top: -1mm;">
+    </section>
+
+    <section class="directory sheet">
+        <img src="./img/TheHighLevel_picture02.png" style="width: 101%; margin-top: -10px;" alt="">
+        <div class="explain">
+            <ul>
+                <li>
+                    <div class="content">
+                        <span>报告导语</span><br>
+                        <span>报告阅读说明及管理能力测评模型介绍</span>
+                    </div>
+                    <p>1</p>
+                </li>
+                <li>
+                    <div class="content">
+                        <span>能力肖像及分析</span><br>
+                        <span>能力情况总览 <br>能力维度详析——自评<br>能力维度详析——他评<br>能力对比分析</span>
+                    </div>
+                    <p>4</p>
+                </li>
+                <li>
+                    <div class="content">
+                        <span>个人能力发展建议</span><br>
+                        <span>个人能力优劣分析及个人发展建议</span>
+                    </div>
+                    <p>12</p>
+                </li>
+            </ul>
+        </div>
+        <img src="./img/TheHighLevel_picture07.png" style="width: 101%" alt="">
+    </section>
+
+    <section class="instructions sheet">
+        <img src="./img/TheHighLevel_picture02.png" alt="">
+        <div class="border">
+            <div class="content">
+                <div class="char">报告阅读说明</div>
+                <div class="jiao"></div>
+                <ul>
+                    <li>
+                        <img class="bigimg" src="./img/TheHighLevel_Img03.png" alt="">
+                        <img class="icon" src="./img/TheHighLevel_icon_01.png" alt="">
+                        <p>本报告如实地反映被评估人本人和他人的评估结果。它可以帮助被评估人更好地理解并有效运用测评的结果。这些结果是根据评估人对被评估人日常工作表现如实的观察得出的，能反映被评估人在各个管理能力上的真实水平。</p>
+                    </li>
+                    <li>
+                        <img class="bigimg" src="./img/TheHighLevel_Img02.png" alt="">
+                        <img class="icon" src="./img/TheHighLevel_icon_01.png" alt="">
+                        <p>报告旨在帮助被评估人更好地识别自身的优势和不足，促使其进一步提高和发展管理能力，进而提升组织的竞争力。同时基于评估结果，报告提出针对性的发展建议，帮助被评估人制定具体的行动计划，促使其向更积极的方向转变。</p>
+                    </li>
+                    <li>
+                        <img class="bigimg" src="./img/TheHighLevel_Img01.png" alt="">
+                        <img class="icon" src="./img/TheHighLevel_icon_01.png" alt="">
+                        <p> 此报告的准确度取决于评估人回答问题的真诚及其对被评估人的认识程度。</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <img src="./img/TheHighLevel_picture07 (1).png" alt="">
+    </section>
+
+    <section class="management sheet">
+        <img src="./img/TheHighLevel_picture02（1）.png" alt="">
+        <div class="border">
+            <div class="content">
+                <div class="char">管理能力测评模型</div>
+                <div class="jiao"></div>
+                <div class="con_big">
+                    <div class="con_top">
+                        <p>一、测评模型介绍</p>
+                        <p style="margin-top:10px;color: rgba(51,51,51,1);line-height: 24px;">结合格略研究院多年管理者能力模型构建与测评经验，构建出以下模型，包含十大能力素质，具体如下图。本次测评将围绕此管理能力模型进行评估。</p>
+                        <img src="./img/TheHighLevel_img04.png" alt="">
+                    </div>
+                    <div class="con_bom">
+                        <p>二、报告图表及符号示意</p>
+                        <p style="color: rgba(51,51,51,1);margin-top: 10px;margin-bottom: 10px;">1、您的整体表现可展示您各项管理能力水平，该总体表现在本报告中用柱状图加以表示。</p>
+                        <div class="report_chart">
+                            <img src="./img/TheHighLevel_img_05.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/TheHighLevel_picture07（2）.png" alt="">
+    </section>
+
+    <section class="score sheet">
+        <img src="./img/TheHighLevel_picture02（2）.png" alt="">
+        <div class="border">
+            <div class="content">
+                <div class="con_top">
+                    <p>2、报告中的勾号、圆圈和叉号表示您的行为方式可能产生正面或负面的影响。</p>
+                    <table>
+                        <tr>
+                            <th>符号</th>
+                            <th>简短说明</th>
+                            <th>定义</th>
+                        </tr>
+                        <tr>
+                            <td><img src="./img/TheHighLevel_icon_02.png" alt=""></td>
+                            <td>可能的强项</td>
+                            <td>可能产生正面影响</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./img/TheHighLevel_icon_03.png" alt=""></td>
+                            <td>一般</td>
+                            <td>可能不产生正面影响或负面影响</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./img/TheHighLevel_icon_04.png" alt=""></td>
+                            <td>可能的弱项</td>
+                            <td>可能产生负面影响</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="con_bom">
+                    <p>3、报告中的分值1-5分，表示他人对您每种行为出现频次的评估。</p>
+                    <table>
+                        <tr>
+                            <th>符号</th>
+                            <th>简短说明</th>
+                            <th>定义</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>非常不符合</td>
+                            <td>可能很少情况下表现出题目描述的行为</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>较不符合</td>
+                            <td>可能较少情况下表现出题目描述的行为</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>较符合</td>
+                            <td>可能较多情况下表现出题目描述的行为</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>非常符合</td>
+                            <td>可能很多情况下表现出题目描述的行为</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>完全符合</td>
+                            <td>可能总是表现出题目描述的行为，是这方面的行为典范，已形成习惯</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <img src="./img/TheHighLevel_picture07（3）.png" alt="">
+    </section>
+
+    <section class="overview sheet">
+        <img src="./img/TheHighLevel_picture02（3）.png" alt="">
+        <div class="border">
+            <div class="content">
+                <div class="char">能力情况总览</div>
+                <div class="jiao"></div>
+                <div class="con_top">
+                    <p>一、能力整体扫描</p>
+                    <p style="margin-top: 10px;color: #333;margin-bottom: 15px;">您在各项能力指标上的得分概况如下图，包括自评分、他评分。</p>
+                    <div class="scanning" id="scanning">
+
+                    </div>
+                </div>
+                <div class="con_bom">
+                    <p>二、能力优势和待发展</p>
+                    <p style="margin-top: 10px;color: #333;margin-bottom: 10px;">根据您自评和他评情况，判断该您自认为的相对优势和劣势能力，以及他人认为您存在的相对优势能力和劣势能力。</p>
+                    <div class="ProsCons">
+                        <div class="pc_top">
+                            <div class="pctop_l">
+                                <p>自我评价相对优势能力</p>
+                            </div>
+                            <div class="pctop_r">
+                                <p>他人评价相对优势能力</p>
+                            </div>
+                        </div>
+                        <div class="pc_bom">
+                            <div class="pcbom_l">
+                                <p id="self_adv" style="color:#555;font-weight: 400;">客户导向 积极进取</p>
+                            </div>
+                            <div class="pcbom_r">
+                                <p id="other_adv" style="color:#555;font-weight: 400;">资源整合 客户导向</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ProsCons">
+                        <div class="pc_top">
+                            <div class="pctop_l">
+                                <p>自我评价相对劣势能力</p>
+                            </div>
+                            <div class="pctop_r">
+                                <p>他人评价相对劣势能力</p>
+                            </div>
+                        </div>
+                        <div class="pc_bom">
+                            <div class="pcbom_l">
+                                <p id="self_ids" style="color:#555;font-weight: 400;">勇于承担 创新优化</p>
+                            </div>
+                            <div class="pcbom_r">
+                                <p id="other_ids" style="color:#555;font-weight: 400;">勇于承担 创新优化</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/TheHighLevel_picture07（4）.png" alt="">
+    </section>
+
+    <section class="selfAssessment sheet">
+        <img src="./img/TheHighLevel_picture02（3）.png" alt="">
+        <div class="border">
+            <div class="content">
+                <div class="char">能力各维度详析——自评</div>
+                <div class="jiao"></div>
+                <div class="con_cen">
+                    <p>一、能力整体扫描</p>
+                    <p style="color:rgba(51, 51, 51, 1)">通过自我评估可以帮助您掌握自己的优势与不足，发现自我认知的偏差，促进自省，更有针对性的提升。下面是您在各项能力指标上的自我评价结果。</p>
+                    <ul>
+                        <li>
+                            <span>积极进取</span>
+                            <div class="progress">
+                                <i>低</i>
+                                <ul>
+                                    <li class="color_r"></li>
+                                    <li class="color_r"></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <i style="margin-top: -59px;margin-right: 15px;float: right;overflow: hidden;">高</i>
+                            </div>
+                            <p id="pos_self" style="padding-top: 48px;padding-left: 15px;color: rgba(51, 51, 51, 1);">能够从自我价值实现的角度实现高标准、具有挑战性的目标，不断自我激励，寻求各种方法努力获得成功。</p>
+                        </li>
+                        <div id="agg" class="height"></div>
+                    </ul>
+
+                    <ul>
+                        <li>
+                            <span>勇于承担</span>
+                            <div class="progress">
+                                <i>低</i>
+                                <ul>
+                                    <li class="color_y"></li>
+                                    <li class="color_y"></li>
+                                    <li class="color_y"></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <i style="margin-top: -59px;margin-right: 15px;float: right;overflow: hidden;">高</i>
+                            </div>
+                            <p id="cou_self" style="padding-top: 48px;padding-left: 15px;color: rgba(51, 51, 51, 1);">始终立足公司发展的大局，积极地看待转型发展中的问题并敢于负责、主动承担、季节奉献，能包容，善团结。</p>
+                        </li>
+                        <div id="courage" class="height"></div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <img src="./img/TheHighLevel_picture07（5）.png" alt="">
+    </section>
+
+    <section class="selfAssessment sheet">
+        <img src="./img/TheHighLevel_picture02（3）.png" alt="">
+        <div class="border">
+            <div class="content" style="top: 0em;">
+                <div class="con_cen">
+                    <ul style="margin-bottom: 55px;">
+                        <li>
+                            <span>正直诚信</span>
+                            <div class="progress">
+                                <i>低</i>
+                                <ul>
+                                    <li class="color_g"></li>
+                                    <li class="color_g"></li>
+                                    <li class="color_g"></li>
+                                    <li class="color_g"></li>
+                                    <li></li>
+                                </ul>
+                                <i style="margin-top: -59px;margin-right: 15px;float: right;overflow: hidden;">高</i>
+                            </div>
+                            <p id="fai_self" style="padding-top: 48px;padding-left: 15px;color: rgba(51, 51, 51, 1);">坚持从客观事实出发，公平公正，坚持原则，不畏权威，言行一致，推动坦诚信任的组织文化建设。</p>
+                        </li>
+                        <div id="faith" class="height"></div>
+                    </ul>
+
+                    <ul style="margin-bottom: 55px;">
+                        <li>
+                            <span>系统思维</span>
+                            <div class="progress">
+                                <i>低</i>
+                                <ul>
+                                    <li class="color_y"></li>
+                                    <li class="color_y"></li>
+                                    <li class="color_y"></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <i style="margin-top: -59px;margin-right: 15px;float: right;overflow: hidden;">高</i>
+                            </div>
+                            <p id="thin_self" style="padding-top: 48px;padding-left: 15px;color: rgba(51, 51, 51, 1);">立足公司战略定位，洞察行业发展的趋势，系统分析业务发展的各种因素，把握本质并结合实际，形成整体判断和系统性的策略安排。</p>
+                        </li>
+                        <div id="thinking" class="height"></div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <img src="./img/TheHighLevel_picture07（6）.png" alt="">
+    </section>
+
+    <section class="selfAssessment sheet">
+        <img src="./img/TheHighLevel_picture02（3）.png" alt="">
+        <div class="border">
+            <div class="content" style="top:0em">
+                <div class="con_cen">
+                    <ul style="margin-bottom: 55px;">
+                        <li>
+                            <span>客户导向</span>
+                            <div class="progress">
+                                <i>低</i>
+                                <ul>
+                                    <li class="color_r"></li>
+                                    <li class="color_r"></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <i style="margin-top: -59px;margin-right: 15px;float: right;overflow: hidden;">高</i>
+                            </div>
+                            <p id="cus_self" style="padding-top: 48px;padding-left: 15px;color: rgba(51, 51, 51, 1);">能够积极关注并有效识别客户的真实需求，采取有效行动并建立良好的客户互动关系。</p>
+                        </li>
+                        <div id="customer" class="height"></div>
+                    </ul>
+
+                    <ul style="margin-bottom: 55px;">
+                        <li>
+                            <span>创新优化</span>
+                            <div class="progress">
+                                <i>低</i>
+                                <ul>
+                                    <li class="color_g"></li>
+                                    <li class="color_g"></li>
+                                    <li class="color_g"></li>
+                                    <li class="color_g"></li>
+                                    <li class="color_g"></li>
+                                </ul>
+                                <i style="margin-top: -59px;margin-right: 15px;float: right;overflow: hidden;">高</i>
+                            </div>
+                            <p id="opt_self" style="padding-top: 48px;padding-left: 15px;color: rgba(51, 51, 51, 1);">敢于打破常规，接纳并进行主动创新，善于从不同的角度提出新颖的问题解决方法，推进问题得到改善。</p>
+                        </li>
+                        <div id="optimize" class="height"></div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <img src="./img/TheHighLevel_picture07（7）.png" alt="">
+    </section>
+
+    <section class="selfAssessment sheet">
+        <img src="./img/TheHighLevel_picture02（3）.png" alt="">
+        <div class="border">
+            <div class="content" style="top:0em">
+                <div class="con_cen">
+                    <ul style="margin-bottom: 55px;">
+                        <li>
+                            <span>变革管理</span>
+                            <div class="progress">
+                                <i>低</i>
+                                <ul>
+                                    <li class="color_y"></li>
+                                    <li class="color_y"></li>
+                                    <li class="color_y"></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <i style="margin-top: -59px;margin-right: 15px;float: right;overflow: hidden;">高</i>
+                            </div>
+                            <p id="man_self" style="padding-top: 48px;padding-left: 15px;color: rgba(51, 51, 51, 1);">能够积极识别和寻求变革的机会和阻力，并为取得建设性的、有益的结果激发变革共识、制定系统计划并主导推进和有效地控制变化。</p>
+                        </li>
+                        <div id="management" class="height"></div>
+                    </ul>
+
+                    <ul style="margin-bottom: 55px;">
+                        <li>
+                            <span>团队领导</span>
+                            <div class="progress">
+                                <i>低</i>
+                                <ul>
+                                    <li class="color_g"></li>
+                                    <li class="color_g"></li>
+                                    <li class="color_g"></li>
+                                    <li class="color_g"></li>
+                                    <li class="color_g"></li>
+                                </ul>
+                                <i style="margin-top: -59px;margin-right: 15px;float: right;overflow: hidden;">高</i>
+                            </div>
+                            <p id="lead_self" style="padding-top: 48px;padding-left: 15px;color: rgba(51, 51, 51, 1);">通过有效的机制和方法进行团队价值观的引导、目标整合、信任建立、潜能激发，塑造优秀的团队文化，推动团队高绩效实现。</p>
+                        </li>
+                        <div id="lead" class="height"></div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <img src="./img/TheHighLevel_picture07（8）.png" alt="">
+    </section>
+
+    <section class="selfAssessment sheet">
+        <img src="./img/TheHighLevel_picture02（3）.png" alt="">
+        <div class="border">
+            <div class="content" style="top:0em">
+                <div class="con_cen">
+                    <ul style="margin-bottom: 55px;">
+                        <li>
+                            <span>跨界协同</span>
+                            <div class="progress">
+                                <i>低</i>
+                                <ul>
+                                    <li class="color_g"></li>
+                                    <li class="color_g"></li>
+                                    <li class="color_g"></li>
+                                    <li class="color_g"></li>
+                                    <li></li>
+                                </ul>
+                                <i style="margin-top: -59px;margin-right: 15px;float: right;overflow: hidden;">高</i>
+                            </div>
+                            <p id="cro_self" style="padding-top: 48px;padding-left: 15px;color: rgba(51, 51, 51, 1);">立足公司整体并从流程协同的角度主动打破边界、换位沟通并通力合作，出现分歧时能寻求整合解决，建立组织协同优势。</p>
+                        </li>
+                        <div id="crossover" class="height"></div>
+                    </ul>
+
+                    <ul style="margin-bottom: 55px;">
+                        <li>
+                            <span>资源整合</span>
+                            <div class="progress">
+                                <i>低</i>
+                                <ul>
+                                    <li class="color_g"></li>
+                                    <li class="color_g"></li>
+                                    <li class="color_g"></li>
+                                    <li class="color_g"></li>
+                                    <li></li>
+                                </ul>
+                                <i style="margin-top: -59px;margin-right: 15px;float: right;overflow: hidden;">高</i>
+                            </div>
+                            <p id="int_self" style="padding-top: 48px;padding-left: 15px;color: rgba(51, 51, 51, 1);">立足价值链的协同，从增加和创造商业价值的角度，通过合理的方式和机制获取资源，并进行有效配置以实现资源价值最大化。</p>
+                        </li>
+                        <div id="integration" class="height"></div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <img src="./img/TheHighLevel_picture07（9）.png" alt="">
+    </section>
+
+    <section class="heReview sheet">
+        <img src="./img/TheHighLevel_picture02（3）.png" alt="">
+        <div class="border">
+            <div class="content">
+                <div class="char">能力各维度详析——他评</div>
+                <div class="jiao"></div>
+                <div class="con_cen">
+                    <p>通过他人评估，可帮助您看到自己视线所不及的地方，下面是您在各指标上的他评得分。</p>
+                    <table>
+                        <tr>
+                            <th>能力</th>
+                            <th>行为</th>
+                            <th>评分结果</th>
+                        </tr>
+                        <tr id="positive"></tr>
+                        <tr id="bear"></tr>
+                        <tr id="integrity"></tr>
+                        <tr id="system"></tr>
+                        <tr id="guide"></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <img src="./img/TheHighLevel_picture07（10）.png" alt="">
+    </section>
+
+    <section class="heReview sheet">
+        <img src="./img/TheHighLevel_picture02（3）.png" alt="">
+        <div class="border">
+            <div class="content">
+                <div class="con_cen" style="margin-top: 30px;">
+                    <table>
+                        <tr>
+                            <th>能力</th>
+                            <th>行为</th>
+                            <th>评分结果</th>
+                        </tr>
+                        <tr id="innovate"></tr>
+                        <tr id="change"></tr>
+                        <tr id="team"></tr>
+                        <tr id="synergy"></tr>
+                        <tr id="resources"></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <img src="./img/TheHighLevel_picture07（11）.png" alt="">
+    </section>
+
+    <section class="contrast sheet">
+        <img src="./img/TheHighLevel_picture02（3）.png" alt="">
+        <div class="border">
+            <div class="content">
+                <div class="char">能力对比</div>
+                <div class="jiao"></div>
+                <p>按照他评与自评的高低，将不同指标划分到待发展共识区、盲区、潜能区、优势共识区，对于不同区域指标，有不同的发展策略。</p>
+                <img style="margin-left: 40px;" src="./img/TheHighLevel_img_06.png" alt="">
+                <p class="line"></p>
+                <div class="sm_title">
+                    <div class="zjiao"></div>
+                    您的能力对比结果
+                </div>
+                <div class="con_bom">
+                    <div class="results potential" style="margin-right: 25px;" id="potential">
+                        <p>潜能区</p>
+                        <!-- 暂无 -->
+                    </div>
+                    <div class="results advantage" id="advantage">
+                        <p>优势共识区</p>
+                       <!-- 暂无 -->
+
+                    </div>
+                    <div class="results develop" style="margin-right: 25px;" id="develop">
+                        <p>待发展共识区</p>
+                        <!-- 渲染 -->
+
+                    </div>
+                    <div class="results blindSpots" id="blindSpots">
+                        <p>盲点</p>
+                        <!-- 渲染 -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./img/TheHighLevel_picture07（12）.png" alt="">
+    </section>
+
+    <section class="advic sheet">
+        <img src="./img/TheHighLevel_picture02（4）.png" alt="">
+        <div class="border">
+            <div class="content">
+                <p>根据能力对比分析，在管理者10条能力素质中您应该重点关注被列入“盲点”和“待发展共识区”的能力素质。以下建议供您参考，塑造更好的自己。</p>
+                <table>
+                    <tr style="height: 45px;">
+                        <th>提升能力</th>
+                        <th>个人发展建议</th>
+                    </tr>
+                    <tr>
+                        <td>团队领导</td>
+                        <td>
+                            <p class="num">1、</p>
+                            <p class="wenzi">总结过往工作中，不同运作效率的团队对部门目标达成的作用，加强对团队的运作效率的了解和支持；</p>
+
+                            <p class="num">2、</p>
+                            <p class="wenzi">结合员工的能力现状和工作任务内容才能做到人岗匹配，达到效能的最大化，授权结束后也不能代表我们领导者工作的结束，还需要进行及时的跟进辅导，才能确保各项工作任务的有序开展；</p>
+
+                            <p class="num">3、</p>
+                            <p class="wenzi">为了提升团队的整体效能，作为团队的领导者，很有必要为团队创造多种形式的交流、分享、学习的平台，促进整个团队能力提升；</p>
+
+                            <p class="num">4、</p>
+                            <p class="wenzi">确定团队文化的方向，并积极的宣导团队愿景，巩固团队的凝聚力，激发团队自主效率。</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>跨界协同</td>
+                        <td>
+                            <p class="num">1、</p>
+                            <p class="wenzi">总结过往工作中，不同运作效率的团队对部门目标达成的作用，加强对团队的运作效率的了解和支持；</p>
+
+                            <p class="num">2、</p>
+                            <p class="wenzi">结合员工的能力现状和工作任务内容才能做到人岗匹配，达到效能的最大化，授权结束后也不能代表我们领导者工作的结束，还需要进行及时的跟进辅导，才能确保各项工作任务的有序开展；</p>
+
+                            <p class="num">3、</p>
+                            <p class="wenzi">为了提升团队的整体效能，作为团队的领导者，很有必要为团队创造多种形式的交流、分享、学习的平台，促进整个团队能力提升；</p>
+
+                            <p class="num">4、</p>
+                            <p class="wenzi">确定团队文化的方向，并积极的宣导团队愿景，巩固团队的凝聚力，激发团队自主效率。</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>资源整合</td>
+                        <td>
+                            <p>资源整合是组织发展的必然趋势，首先您必须清晰并坚持组织在目标意愿的战略规划，其次您需要从长远的角度考量不同资源相互协调配合所产生的效益，以打造提升组织效能的资源体系。</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <img src="./img/TheHighLevel_picture07（13）.png" alt="">
+    </section>
+
+    <section class="footer sheet">
+        <img src="./img/TheHighLevel_picture05 (1).png" alt="">
+    </section>
+</body>
+
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.2.1/echarts.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<script>
+
+    $.ajax({
+        url: 'http://admin.yx.iwedoing.com/api/client/v1/front/report/data/',
+        type: 'POST',
+        data: {
+            people_result_id: 633535,
+            // people_result_id: this.people_result_id,
+            report_type_id: 'MC2019'
+        },
+        dataType: 'json',
+        success: function (res) {
+
+            let data = res;
+            console.log(data)
+
+            if (data.code == 0) {
+                let result = data.detail.report_data.msg;
+                console.log(result)
+                AddDom(result)
+                //_this.AddDom(result);
+            } else {
+                alert('请求数据有误')
+            }
+        }
+    })
+
+    function AddDom(data) {
+
+        $('#Name').text(data.Name)
+        $('#Age').text(data.Age)
+        $('#Gender').text(data.Gender)
+        $('#TestTime').text(data.TestTime)
+
+        $('#self_adv').text(data.analysis['自我评价相对优势能力'])
+        $('#self_ids').text(data.analysis['自我评价相对劣势能力'])
+        $('#other_adv').text(data.analysis['他人评价相对优势能力'])
+        $('#other_ids').text(data.analysis['他人评价相对劣势能力'])
+
+        // 自评
+        $('#pos_self').text(data.details_self['积极进取'].desc)
+        var memo1 = data.details_self['积极进取'].memo
+        let fathagg = $('#agg');
+        for(var i of memo1) {
+            let liList = $('<li></li>')
+            if(i[0] == 'H') {
+                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_02.png" alt=""></div>')
+                liList.append(imgS)
+                let P = $('<p class="font_size">'+i[1]+'</P>')
+                liList.append(P)
+                fathagg.append(liList)
+
+            } else if(i[0] == 'M') {
+                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_03.png" alt=""></div>')
+                liList.append(imgS)
+                let P = $('<p class="font_size">'+i[1]+'</P>')
+                liList.append(P)    
+                fathagg.append(liList)
+
+            } else if(i[0] == 'L') {
+                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_04.png" alt=""></div>')
+                liList.append(imgS)
+                let P = $('<p class="font_size">'+i[1]+'</P>')
+                liList.append(P)
+                fathagg.append(liList)
+            }   
+        }
+
+
+        $('#cou_self').text(data.details_self['勇于承担'].desc)
+        var memo1 = data.details_self['勇于承担'].memo
+        let fathcou = $('#courage');
+        for(var i of memo1) {
+            let liList = $('<li></li>')
+            if(i[0] == 'H') {
+                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_02.png" alt=""></div>')
+                liList.append(imgS)
+                let P = $('<p class="font_size">'+i[1]+'</P>')
+                liList.append(P)
+                fathcou.append(liList)
+
+            } else if(i[0] == 'M') {
+                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_03.png" alt=""></div>')
+                liList.append(imgS)
+                let P = $('<p class="font_size">'+i[1]+'</P>')
+                liList.append(P)    
+                fathcou.append(liList)
+
+            } else if(i[0] == 'L') {
+                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_04.png" alt=""></div>')
+                liList.append(imgS)
+                let P = $('<p class="font_size">'+i[1]+'</P>')
+                liList.append(P)
+                fathcou.append(liList)
+            }   
+        }
+
+
+        $('#fai_self').text(data.details_self['正直诚信'].desc)
+        var memo1 = data.details_self['正直诚信'].memo
+        let fathfai = $('#faith');
+        for(var i of memo1) {
+            let liList = $('<li></li>')
+            if(i[0] == 'H') {
+                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_02.png" alt=""></div>')
+                liList.append(imgS)
+                let P = $('<p class="font_size">'+i[1]+'</P>')
+                liList.append(P)
+                fathfai.append(liList)
+
+            } else if(i[0] == 'M') {
+                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_03.png" alt=""></div>')
+                liList.append(imgS)
+                let P = $('<p class="font_size">'+i[1]+'</P>')
+                liList.append(P)    
+                fathfai.append(liList)
+
+            } else if(i[0] == 'L') {
+                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_04.png" alt=""></div>')
+                liList.append(imgS)
+                let P = $('<p class="font_size">'+i[1]+'</P>')
+                liList.append(P)
+                fathfai.append(liList)
+            }   
+        }
+
+        $('#thin_self').text(data.details_self['系统思维'].desc)
+        var memo1 = data.details_self['系统思维'].memo
+        let faththin = $('#thinking');
+        for(var i of memo1) {
+            let liList = $('<li></li>')
+            if(i[0] == 'H') {
+                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_02.png" alt=""></div>')
+                liList.append(imgS)
+                let P = $('<p class="font_size">'+i[1]+'</P>')
+                liList.append(P)
+                faththin.append(liList)
+
+            } else if(i[0] == 'M') {
+                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_03.png" alt=""></div>')
+                liList.append(imgS)
+                let P = $('<p class="font_size">'+i[1]+'</P>')
+                liList.append(P)    
+                faththin.append(liList)
+
+            } else if(i[0] == 'L') {
+                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_04.png" alt=""></div>')
+                liList.append(imgS)
+                let P = $('<p class="font_size">'+i[1]+'</P>')
+                liList.append(P)
+                faththin.append(liList)
+            }   
+        }
+
+
+        $('#cus_self').text(data.details_self['客户导向'].desc)
+        var memo1 = data.details_self['客户导向'].memo
+        let fathcus = $('#customer');
+        for(var i of memo1) {
+            let liList = $('<li></li>')
+            if(i[0] == 'H') {
+                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_02.png" alt=""></div>')
+                liList.append(imgS)
+                let P = $('<p class="font_size">'+i[1]+'</P>')
+                liList.append(P)
+                fathcus.append(liList)
+
+            } else if(i[0] == 'M') {
+                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_03.png" alt=""></div>')
+                liList.append(imgS)
+                let P = $('<p class="font_size">'+i[1]+'</P>')
+                liList.append(P)    
+                fathcus.append(liList)
+
+            } else if(i[0] == 'L') {
+                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_04.png" alt=""></div>')
+                liList.append(imgS)
+                let P = $('<p class="font_size">'+i[1]+'</P>')
+                liList.append(P)
+                fathcus.append(liList)
+            }   
+        }
+
+
+        $('#opt_self').text(data.details_self['创新优化'].desc)
+        var memo1 = data.details_self['创新优化'].memo
+        let fathopt = $('#optimize');
+        for(var i of memo1) {
+            let liList = $('<li></li>')
+            if(i[0] == 'H') {
+                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_02.png" alt=""></div>')
+                liList.append(imgS)
+                let P = $('<p class="font_size">'+i[1]+'</P>')
+                liList.append(P)
+                fathopt.append(liList)
+
+            } else if(i[0] == 'M') {
+                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_03.png" alt=""></div>')
+                liList.append(imgS)
+                let P = $('<p class="font_size">'+i[1]+'</P>')
+                liList.append(P)    
+                fathopt.append(liList)
+
+            } else if(i[0] == 'L') {
+                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_04.png" alt=""></div>')
+                liList.append(imgS)
+                let P = $('<p class="font_size">'+i[1]+'</P>')
+                liList.append(P)
+                fathopt.append(liList)
+            }   
+        }
+
+
+        $('#man_self').text(data.details_self['变革推动'].desc)
+        var memo1 = data.details_self['变革推动'].memo
+        let fathman = $('#management');
+        for(var i of memo1) {
+            let liList = $('<li></li>')
+            if(i[0] == 'H') {
+                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_02.png" alt=""></div>')
+                liList.append(imgS)
+                let P = $('<p class="font_size">'+i[1]+'</P>')
+                liList.append(P)
+                fathman.append(liList)
+
+            } else if(i[0] == 'M') {
+                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_03.png" alt=""></div>')
+                liList.append(imgS)
+                let P = $('<p class="font_size">'+i[1]+'</P>')
+                liList.append(P)    
+                fathman.append(liList)
+
+            } else if(i[0] == 'L') {
+                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_04.png" alt=""></div>')
+                liList.append(imgS)
+                let P = $('<p class="font_size">'+i[1]+'</P>')
+                liList.append(P)
+                fathman.append(liList)
+            }   
+        }
+
+
+        $('#lead_self').text(data.details_self['团队领导'].desc)
+        var memo1 = data.details_self['团队领导'].memo
+        let fathlead = $('#lead');
+        for(var i of memo1) {
+            let liList = $('<li></li>')
+            if(i[0] == 'H') {
+                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_02.png" alt=""></div>')
+                liList.append(imgS)
+                let P = $('<p class="font_size">'+i[1]+'</P>')
+                liList.append(P)
+                fathlead.append(liList)
+
+            } else if(i[0] == 'M') {
+                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_03.png" alt=""></div>')
+                liList.append(imgS)
+                let P = $('<p class="font_size">'+i[1]+'</P>')
+                liList.append(P)    
+                fathlead.append(liList)
+
+            } else if(i[0] == 'L') {
+                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_04.png" alt=""></div>')
+                liList.append(imgS)
+                let P = $('<p class="font_size">'+i[1]+'</P>')
+                liList.append(P)
+                fathlead.append(liList)
+            }   
+        }
+
+
+        $('#cro_self').text(data.details_self['跨界协同'].desc)
+        var memo1 = data.details_self['跨界协同'].memo
+        let fathcro = $('#crossover');
+        for(var i of memo1) {
+            let liList = $('<li></li>')
+            if(i[0] == 'H') {
+                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_02.png" alt=""></div>')
+                liList.append(imgS)
+                let P = $('<p class="font_size">'+i[1]+'</P>')
+                liList.append(P)
+                fathcro.append(liList)
+
+            } else if(i[0] == 'M') {
+                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_03.png" alt=""></div>')
+                liList.append(imgS)
+                let P = $('<p class="font_size">'+i[1]+'</P>')
+                liList.append(P)    
+                fathcro.append(liList)
+
+            } else if(i[0] == 'L') {
+                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_04.png" alt=""></div>')
+                liList.append(imgS)
+                let P = $('<p class="font_size">'+i[1]+'</P>')
+                liList.append(P)
+                fathcro.append(liList)
+            }   
+        }
+
+
+        $('#int_self').text(data.details_self['资源整合'].desc)
+        var memo1 = data.details_self['资源整合'].memo
+        let fathinte = $('#integration');
+        for(var i of memo1) {
+            let liList = $('<li></li>')
+            if(i[0] == 'H') {
+                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_02.png" alt=""></div>')
+                liList.append(imgS)
+                let P = $('<p class="font_size">'+i[1]+'</P>')
+                liList.append(P)
+                fathinte.append(liList)
+
+            } else if(i[0] == 'M') {
+                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_03.png" alt=""></div>')
+                liList.append(imgS)
+                let P = $('<p class="font_size">'+i[1]+'</P>')
+                liList.append(P)    
+                fathinte.append(liList)
+
+            } else if(i[0] == 'L') {
+                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_04.png" alt=""></div>')
+                liList.append(imgS)
+                let P = $('<p class="font_size">'+i[1]+'</P>')
+                liList.append(P)
+                fathinte.append(liList)
+            }   
+        }
+        // Object.assgin()
+        
+        // 他评
+        // 积极进取
+        let fathpos = $('#positive');
+        let positive = data.details_others['积极进取']
+        let title = $('<td>积极进取</td>')
+        fathpos.append(title)
+        let first = $('<td id="first"></td>')
+        let second = $('<td id="second"></td>')
+        for(var i in positive) {
+            let content = $('<pre>'+positive[i][0]+'</pre>')
+            first.append(content)
+            let score = $('<pre>'+positive[i][1]+'</pre>')
+            second.append(score)
+        }
+        fathpos.append(first)
+        fathpos.append(second)
+        
+
+        // 勇于担当
+        let fathbear = $('#bear');
+        let positive2 = data.details_others['勇于承担']
+        let title2 = $('<td>勇于担当</td>')
+        fathbear.append(title2)
+        let first2 = $('<td id="first2"></td>')
+        let second2 = $('<td id="second2"></td>')
+        for(var i in positive2) {
+            let content2 = $('<pre>'+positive2[i][0]+'</pre>')
+            first2.append(content2)
+            let score2 = $('<pre>'+positive2[i][1]+'</pre>')
+            second2.append(score2)
+        }
+        fathbear.append(first2)
+        fathbear.append(second2)
+
+
+        // 正直诚信
+        let fathint = $('#integrity');
+        let positive3 = data.details_others['正直诚信']
+        let title3 = $('<td>正直诚信</td>')
+        fathint.append(title3)
+        let first3 = $('<td id="first3"></td>')
+        let second3 = $('<td id="second3"></td>')
+        for(var i in positive3) {
+            let content3 = $('<pre>'+positive3[i][0]+'</pre>')
+            first3.append(content3)
+            let score3 = $('<pre>'+positive3[i][1]+'</pre>')
+            second3.append(score3)
+        }
+        fathint.append(first3)
+        fathint.append(second3)
+
+        // 系统思维
+        let fathsys = $('#system');
+        let positive4 = data.details_others['系统思维']
+        let title4 = $('<td>系统思维</td>')
+        fathsys.append(title4)
+        let first4 = $('<td id="first4"></td>')
+        let second4 = $('<td id="second4"></td>')
+        for(var i in positive4) {
+            let content4 = $('<pre>'+positive4[i][0]+'</pre>')
+            first4.append(content4)
+            let score4 = $('<pre>'+positive4[i][1]+'</pre>')
+            second4.append(score4)
+        }
+        fathsys.append(first4)
+        fathsys.append(second4)
+        
+
+        // 客户导向
+        let fathgui = $('#guide');
+        let positive5 = data.details_others['客户导向']
+        let title5 = $('<td>客户导向</td>')
+        fathgui.append(title5)
+        let first5 = $('<td id="first5"></td>')
+        let second5 = $('<td id="second5"></td>')
+        for(var i in positive5) {
+            let content5 = $('<pre>'+positive5[i][0]+'</pre>')
+            first5.append(content5)
+            let score5 = $('<pre>'+positive5[i][1]+'</pre>')
+            second5.append(score5)
+        }
+        fathgui.append(first5)
+        fathgui.append(second5)
+
+        // 创新优化
+        let fathinn = $('#innovate');
+        let positive6 = data.details_others['创新优化']
+        let title6 = $('<td>创新优化</td>')
+        fathinn.append(title6)
+        let first6 = $('<td id="first6"></td>')
+        let second6 = $('<td id="second6"></td>')
+        for(var i in positive6) {
+            let content6 = $('<pre>'+positive6[i][0]+'</pre>')
+            first6.append(content6)
+            let score6 = $('<pre>'+positive6[i][1]+'</pre>')
+            second6.append(score6)
+        }
+        fathinn.append(first6)
+        fathinn.append(second6)
+
+        // 变革管理
+        let fathcha = $('#change');
+        let positive7 = data.details_others['变革推动']
+        let title7 = $('<td>变革推动</td>')
+        fathcha.append(title7)
+        let first7 = $('<td id="first7"></td>')
+        let second7 = $('<td id="second7"></td>')
+        for(var i in positive7) {
+            let content7 = $('<pre>'+positive7[i][0]+'</pre>')
+            first7.append(content7)
+            let score7 = $('<pre>'+positive7[i][1]+'</pre>')
+            second7.append(score7)
+        }
+        fathcha.append(first7)
+        fathcha.append(second7)
+
+        // 团队领导
+        let fathteam = $('#team');
+        let positive8 = data.details_others['团队领导']
+        let title8 = $('<td>团队领导</td>')
+        fathteam.append(title8)
+        let first8 = $('<td id="first8"></td>')
+        let second8 = $('<td id="second8"></td>')
+        for(var i in positive8) {
+            let content8 = $('<pre>'+positive8[i][0]+'</pre>')
+            first8.append(content8)
+            let score8 = $('<pre>'+positive8[i][1]+'</pre>')
+            second8.append(score8)
+        }
+        fathteam.append(first8)
+        fathteam.append(second8)
+
+        // 跨界协同
+        let fathsyn = $('#synergy');
+        let positive9 = data.details_others['跨界协同']
+        let title9 = $('<td>跨界协同</td>')
+        fathsyn.append(title9)
+        let first9= $('<td id="first9"></td>')
+        let second9 = $('<td id="second9"></td>')
+        for(var i in positive9) {
+            let content9 = $('<pre>'+positive9[i][0]+'</pre>')
+            first9.append(content9)
+            let score9 = $('<pre>'+positive9[i][1]+'</pre>')
+            second9.append(score9)
+        }
+        fathsyn.append(first9)
+        fathsyn.append(second9)
+
+        // 资源整合
+        let fathres = $('#resources');
+        let positive10 = data.details_others['资源整合']
+        let title10 = $('<td>资源整合</td>')
+        fathres.append(title10)
+        let first10= $('<td id="first10"></td>')
+        let second10 = $('<td id="second10"></td>')
+        for(var i in positive10) {
+            let content10 = $('<pre>'+positive10[i][0]+'</pre>')
+            first10.append(content10)
+            let score10 = $('<pre>'+positive10[i][1]+'</pre>')
+            second10.append(score10)
+        }
+        fathres.append(first10)
+        fathres.append(second10)
+        
+
+        let fathQN = $('#potential');
+        var potential = data.portrait['潜能区']
+        // potential.push('abc')
+        if(potential.length == 0) {
+            let ZW = $('<div><pre class="zw">暂无</pre></div>')
+            fathQN.append(ZW)
+        }else if(potential.length != 0) {
+            let ullist = $('<ul class="cont"></ul>')
+            for(var i in potential) {
+                let QN = $('<li class="con">'+potential[i]+'</li>')
+                ullist.append(QN)
+            }
+            fathQN.append(ullist)
+        }
+        
+        let fathYS = $('#advantage');
+        var potential = data.portrait['优势共识区']
+        if(potential.length == 0) {
+            let ZW = $('<div><pre class="zw">暂无</pre></div>')
+            fathYS.append(ZW)
+        }else if(potential.length != 0) {
+            let ullist = $('<ul class="cont"></ul>')
+            for(var i in potential) {
+                let YS = $('<li class="con">'+potential[i]+'</li>')
+                ullist.append(YS)
+            }
+            fathYS.append(ullist)
+        }
+
+        let fathDFZ = $('#develop');
+        var potential = data.portrait['待发展共识区']
+        if(potential.length == 0) {
+            let ZW = $('<div><pre class="zw">暂无</pre></div>')
+            fathDFZ.append(ZW)
+        }else if(potential.length != 0) {
+            let ullist = $('<ul class="cont"></ul>')
+            for(var i in potential) {
+                let DFZ = $('<li class="con">'+potential[i]+'</li>')
+                ullist.append(DFZ)
+            }
+            fathDFZ.append(ullist)
+        }
+
+        let fathMD = $('#blindSpots');
+        var potential = data.portrait['盲点']
+        if(potential.length == 0) {
+            let ZW = $('<div><pre class="zw">暂无</pre></div>')
+            fathMD.append(ZW)
+        }else if(potential.length != 0) {
+            let ullist = $('<ul class="cont"></ul>')
+            for(var i in potential) {
+                let MD = $('<li class="con">'+potential[i]+'</li>')
+                ullist.append(MD)
+            }
+            fathMD.append(ullist)
+        }
+        
+
+        // 雷达图
+        var option = {
+            dataName: [],
+            dataSelf: [],
+            dataOther: []
+        }
+        $.each(data.scores,function(key,value) {
+            $.each(value,function(k,v) {
+                option.dataName.push(k)
+                
+            })
+        })
+        $.each(data.scores.self,function(key,value) {
+            option.dataSelf.push(value)
+        })
+
+        $.each(data.scores.others,function(key,value) {
+            option.dataOther.push(value)
+        })
+
+        AddEchart(option);
+
+    }
+
+    function AddEchart(data) {
+        var myChart = echarts.init(document.getElementById('scanning'));
+        // 指定图表的配置项和数据
+        var option = {
+            tooltip: {
+                trigger: 'axis'
+            },
+            grid: {
+                x: 10000,
+
+            },
+            splitArea: {
+                areaStyle: {
+                    color: ['rgba(114, 172, 209, 0)',
+                    'rgba(114, 172, 209, 0.4)', 'rgba(114, 172, 209, 0)',
+                    'rgba(114, 172, 209, 0.8)', 'rgba(114, 172, 209, 0)'],
+                    shadowColor: 'rgba(0, 0, 0, 0.3)',
+                    shadowBlur: 10
+                }
+            },
+            legend: {
+                x: 'right',
+                data: ['他评', '自评']
+            },
+            calculable: true,
+            polar: [
+                {
+                    indicator: [
+                        { text: data.dataName[0], max: 5 },
+                        { text: data.dataName[1], max: 5 },
+                        { text: data.dataName[2], max: 5 },
+                        { text: data.dataName[3], max: 5 },
+                        { text: data.dataName[4], max: 5 },
+                        { text: data.dataName[5], max: 5 },
+                        { text: data.dataName[6], max: 5 },
+                        { text: data.dataName[7], max: 5 },
+                        { text: data.dataName[8], max: 5 },
+                        { text: data.dataName[9], max: 5 },
+                    ],
+                    center: ['50%', '50%'],
+                    radius: 100
+                }
+            ],
+            series: [
+                {
+                    name: '雷达图',
+                    type: 'radar',
+                    itemStyle: {
+                        emphasis: {
+                            // color: 各异,
+                            lineStyle: {
+                                width: 4
+                            }
+                        }
+                    },
+                    data: [
+                        {
+                            value: [data.dataOther[0],data.dataOther[1],data.dataOther[2],data.dataOther[3],data.dataOther[4],data.dataOther[5],data.dataOther[6],data.dataOther[7],data.dataOther[8],data.dataOther[9]],
+                            name: '他评',
+                            symbol: 'star5',
+                            symbolSize: 4,           // 可计算特性参数，空数据拖拽提示图形大小
+                            itemStyle: {
+                                normal: {
+                                    lineStyle: {
+                                        type: 'dashed'
+                                    }   
+                                }
+                            },
+                            lineStyle: {                // 单项线条样式。
+                                normal: {
+                                    color: 'rgba(75, 211, 140, 1)'         // 图形透明度
+                                }
+                            },
+                            //rgba(75, 211, 140, 1)
+                        },
+                        {
+                            value: [data.dataSelf[0],data.dataSelf[1],data.dataSelf[2],data.dataSelf[3],data.dataSelf[4],data.dataSelf[5],data.dataSelf[6],data.dataSelf[7],data.dataSelf[8],data.dataSelf[9]],
+                            name: '自评',
+                            itemStyle: {
+                                normal: {
+                                    areaStyle: {
+                                        type: 'default'
+                                    }
+                                },
+
+                            },
+                            lineStyle: {                // 单项线条样式。
+                                normal: {
+                                    opacity: 0         // 图形透明度
+                                }
+                            },
+
+                            areaStyle: {                // 单项区域填充样式
+                                normal: {
+                                    color: 'rgba(126, 75, 211, 0.9)'       // 填充的颜色。[ default: "#000" ]
+                                }
+                            }
+
+                        },
+
+                    ]
+                },
+
+            ]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    }
+
+</script>
