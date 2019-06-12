@@ -616,6 +616,7 @@
 
         .selfAssessment .content .con_cen ul li .font_size {
            font-size: 14px;
+           line-height: 35px;
         }
 
         .selfAssessment .content .con_cen ul li p {
@@ -900,7 +901,7 @@
         }
 
         .advic .border .content {
-            width: 80%;
+            width: 90%;
             height: 70%;
             margin: 0 auto;
             position: absolute;
@@ -915,7 +916,7 @@
             font-weight: 400;
             color: rgba(51, 51, 51, 1);
             line-height: 24px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .advic .content td p {
@@ -931,7 +932,6 @@
 
         .advic .content table {
             width: 100%;
-            height: 90%;
         }
 
         .advic .content table tr:nth-child(1) {
@@ -952,6 +952,7 @@
         .advic .content table tr td:nth-child(2) {
             width: 80%;
             border: 1px solid #e8e8e8;
+            padding: 5px;
         }
 
         .advic .content table tr td:nth-child(1) {
@@ -967,13 +968,12 @@
         .advic .content table tr td .num {
             float: left;
             overflow: hidden;
-            margin-top: 11px;
-            
+            margin-top: 0px;
         }
 
         .advic .content table tr td .wenzi {
             float: left;
-            margin-top: -48px;
+            margin-top: -42px;
             overflow: hidden;
             margin-left: 17px;
         }
@@ -1231,13 +1231,7 @@
                             <span>积极进取</span>
                             <div class="progress">
                                 <i>低</i>
-                                <ul>
-                                    <li class="color_r"></li>
-                                    <li class="color_r"></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                </ul>
+                                <ul id="apt"></ul>
                                 <i style="margin-top: -59px;margin-right: 15px;float: right;overflow: hidden;">高</i>
                             </div>
                             <p id="pos_self" style="padding-top: 48px;padding-left: 15px;color: rgba(51, 51, 51, 1);">能够从自我价值实现的角度实现高标准、具有挑战性的目标，不断自我激励，寻求各种方法努力获得成功。</p>
@@ -1250,13 +1244,7 @@
                             <span>勇于承担</span>
                             <div class="progress">
                                 <i>低</i>
-                                <ul>
-                                    <li class="color_y"></li>
-                                    <li class="color_y"></li>
-                                    <li class="color_y"></li>
-                                    <li></li>
-                                    <li></li>
-                                </ul>
+                                <ul id="cpr"></ul>
                                 <i style="margin-top: -59px;margin-right: 15px;float: right;overflow: hidden;">高</i>
                             </div>
                             <p id="cou_self" style="padding-top: 48px;padding-left: 15px;color: rgba(51, 51, 51, 1);">始终立足公司发展的大局，积极地看待转型发展中的问题并敢于负责、主动承担、季节奉献，能包容，善团结。</p>
@@ -1279,13 +1267,7 @@
                             <span>正直诚信</span>
                             <div class="progress">
                                 <i>低</i>
-                                <ul>
-                                    <li class="color_g"></li>
-                                    <li class="color_g"></li>
-                                    <li class="color_g"></li>
-                                    <li class="color_g"></li>
-                                    <li></li>
-                                </ul>
+                                <ul id="fpr"></ul>
                                 <i style="margin-top: -59px;margin-right: 15px;float: right;overflow: hidden;">高</i>
                             </div>
                             <p id="fai_self" style="padding-top: 48px;padding-left: 15px;color: rgba(51, 51, 51, 1);">坚持从客观事实出发，公平公正，坚持原则，不畏权威，言行一致，推动坦诚信任的组织文化建设。</p>
@@ -1298,13 +1280,7 @@
                             <span>系统思维</span>
                             <div class="progress">
                                 <i>低</i>
-                                <ul>
-                                    <li class="color_y"></li>
-                                    <li class="color_y"></li>
-                                    <li class="color_y"></li>
-                                    <li></li>
-                                    <li></li>
-                                </ul>
+                                <ul id="tpr"></ul>
                                 <i style="margin-top: -59px;margin-right: 15px;float: right;overflow: hidden;">高</i>
                             </div>
                             <p id="thin_self" style="padding-top: 48px;padding-left: 15px;color: rgba(51, 51, 51, 1);">立足公司战略定位，洞察行业发展的趋势，系统分析业务发展的各种因素，把握本质并结合实际，形成整体判断和系统性的策略安排。</p>
@@ -1327,13 +1303,7 @@
                             <span>客户导向</span>
                             <div class="progress">
                                 <i>低</i>
-                                <ul>
-                                    <li class="color_r"></li>
-                                    <li class="color_r"></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                </ul>
+                                <ul id="cpk"></ul>
                                 <i style="margin-top: -59px;margin-right: 15px;float: right;overflow: hidden;">高</i>
                             </div>
                             <p id="cus_self" style="padding-top: 48px;padding-left: 15px;color: rgba(51, 51, 51, 1);">能够积极关注并有效识别客户的真实需求，采取有效行动并建立良好的客户互动关系。</p>
@@ -1346,13 +1316,7 @@
                             <span>创新优化</span>
                             <div class="progress">
                                 <i>低</i>
-                                <ul>
-                                    <li class="color_g"></li>
-                                    <li class="color_g"></li>
-                                    <li class="color_g"></li>
-                                    <li class="color_g"></li>
-                                    <li class="color_g"></li>
-                                </ul>
+                                <ul id="opr"></ul>
                                 <i style="margin-top: -59px;margin-right: 15px;float: right;overflow: hidden;">高</i>
                             </div>
                             <p id="opt_self" style="padding-top: 48px;padding-left: 15px;color: rgba(51, 51, 51, 1);">敢于打破常规，接纳并进行主动创新，善于从不同的角度提出新颖的问题解决方法，推进问题得到改善。</p>
@@ -1375,13 +1339,7 @@
                             <span>变革管理</span>
                             <div class="progress">
                                 <i>低</i>
-                                <ul>
-                                    <li class="color_y"></li>
-                                    <li class="color_y"></li>
-                                    <li class="color_y"></li>
-                                    <li></li>
-                                    <li></li>
-                                </ul>
+                                <ul id="mpr"></ul>
                                 <i style="margin-top: -59px;margin-right: 15px;float: right;overflow: hidden;">高</i>
                             </div>
                             <p id="man_self" style="padding-top: 48px;padding-left: 15px;color: rgba(51, 51, 51, 1);">能够积极识别和寻求变革的机会和阻力，并为取得建设性的、有益的结果激发变革共识、制定系统计划并主导推进和有效地控制变化。</p>
@@ -1394,13 +1352,7 @@
                             <span>团队领导</span>
                             <div class="progress">
                                 <i>低</i>
-                                <ul>
-                                    <li class="color_g"></li>
-                                    <li class="color_g"></li>
-                                    <li class="color_g"></li>
-                                    <li class="color_g"></li>
-                                    <li class="color_g"></li>
-                                </ul>
+                                <ul id="lpr"></ul>
                                 <i style="margin-top: -59px;margin-right: 15px;float: right;overflow: hidden;">高</i>
                             </div>
                             <p id="lead_self" style="padding-top: 48px;padding-left: 15px;color: rgba(51, 51, 51, 1);">通过有效的机制和方法进行团队价值观的引导、目标整合、信任建立、潜能激发，塑造优秀的团队文化，推动团队高绩效实现。</p>
@@ -1423,13 +1375,7 @@
                             <span>跨界协同</span>
                             <div class="progress">
                                 <i>低</i>
-                                <ul>
-                                    <li class="color_g"></li>
-                                    <li class="color_g"></li>
-                                    <li class="color_g"></li>
-                                    <li class="color_g"></li>
-                                    <li></li>
-                                </ul>
+                                <ul id="prj"></ul>
                                 <i style="margin-top: -59px;margin-right: 15px;float: right;overflow: hidden;">高</i>
                             </div>
                             <p id="cro_self" style="padding-top: 48px;padding-left: 15px;color: rgba(51, 51, 51, 1);">立足公司整体并从流程协同的角度主动打破边界、换位沟通并通力合作，出现分歧时能寻求整合解决，建立组织协同优势。</p>
@@ -1442,13 +1388,7 @@
                             <span>资源整合</span>
                             <div class="progress">
                                 <i>低</i>
-                                <ul>
-                                    <li class="color_g"></li>
-                                    <li class="color_g"></li>
-                                    <li class="color_g"></li>
-                                    <li class="color_g"></li>
-                                    <li></li>
-                                </ul>
+                                <ul id="ipr"></ul>
                                 <i style="margin-top: -59px;margin-right: 15px;float: right;overflow: hidden;">高</i>
                             </div>
                             <p id="int_self" style="padding-top: 48px;padding-left: 15px;color: rgba(51, 51, 51, 1);">立足价值链的协同，从增加和创造商业价值的角度，通过合理的方式和机制获取资源，并进行有效配置以实现资源价值最大化。</p>
@@ -1554,49 +1494,12 @@
         <div class="border">
             <div class="content">
                 <p>根据能力对比分析，在管理者10条能力素质中您应该重点关注被列入“盲点”和“待发展共识区”的能力素质。以下建议供您参考，塑造更好的自己。</p>
-                <table>
-                    <tr style="height: 45px;">
+                <table id="table">
+                    <!-- <tr style="height: 45px;">
                         <th>提升能力</th>
                         <th>个人发展建议</th>
                     </tr>
-                    <tr>
-                        <td>团队领导</td>
-                        <td>
-                            <p class="num">1、</p>
-                            <p class="wenzi">总结过往工作中，不同运作效率的团队对部门目标达成的作用，加强对团队的运作效率的了解和支持；</p>
-
-                            <p class="num">2、</p>
-                            <p class="wenzi">结合员工的能力现状和工作任务内容才能做到人岗匹配，达到效能的最大化，授权结束后也不能代表我们领导者工作的结束，还需要进行及时的跟进辅导，才能确保各项工作任务的有序开展；</p>
-
-                            <p class="num">3、</p>
-                            <p class="wenzi">为了提升团队的整体效能，作为团队的领导者，很有必要为团队创造多种形式的交流、分享、学习的平台，促进整个团队能力提升；</p>
-
-                            <p class="num">4、</p>
-                            <p class="wenzi">确定团队文化的方向，并积极的宣导团队愿景，巩固团队的凝聚力，激发团队自主效率。</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>跨界协同</td>
-                        <td>
-                            <p class="num">1、</p>
-                            <p class="wenzi">总结过往工作中，不同运作效率的团队对部门目标达成的作用，加强对团队的运作效率的了解和支持；</p>
-
-                            <p class="num">2、</p>
-                            <p class="wenzi">结合员工的能力现状和工作任务内容才能做到人岗匹配，达到效能的最大化，授权结束后也不能代表我们领导者工作的结束，还需要进行及时的跟进辅导，才能确保各项工作任务的有序开展；</p>
-
-                            <p class="num">3、</p>
-                            <p class="wenzi">为了提升团队的整体效能，作为团队的领导者，很有必要为团队创造多种形式的交流、分享、学习的平台，促进整个团队能力提升；</p>
-
-                            <p class="num">4、</p>
-                            <p class="wenzi">确定团队文化的方向，并积极的宣导团队愿景，巩固团队的凝聚力，激发团队自主效率。</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>资源整合</td>
-                        <td>
-                            <p>资源整合是组织发展的必然趋势，首先您必须清晰并坚持组织在目标意愿的战略规划，其次您需要从长远的角度考量不同资源相互协调配合所产生的效益，以打造提升组织效能的资源体系。</p>
-                        </td>
-                    </tr>
+                    <tr class="advicea"></tr> -->
                 </table>
             </div>
         </div>
@@ -1616,12 +1519,25 @@
 
 <script>
 
+    function GetQueryString(name){
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+        var r = window.location.search.substr(1).match(reg); //获取url中"?"符后的字符串并正则匹配
+        var context = ""; 
+        if (r != null) 
+            context = r[2]; 
+        reg = null; 
+        r = null; 
+        return context == null || context == "" || context == "undefined" ? "" : context; 
+    }
+
+    let people_result_id= this.GetQueryString('people_result_id');
+
     $.ajax({
         url: 'http://admin.yx.iwedoing.com/api/client/v1/front/report/data/',
         type: 'POST',
         data: {
-            people_result_id: 633535,
-            // people_result_id: this.people_result_id,
+            // people_result_id: 633535,
+            people_result_id: people_result_id,
             report_type_id: 'MC2019'
         },
         dataType: 'json',
@@ -1633,13 +1549,105 @@
             if (data.code == 0) {
                 let result = data.detail.report_data.msg;
                 console.log(result)
-                AddDom(result)
+                let add = new AddDom(result)
+                // console.log(add)
                 //_this.AddDom(result);
             } else {
                 alert('请求数据有误')
             }
         }
     })
+
+    AddDom.prototype.progress = function(data,element){  
+        this.data = data
+        this.element = element
+        let pt = parseInt(data)
+        let liCol1 = $('<li></li>')
+        let liCol2 = $('<li></li>')
+        let liCol3 = $('<li></li>')
+        let liCol4 = $('<li></li>')
+        let liCol5 = $('<li></li>')
+        let liColr1 = $('<li class="color_r"></li>')
+        let liColr2 = $('<li class="color_r"></li>')
+        let liColy1 = $('<li class="color_y"></li>')
+        let liColy2 = $('<li class="color_y"></li>')
+        let liColy3 = $('<li class="color_y"></li>')
+        let liColg1 = $('<li class="color_g"></li>')
+        let liColg2 = $('<li class="color_g"></li>')
+        let liColg3 = $('<li class="color_g"></li>')
+        let liColg4 = $('<li class="color_g"></li>')
+        let liColg5 = $('<li class="color_g"></li>')
+        if(pt === 2) {
+            element.append(liColr1)
+            element.append(liColr2)
+            element.append(liCol1)
+            element.append(liCol2)
+            element.append(liCol3)
+        } else if(pt === 1) {
+            element.append(liColr1)
+            element.append(liCol1)
+            element.append(liCol2)
+            element.append(liCol3)
+            element.append(liCol4)
+        } else if(pt === 3) {
+            element.append(liColy1)
+            element.append(liColy2)
+            element.append(liColy3)
+            element.append(liCol1)
+            element.append(liCol2)
+        } else if(pt === 4) {
+            element.append(liColg1)
+            element.append(liColg2)
+            element.append(liColg3)
+            element.append(liColg4)
+            element.append(liCol1)
+        } else if(pt === 5) {
+            element.append(liColg1)
+            element.append(liColg2)
+            element.append(liColg3)
+            element.append(liColg4)
+            element.append(liColg5)
+        } else if(pt === 0) {
+            element.append(liCol1)
+            element.append(liCol2)
+            element.append(liCol3)
+            element.append(liCol4)
+            element.append(liCol5)
+        }
+
+    }
+
+    AddDom.prototype.contentss = function(fathCon,memo) {
+        this.fathCon = fathCon
+        this.memo = memo
+
+        let fathcont = fathCon;
+        
+        for(var i of memo) {
+            let liList = $('<li></li>')
+            if(i[0] == 'H') {
+                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_02.png" alt=""></div>')
+                liList.append(imgS)
+                let P = $('<p class="font_size">'+i[1]+'</P>')
+                liList.append(P)
+                fathcont.append(liList)
+
+            } else if(i[0] == 'M') {
+                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_03.png" alt=""></div>')
+                liList.append(imgS)
+                let P = $('<p class="font_size">'+i[1]+'</P>')
+                liList.append(P)    
+                fathcont.append(liList)
+
+            } else if(i[0] == 'L') {
+                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_04.png" alt=""></div>')
+                liList.append(imgS)
+                let P = $('<p class="font_size">'+i[1]+'</P>')
+                liList.append(P)
+                fathcont.append(liList)
+            }   
+        }
+    }
 
     function AddDom(data) {
 
@@ -1651,296 +1659,79 @@
         $('#self_adv').text(data.analysis['自我评价相对优势能力'])
         $('#self_ids').text(data.analysis['自我评价相对劣势能力'])
         $('#other_adv').text(data.analysis['他人评价相对优势能力'])
-        $('#other_ids').text(data.analysis['他人评价相对劣势能力'])
-
+        $('#other_ids').text(data.analysis['他人评价相对劣势能力']) 
+        
         // 自评
         $('#pos_self').text(data.details_self['积极进取'].desc)
         var memo1 = data.details_self['积极进取'].memo
-        let fathagg = $('#agg');
-        for(var i of memo1) {
-            let liList = $('<li></li>')
-            if(i[0] == 'H') {
-                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_02.png" alt=""></div>')
-                liList.append(imgS)
-                let P = $('<p class="font_size">'+i[1]+'</P>')
-                liList.append(P)
-                fathagg.append(liList)
-
-            } else if(i[0] == 'M') {
-                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_03.png" alt=""></div>')
-                liList.append(imgS)
-                let P = $('<p class="font_size">'+i[1]+'</P>')
-                liList.append(P)    
-                fathagg.append(liList)
-
-            } else if(i[0] == 'L') {
-                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_04.png" alt=""></div>')
-                liList.append(imgS)
-                let P = $('<p class="font_size">'+i[1]+'</P>')
-                liList.append(P)
-                fathagg.append(liList)
-            }   
-        }
+        var pt = data.details_self['积极进取'].pt
+        // this.progress(pt,$('#apt'),$('#agg'),memo1)
+        this.progress(pt,$('#apt'),$('#agg'),memo1)
+        this.contentss($('#agg'),memo1)
 
 
         $('#cou_self').text(data.details_self['勇于承担'].desc)
         var memo1 = data.details_self['勇于承担'].memo
-        let fathcou = $('#courage');
-        for(var i of memo1) {
-            let liList = $('<li></li>')
-            if(i[0] == 'H') {
-                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_02.png" alt=""></div>')
-                liList.append(imgS)
-                let P = $('<p class="font_size">'+i[1]+'</P>')
-                liList.append(P)
-                fathcou.append(liList)
-
-            } else if(i[0] == 'M') {
-                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_03.png" alt=""></div>')
-                liList.append(imgS)
-                let P = $('<p class="font_size">'+i[1]+'</P>')
-                liList.append(P)    
-                fathcou.append(liList)
-
-            } else if(i[0] == 'L') {
-                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_04.png" alt=""></div>')
-                liList.append(imgS)
-                let P = $('<p class="font_size">'+i[1]+'</P>')
-                liList.append(P)
-                fathcou.append(liList)
-            }   
-        }
+        var pt = data.details_self['勇于承担'].pt
+        this.progress(pt,$('#cpr'))
+        this.contentss($('#courage'),memo1)
 
 
         $('#fai_self').text(data.details_self['正直诚信'].desc)
         var memo1 = data.details_self['正直诚信'].memo
-        let fathfai = $('#faith');
-        for(var i of memo1) {
-            let liList = $('<li></li>')
-            if(i[0] == 'H') {
-                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_02.png" alt=""></div>')
-                liList.append(imgS)
-                let P = $('<p class="font_size">'+i[1]+'</P>')
-                liList.append(P)
-                fathfai.append(liList)
-
-            } else if(i[0] == 'M') {
-                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_03.png" alt=""></div>')
-                liList.append(imgS)
-                let P = $('<p class="font_size">'+i[1]+'</P>')
-                liList.append(P)    
-                fathfai.append(liList)
-
-            } else if(i[0] == 'L') {
-                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_04.png" alt=""></div>')
-                liList.append(imgS)
-                let P = $('<p class="font_size">'+i[1]+'</P>')
-                liList.append(P)
-                fathfai.append(liList)
-            }   
-        }
+        var pt = data.details_self['正直诚信'].pt
+        this.progress(pt,$('#fpr'))
+        this.contentss($('#faith'),memo1)
+       
 
         $('#thin_self').text(data.details_self['系统思维'].desc)
         var memo1 = data.details_self['系统思维'].memo
-        let faththin = $('#thinking');
-        for(var i of memo1) {
-            let liList = $('<li></li>')
-            if(i[0] == 'H') {
-                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_02.png" alt=""></div>')
-                liList.append(imgS)
-                let P = $('<p class="font_size">'+i[1]+'</P>')
-                liList.append(P)
-                faththin.append(liList)
-
-            } else if(i[0] == 'M') {
-                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_03.png" alt=""></div>')
-                liList.append(imgS)
-                let P = $('<p class="font_size">'+i[1]+'</P>')
-                liList.append(P)    
-                faththin.append(liList)
-
-            } else if(i[0] == 'L') {
-                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_04.png" alt=""></div>')
-                liList.append(imgS)
-                let P = $('<p class="font_size">'+i[1]+'</P>')
-                liList.append(P)
-                faththin.append(liList)
-            }   
-        }
-
+        var pt = data.details_self['系统思维'].pt
+        this.progress(pt,$('#tpr'))
+        this.contentss($('#thinking'),memo1)
+        
 
         $('#cus_self').text(data.details_self['客户导向'].desc)
         var memo1 = data.details_self['客户导向'].memo
-        let fathcus = $('#customer');
-        for(var i of memo1) {
-            let liList = $('<li></li>')
-            if(i[0] == 'H') {
-                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_02.png" alt=""></div>')
-                liList.append(imgS)
-                let P = $('<p class="font_size">'+i[1]+'</P>')
-                liList.append(P)
-                fathcus.append(liList)
-
-            } else if(i[0] == 'M') {
-                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_03.png" alt=""></div>')
-                liList.append(imgS)
-                let P = $('<p class="font_size">'+i[1]+'</P>')
-                liList.append(P)    
-                fathcus.append(liList)
-
-            } else if(i[0] == 'L') {
-                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_04.png" alt=""></div>')
-                liList.append(imgS)
-                let P = $('<p class="font_size">'+i[1]+'</P>')
-                liList.append(P)
-                fathcus.append(liList)
-            }   
-        }
+        var pt = data.details_self['客户导向'].pt
+        this.progress(pt,$('#cpk'))
+        this.contentss($('#customer'),memo1)
 
 
         $('#opt_self').text(data.details_self['创新优化'].desc)
         var memo1 = data.details_self['创新优化'].memo
-        let fathopt = $('#optimize');
-        for(var i of memo1) {
-            let liList = $('<li></li>')
-            if(i[0] == 'H') {
-                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_02.png" alt=""></div>')
-                liList.append(imgS)
-                let P = $('<p class="font_size">'+i[1]+'</P>')
-                liList.append(P)
-                fathopt.append(liList)
-
-            } else if(i[0] == 'M') {
-                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_03.png" alt=""></div>')
-                liList.append(imgS)
-                let P = $('<p class="font_size">'+i[1]+'</P>')
-                liList.append(P)    
-                fathopt.append(liList)
-
-            } else if(i[0] == 'L') {
-                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_04.png" alt=""></div>')
-                liList.append(imgS)
-                let P = $('<p class="font_size">'+i[1]+'</P>')
-                liList.append(P)
-                fathopt.append(liList)
-            }   
-        }
-
+        var pt = data.details_self['创新优化'].pt
+        this.progress(pt,$('#opr'))
+        this.contentss($('#optimize'),memo1)
+        
 
         $('#man_self').text(data.details_self['变革推动'].desc)
         var memo1 = data.details_self['变革推动'].memo
-        let fathman = $('#management');
-        for(var i of memo1) {
-            let liList = $('<li></li>')
-            if(i[0] == 'H') {
-                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_02.png" alt=""></div>')
-                liList.append(imgS)
-                let P = $('<p class="font_size">'+i[1]+'</P>')
-                liList.append(P)
-                fathman.append(liList)
-
-            } else if(i[0] == 'M') {
-                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_03.png" alt=""></div>')
-                liList.append(imgS)
-                let P = $('<p class="font_size">'+i[1]+'</P>')
-                liList.append(P)    
-                fathman.append(liList)
-
-            } else if(i[0] == 'L') {
-                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_04.png" alt=""></div>')
-                liList.append(imgS)
-                let P = $('<p class="font_size">'+i[1]+'</P>')
-                liList.append(P)
-                fathman.append(liList)
-            }   
-        }
-
+        var pt = data.details_self['变革推动'].pt
+        this.progress(pt,$('#mpr'))
+        this.contentss($('#management'),memo1)
+        
 
         $('#lead_self').text(data.details_self['团队领导'].desc)
         var memo1 = data.details_self['团队领导'].memo
-        let fathlead = $('#lead');
-        for(var i of memo1) {
-            let liList = $('<li></li>')
-            if(i[0] == 'H') {
-                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_02.png" alt=""></div>')
-                liList.append(imgS)
-                let P = $('<p class="font_size">'+i[1]+'</P>')
-                liList.append(P)
-                fathlead.append(liList)
-
-            } else if(i[0] == 'M') {
-                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_03.png" alt=""></div>')
-                liList.append(imgS)
-                let P = $('<p class="font_size">'+i[1]+'</P>')
-                liList.append(P)    
-                fathlead.append(liList)
-
-            } else if(i[0] == 'L') {
-                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_04.png" alt=""></div>')
-                liList.append(imgS)
-                let P = $('<p class="font_size">'+i[1]+'</P>')
-                liList.append(P)
-                fathlead.append(liList)
-            }   
-        }
+        var pt = data.details_self['团队领导'].pt
+        this.progress(pt,$('#lpr'))
+        this.contentss($('#lead'),memo1)
 
 
         $('#cro_self').text(data.details_self['跨界协同'].desc)
         var memo1 = data.details_self['跨界协同'].memo
-        let fathcro = $('#crossover');
-        for(var i of memo1) {
-            let liList = $('<li></li>')
-            if(i[0] == 'H') {
-                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_02.png" alt=""></div>')
-                liList.append(imgS)
-                let P = $('<p class="font_size">'+i[1]+'</P>')
-                liList.append(P)
-                fathcro.append(liList)
-
-            } else if(i[0] == 'M') {
-                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_03.png" alt=""></div>')
-                liList.append(imgS)
-                let P = $('<p class="font_size">'+i[1]+'</P>')
-                liList.append(P)    
-                fathcro.append(liList)
-
-            } else if(i[0] == 'L') {
-                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_04.png" alt=""></div>')
-                liList.append(imgS)
-                let P = $('<p class="font_size">'+i[1]+'</P>')
-                liList.append(P)
-                fathcro.append(liList)
-            }   
-        }
-
+        var pt = data.details_self['跨界协同'].pt
+        this.progress(pt,$('#prj'))
+        this.contentss($('#crossover'),memo1)
+        
 
         $('#int_self').text(data.details_self['资源整合'].desc)
         var memo1 = data.details_self['资源整合'].memo
-        let fathinte = $('#integration');
-        for(var i of memo1) {
-            let liList = $('<li></li>')
-            if(i[0] == 'H') {
-                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_02.png" alt=""></div>')
-                liList.append(imgS)
-                let P = $('<p class="font_size">'+i[1]+'</P>')
-                liList.append(P)
-                fathinte.append(liList)
+        var pt = data.details_self['资源整合'].pt
+        this.progress(pt,$('#ipr'))
+        this.contentss($('#integration'),memo1)
 
-            } else if(i[0] == 'M') {
-                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_03.png" alt=""></div>')
-                liList.append(imgS)
-                let P = $('<p class="font_size">'+i[1]+'</P>')
-                liList.append(P)    
-                fathinte.append(liList)
-
-            } else if(i[0] == 'L') {
-                let imgS = $('<div class="middle"><img src="./img/TheHighLevel_icon_04.png" alt=""></div>')
-                liList.append(imgS)
-                let P = $('<p class="font_size">'+i[1]+'</P>')
-                liList.append(P)
-                fathinte.append(liList)
-            }   
-        }
         // Object.assgin()
         
         // 他评
@@ -2164,6 +1955,50 @@
             }
             fathMD.append(ullist)
         }
+
+        
+        // 个人能力发展建议
+        let fathAdv = $('#table')
+        let firsttr = $('<tr style="height: 45px;"><th>提升能力</th><th>个人发展建议</th></tr>')
+        fathAdv.append(firsttr)
+        $.each(data.advices,function(key,value) {
+            
+            console.log(key)
+            let qittr = $('<tr class="advicea"><tr>')
+            let power = $('<td class="power">'+key+'</td>')
+            qittr.append(power)
+            let personal = $('<td class="personal"></td>')
+            $.each(value,function(k,v) {
+                
+                if(k.length === 1) {
+                    let wenzi = $('<p class="wenzi">'+v+'</p>')
+                    personal.append(wenzi)
+                    
+                } else {
+                    let a = k+1
+                    // console.log(a)
+                    let num = $('<p class="num">'+a+'、'+'</p>')
+                    personal.append(num)
+                    let wenzi = $('<p class="wenzi">'+v+'</p>')
+                    personal.append(wenzi)
+                }
+            })
+            qittr.append(personal)
+            fathAdv.append(qittr)
+        })
+
+        
+        // let fathAdv = $('#table')
+        // let firsttr = $('<tr style="height: 45px;"><th>提升能力</th><th>个人发展建议</th></tr>')
+        // fathAdv.append(firsttr)
+        // for(var i in data.advices) {
+            // console.log(i)
+            // let qittr = $('<tr class="advicea"><tr>')
+            // let power = $('<td class="power">'+i+'</td>')
+            // qittr.append(power)
+            // let personal = $('<td class="personal"></td>')
+            // fathAdv.append(qittr)
+        // }
         
 
         // 雷达图
@@ -2187,7 +2022,6 @@
         })
 
         AddEchart(option);
-
     }
 
     function AddEchart(data) {
