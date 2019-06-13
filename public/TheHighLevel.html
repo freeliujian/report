@@ -889,14 +889,13 @@
 
 
         .advic .border {
-            height: 88.5%;
+            height: 88.35%;
             margin-top: -2px;
             position: relative;
         }
 
         .advic .border .content {
             width: 90%;
-            height: 70%;
             margin: 0 auto;
             position: absolute;
             top: 3rem;
@@ -1488,13 +1487,7 @@
         <div class="border">
             <div class="content">
                 <p>根据能力对比分析，在管理者10条能力素质中您应该重点关注被列入“盲点”和“待发展共识区”的能力素质。以下建议供您参考，塑造更好的自己。</p>
-                <table id="table">
-                    <!-- <tr style="height: 45px;">
-                        <th>提升能力</th>
-                        <th>个人发展建议</th>
-                    </tr>
-                    <tr class="advicea"></tr> -->
-                </table>
+                <table id="table"></table>
             </div>
         </div>
         <img src="./img/TheHighLevel_picture07（13）.png" alt="">
@@ -1663,20 +1656,17 @@
         this.progress(pt,$('#apt'),$('#agg'),memo1)
         this.contentss($('#agg'),memo1)
 
-
         $('#cou_self').text(data.details_self['勇于承担'].desc)
         var memo1 = data.details_self['勇于承担'].memo
         var pt = data.details_self['勇于承担'].pt
         this.progress(pt,$('#cpr'))
         this.contentss($('#courage'),memo1)
 
-
         $('#fai_self').text(data.details_self['正直诚信'].desc)
         var memo1 = data.details_self['正直诚信'].memo
         var pt = data.details_self['正直诚信'].pt
         this.progress(pt,$('#fpr'))
         this.contentss($('#faith'),memo1)
-       
 
         $('#thin_self').text(data.details_self['系统思维'].desc)
         var memo1 = data.details_self['系统思维'].memo
@@ -1684,13 +1674,11 @@
         this.progress(pt,$('#tpr'))
         this.contentss($('#thinking'),memo1)
         
-
         $('#cus_self').text(data.details_self['客户导向'].desc)
         var memo1 = data.details_self['客户导向'].memo
         var pt = data.details_self['客户导向'].pt
         this.progress(pt,$('#cpk'))
         this.contentss($('#customer'),memo1)
-
 
         $('#opt_self').text(data.details_self['创新优化'].desc)
         var memo1 = data.details_self['创新优化'].memo
@@ -1698,13 +1686,11 @@
         this.progress(pt,$('#opr'))
         this.contentss($('#optimize'),memo1)
         
-
         $('#man_self').text(data.details_self['变革推动'].desc)
         var memo1 = data.details_self['变革推动'].memo
         var pt = data.details_self['变革推动'].pt
         this.progress(pt,$('#mpr'))
         this.contentss($('#management'),memo1)
-        
 
         $('#lead_self').text(data.details_self['团队领导'].desc)
         var memo1 = data.details_self['团队领导'].memo
@@ -1712,14 +1698,12 @@
         this.progress(pt,$('#lpr'))
         this.contentss($('#lead'),memo1)
 
-
         $('#cro_self').text(data.details_self['跨界协同'].desc)
         var memo1 = data.details_self['跨界协同'].memo
         var pt = data.details_self['跨界协同'].pt
         this.progress(pt,$('#prj'))
         this.contentss($('#crossover'),memo1)
         
-
         $('#int_self').text(data.details_self['资源整合'].desc)
         var memo1 = data.details_self['资源整合'].memo
         var pt = data.details_self['资源整合'].pt
@@ -1745,7 +1729,6 @@
         fathpos.append(first)
         fathpos.append(second)
         
-
         // 勇于担当
         let fathbear = $('#bear');
         let positive2 = data.details_others['勇于承担']
@@ -1761,7 +1744,6 @@
         }
         fathbear.append(first2)
         fathbear.append(second2)
-
 
         // 正直诚信
         let fathint = $('#integrity');
@@ -1794,7 +1776,6 @@
         }
         fathsys.append(first4)
         fathsys.append(second4)
-        
 
         // 客户导向
         let fathgui = $('#guide');
@@ -1950,7 +1931,6 @@
             fathMD.append(ullist)
         }
 
-        
         // 个人能力发展建议
         let fathAdv = $('#table')
         let firsttr = $('<tr style="height: 45px;"><th>提升能力</th><th>个人发展建议</th></tr>')
@@ -1963,14 +1943,11 @@
             qittr.append(power)
             let personal = $('<td class="personal"></td>')
             $.each(value,function(k,v) {
-                
                 if(k.length === 1) {
                     let wenzi = $('<p class="wenzi">'+v+'</p>')
                     personal.append(wenzi)
-                    
                 } else {
                     let a = k+1
-                    // console.log(a)
                     let num = $('<p class="num">'+a+'、'+'</p>')
                     personal.append(num)
                     let wenzi = $('<p class="wenzi">'+v+'</p>')
@@ -1980,20 +1957,6 @@
             qittr.append(personal)
             fathAdv.append(qittr)
         })
-
-        
-        // let fathAdv = $('#table')
-        // let firsttr = $('<tr style="height: 45px;"><th>提升能力</th><th>个人发展建议</th></tr>')
-        // fathAdv.append(firsttr)
-        // for(var i in data.advices) {
-            // console.log(i)
-            // let qittr = $('<tr class="advicea"><tr>')
-            // let power = $('<td class="power">'+i+'</td>')
-            // qittr.append(power)
-            // let personal = $('<td class="personal"></td>')
-            // fathAdv.append(qittr)
-        // }
-        
 
         // 雷达图
         var option = {
