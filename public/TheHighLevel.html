@@ -530,9 +530,7 @@
             vertical-align: middle;
             margin-left: 11px;
         }
-        .height {
-            /* height: 25%; */
-        }
+
         .selfAssessment .content .con_cen ul>li:nth-child(1) {
             width: 100%;
             height: 27%;
@@ -553,10 +551,6 @@
 
         .selfAssessment .content .con_cen ul li:nth-of-type(even) {
             background-color: #f3f4f6;
-        }
-
-        .selfAssessment .content .con_cen ul li:nth-of-type(even) img {
-
         }
 
         .selfAssessment .content .con_cen .progress {
@@ -924,7 +918,7 @@
             font-family: PingFangSC-Regular;
             font-weight: 400;
             color: rgba(0, 0, 0, 0.65);
-            line-height: 21px;
+            line-height: 17px;
             padding-left: 16px;
             width: 93%;
             padding-top: 5px;
@@ -1964,7 +1958,7 @@
         $.each(data.advices,function(key,value) {
             
             console.log(key)
-            let qittr = $('<tr class="advicea"><tr>')
+            let qittr = $('<tr class="advicea"></tr>')
             let power = $('<td class="power">'+key+'</td>')
             qittr.append(power)
             let personal = $('<td class="personal"></td>')
