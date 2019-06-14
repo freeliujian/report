@@ -11,31 +11,33 @@
 
     <!-- Load paper.css for happy printing -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.4.1/paper.css">
-    <style>@page { size: A4 }</style>
+    <style>
+        @page {
+            size: A4
+        }
+    </style>
     <link rel="stylesheet" href="./css/react.css">
     <style>
-		
-        * {
-            font-size: 16px !important;
+        .contanier {
+            width: 100%;
         }
 
-		.contanier{
-			width:100%;
-		}
-		section{
-			width: 100%;
-			height:'';
-			box-sizing: border-box;
-			font-size: 8px;
+        section {
+            width: 100%;
+            height: '';
+            box-sizing: border-box;
+            font-size: 8px;
             font-family: 'SourceHanSansCN-Bold';
-			
-		}
-		section>img{
-			width:100%;
-		}
-		.index {
-			padding:10px 0;
-		}
+
+        }
+
+        section>img {
+            width: 100%;
+        }
+
+        .index {
+            padding: 10px 0;
+        }
 
         .index .userInfo {
             height: 18%;
@@ -43,12 +45,12 @@
             margin-top: -2px;
         }
 
-        .index .userInfo ul{
+        .index .userInfo ul {
             overflow: hidden;
             padding-top: 3.5rem;
-		}
+        }
 
-		.index .userInfo ul li{
+        .index .userInfo ul li {
             float: left;
             text-align: left;
             font-size: 16px;
@@ -59,176 +61,267 @@
             line-height: 2rem;
         }
 
-
-        .directory .explain {
-            background:rgba(255,255,255,1);
-            height: 90%;
-            margin-top: -10px;
-            position: relative;
-        }
-
-        .directory .explain ul {
-            width: 75%;
-            height: 55%;
-            margin: 0 auto;
-            position: absolute;
-            top: 13rem;
-            left: 0;
-            right: 0;
-        }
-
-        .directory .explain ul li {
-            display: inline-block;
-            clear: both;
-            width: 100%;
-            line-height: 3rem;
-            border-bottom: 1px solid #333333;
-            margin-top: 3rem;
-        }
-        
-        .directory .explain ul li .content {
-            float: left;
-        }
-
-        .directory .explain ul li .content span:nth-of-type(odd) {
-            font-size:40px;
-            font-family:SourceHanSansCN-Bold;
-            font-weight:bold;
-            color:rgba(106,184,197,1);
-            line-height:60px;
-        } 
-
-        .directory .explain ul li .content span:nth-of-type(even) {
-            font-size: 23px;
-            font-family:SourceHanSansCN-Regular;
-            font-weight: bold;
-            color: rgba(54,54,56,1);
-            line-height: 30px;
-            display: inline-block;
-        }
-
-        .directory .explain ul li p {
-            float: right;
-            width: 69px;
-            height: 91px;
-            background: rgba(106,184,197,1);
-            text-align: center;
-            line-height: 91px;
-            font-size: 40px;
-            font-family: "SourceHanSansCN-Bold";
-            font-weight: bold;
-            color: rgba(255,255,255,1);
-            line-height: 91px;
-            margin-top: 10px;
-        }   
-        
-        .introduction .border {
-            height: 89.3%;
+        .Introduction .border {
+            height: 88.45%;
             margin-top: -2px;
             position: relative;
         }
 
-        .introduction .content {
-            width: 90%;
-            height: 90%;
+        .Introduction .border .content {
+            width: 92%;
+            height: 92%;
             margin: 0 auto;
             position: absolute;
             top: 2rem;
             left: 0;
-            right: 0;   
-        }
-        
-        .introduction .content p {
-            font-size:12px;
-            font-family: "SourceHanSansCN-Bold";
-            font-weight:bold;
-            color:rgba(51,51,51,1);
-            line-height:24px;
-            width: 100%;
-           
-            margin-bottom: 1rem;    
+            right: 0;
         }
 
-        .introduction .content img {
-            width: 23rem;
-            margin-left: 9rem;
-            margin-top: 1rem;
-        }
-
-        .introduction .content  .lit-title {
-            margin-top: 2rem;
-        }
-        .DISC_content{
-            width: 100%;
-            overflow: hidden;
-            display: flex;    flex-wrap: wrap;    align-items: flex-start;    align-content: flex-start;    justify-content: space-between;
-        }
-        
-        .DISC_content>li{
-            
-            
-            width:340px;
-            justify-content: space-between;
-            padding:20px;
-            margin-top:25px;
-            background:#F3F4F6;
-            box-sizing:border-box;
-        }
-        .DISC_theoty{
-            
-            font-weight:bold;
-            color:rgba(51,51,51,1);
-            line-height:18px;
-        }
-        .Read_suggest{
-            
-            box-sizing:border-box;
-            text-align: center;
-            line-height: 37px;
-            font-weight:bold;
-            color:rgba(51,51,51,1);
-            height:37px;
-            font-size: 13px;
-            margin-bottom:24px; 
-            background:rgba(243, 244, 246, 1);  
-        }
-        .introduction .content .char{
-            background-color: #00A0E9;
+        .Introduction .content .char {
+            background-color: rgba(0, 160, 233, 1);
             padding: 8px;
             font-size: 14px;
             color: white;
             font-family: "SourceHanSansCN-Bold";
             font-weight: bold;
-            line-height: 23px;
             height: 23px;
             float: left;
-		}
+        }
 
-        .introduction .content .jiao {
+        .Introduction .content .jiao {
             width: 0px;
             height: 0px;
-            border-left: solid 15px #00A0E9;
+            border-left: solid 15px rgba(0, 160, 233, 1);
             border-top: solid 20px transparent;
             border-bottom: solid 20px transparent;
             float: left;
             margin-left: -1px;
         }
 
-        .introduction .content .tit_list {
-            width:98%;
-           margin-bottom: 30px;
-            margin-top: -40px;
-            margin-left: 25px;
+        .Introduction .content p {
+            font-size: 14px;
+            font-family: SourceHanSansCN-Normal;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+            line-height: 18px;
+            margin-bottom: 10px;
+        }
+
+        .Introduction .content .sm_tit {
+            font-weight: bold;
+        }
+
+        .Introduction .content .cont_top {
+            width: 100%;
+            height: 65%;
+            margin-bottom: 30px;
+        }
+
+        .Introduction .content .parsing {
+            width: 100%;
+            height: 23%;
+            margin-top: 15px;
+        }
+
+        .Introduction .content .parsing .par_l,
+        .Introduction .content .parsing .par_l {
+            width: 47%;
+            height: 100%;
+            background-color: rgba(243, 244, 246, 1);
+            float: left;
+            padding-top: 10px;
+            padding-left: 10px;
+        }
+
+        .Introduction .content .yuandian {
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
+            background-color: rgba(0, 160, 232, 1);
+        }
+
+        .Introduction .content .hanzi {
+            margin-top: -21px;
+            margin-left: 15px;
+            font-size: 14px;
+            font-family: SourceHanSansCN-Bold;
+            color: rgba(51, 51, 51, 1);
+            line-height: 18px;
+        }
+
+        .Introduction .content .parsing2 {
+            width: 97.2%;
+            height: 18%;
+            background-color: rgba(243, 244, 246, 1);
+            padding: 10px;
+        }
+
+        .Introduction .content .cont_bom {
+            width: 100%;
+            height: 32%;
+        }
+
+        .Introduction .content .advice {
+            width: 100%;
+            height: 15%;
+            background-color: rgba(243, 244, 246, 1);
+            font-size: 14px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            color: rgba(51, 51, 51, 1);
+            line-height: 40px;
+            text-align: center;
+        }
+
+
+        .WorkingStyle .border {
+            height: 88.45%;
+            margin-top: -2px;
+            position: relative;
+        }
+
+        .WorkingStyle .border .content {
+            width: 92%;
+            height: 92%;
+            margin: 0 auto;
+            position: absolute;
+            top: 2rem;
+            left: 0;
+            right: 0;
+        }
+
+        .WorkingStyle .content .char {
+            background-color: rgba(0, 160, 233, 1);
+            padding: 8px;
+            font-size: 14px;
+            color: white;
+            font-family: "SourceHanSansCN-Bold";
+            font-weight: bold;
+            height: 23px;
+            float: left;
+        }
+
+        .WorkingStyle .content .jiao {
+            width: 0px;
+            height: 0px;
+            border-left: solid 15px rgba(0, 160, 233, 1);
+            border-top: solid 20px transparent;
+            border-bottom: solid 20px transparent;
+            float: left;
+            margin-left: -1px;
+        }
+
+        .WorkingStyle .content .cont {
+            width: 98%;
+            height: 10%;
+            margin-top: 33px;
+        }
+
+        .WorkingStyle .content .cont_l {
+            width: 48%;
+            height: 100%;
             float: left;
 
         }
-        .tit_num{
-            float: left;
+
+        .WorkingStyle .content p {
+            font-size: 14px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+            line-height: 18px;
+        }
+
+        .WorkingStyle .content .sm_tit {
+            font-weight: bold;
         }
 
 
-        .results .border,.leading .border {
-            height: 86.1%;
+        .trait .border {
+            height: 88.45%;
+            margin-top: -2px;
+            position: relative;
+        }
+
+        .trait .border .content {
+            width: 92%;
+            height: 92%;
+            margin: 0 auto;
+            position: absolute;
+            top: 2rem;
+            left: 0;
+            right: 0;
+        }
+
+        .trait .content .char {
+            background-color: rgba(0, 160, 233, 1);
+            padding: 8px;
+            font-size: 14px;
+            color: white;
+            font-family: "SourceHanSansCN-Bold";
+            font-weight: bold;
+            height: 23px;
+            float: left;
+        }
+
+        .trait .content .jiao {
+            width: 0px;
+            height: 0px;
+            border-left: solid 15px rgba(0, 160, 233, 1);
+            border-top: solid 20px transparent;
+            border-bottom: solid 20px transparent;
+            float: left;
+            margin-left: -1px;
+        }
+
+        .trait .content .explain_warpper {
+            width: 100%;
+            margin: 25px auto;
+            padding-bottom: 50px;
+            box-sizing: border-box;
+            background-color: rgba(243, 244, 246, 1);
+            overflow: hidden;
+        }
+
+        .trait .content .explain_item {
+            overflow: hidden;
+            padding: 15px 24px;
+            padding-bottom: 0;
+            box-sizing: border-box;
+            width: 50%;
+            float: left;
+        }
+
+        .trait .content .explain_letter {
+            width: 53px;
+            height: 53px;
+            background: rgba(243, 244, 246, 1);
+            line-height: 53px;
+            text-align: center;
+            font-size: 24px !important;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border: 1px solid;
+        }
+
+        .trait .content .explain_content {
+            font-size: 14px;
+            font-weight: 400;
+            color: rgba(54, 54, 56, 1);
+            line-height: 17px;
+        }
+
+        .trait .content .explain_content>p {
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+
+
+
+        .results .border,
+        .leading .border {
+            height: 88.5%;
             margin-top: -2px;
             position: relative;
         }
@@ -240,85 +333,118 @@
             position: absolute;
             top: 4rem;
             left: 0;
-            right: 0;  
+            right: 0;
         }
 
         .results .content p {
-            font-size:16px;
-            font-family:SourceHanSansCN-Regular;
-            font-weight:400;
-            color:rgba(51,51,51,1);
-            line-height:24px;
+            font-size: 16px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+            line-height: 24px;
             margin-top: 1rem;
             color: #333;
         }
-        .sample_lef{
+
+        .iwedoing_content .char {
+            background-color: rgba(0, 160, 233, 1);
+            padding: 8px;
+            font-size: 14px;
+            color: white;
+            font-family: "SourceHanSansCN-Bold";
+            font-weight: bold;
+            height: 23px;
             float: left;
         }
-        .sample_charts{
-            height:740px;
-            width:350px;
-            
+
+        .iwedoing_content .jiao {
+            width: 0px;
+            height: 0px;
+            border-left: solid 15px rgba(0, 160, 233, 1);
+            border-top: solid 20px transparent;
+            border-bottom: solid 20px transparent;
+            /* float: left; */
+            margin-left: 130px;
         }
-        .sample_table{
+
+        .sample_lef {
+            float: left;
+            margin-top: 17px;
+        }
+
+        .sample_charts {
+            height: 740px;
+            width: 350px;
+
+        }
+
+        .sample_table {
             width: 350px;
             height: 85px;
             background: #D7DAE1;
-            margin-top:30px;
+            margin-top: 30px;
         }
-        .sample_table>ul{
+
+        .sample_table>ul {
             overflow: hidden;
         }
-        .sample_table>ul>li{
-            width:25%;
-            height:42px;
-            line-height:42px;
-            text-align:center;
-            font-weight:400;
-            box-sizing:border-box;
-            border:solid 1px #F3F4F6;
-            color:black;
-            background:#D7DAE1;
-            float:left;
-        }
-        .iwedoing_content{
-            overflow: hidden;
+
+        .sample_table>ul>li {
+            width: 25%;
+            height: 42px;
+            line-height: 42px;
+            text-align: center;
+            font-weight: 400;
             box-sizing: border-box;
-            padding:20px 37px;
-        }
-        .sample_introduce{
-            width:350px;
+            border: solid 1px #F3F4F6;
+            color: black;
+            background: #D7DAE1;
             float: left;
-            padding:17px;
+        }
+
+        .iwedoing_content {
+            overflow: hidden;
+            box-sizing: border-box;
+            padding: 20px 37px;
+        }
+
+        .sample_introduce {
+            width: 350px;
+            float: left;
+            padding: 17px;
             box-sizing: border-box;
         }
-        .sample_introduce_title{
-            width:340px;
-            height:38px;
-            background:rgba(243,244,246,1);
+
+        .sample_introduce_title {
+            width: 340px;
+            height: 38px;
+            background: rgba(243, 244, 246, 1);
             margin: 0 auto;
-            font-size:12px;
-            font-weight:bold;
-            color:rgba(51,51,51,1);
-            line-height:18px;
+            font-size: 12px;
+            font-weight: bold;
+            color: rgba(51, 51, 51, 1);
+            line-height: 18px;
             text-align: center;
             line-height: 38px;
             margin-bottom: 40px;
         }
-        .sample_introduce_title>span{
-            color:#01AAEC;
+
+        .sample_introduce_title>span {
+            color: #01AAEC;
         }
-        .sample_introduce .char{
+
+        .sample_introduce .char {
             background-color: #00A0E9;
             padding: 8px;
             font-size: 14px;
             color: white;
             font-family: "SourceHanSansCN-Bold";
             font-weight: bold;
+            width: 90px;
             line-height: 23px;
             height: 23px;
             float: left;
-		}
+        }
 
         .sample_introduce .jiao {
             width: 0px;
@@ -329,537 +455,2589 @@
             float: left;
             margin-left: -1px;
         }
-        .sample_introduce>p{
-            font-size:12px;
-            font-weight:400;
-            color:rgba(51,51,51,1);
-            line-height:21px;
-            float:left;
-            margin-top:16px;
-            margin-bottom:30px;
+
+        .sample_introduce>p {
+            font-size: 12px;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+            line-height: 18px;
+            float: left;
+            margin-top: 16px;
+            margin-bottom: 75px;
         }
-        .leading_wrapper{
+
+
+        .leading_wrapper {
             padding: 0 37px;
             box-sizing: border-box;
         }
-        .leading_title{
+
+        .leading_title {
             height: 40px;
-            font-size:14px;
-            font-weight:bold;
-            color:rgba(51,51,51,1);
-            line-height:40px;
+            font-size: 14px;
+            font-weight: bold;
+            color: rgba(51, 51, 51, 1);
+            line-height: 40px;
             text-align: center;
-            padding-top:15px;
+            padding-top: 15px;
 
         }
 
-        .leading .sm_title {
-            width: 100%;
-            height: 43px;
-        }
-
-        .leading .text {
-            height: 85px;
-        }
-        .leading .text2 {
-            height: 40px;
-        }
-        .leading .text3 {
-            height: 63px;
-        }
-        .leading_content{
+        .leading_content {
             width: 100%;
             overflow: hidden;
         }
-        .leading_item{
+
+        .leading_item {
             width: 200px;
             overflow: hidden;
-            float:left;
-            margin-left:35px;
+            float: left;
+            margin-left: 35px;
         }
-        .leading_item:nth-child(1){
+
+        .leading_item:nth-child(1) {
             margin-left: 0;
         }
-        .leading_item_title{
-            font-weight:bold;
-            color:rgba(51,51,51,1);
-            line-height:18px;
+
+        .leading_item_title {
+            font-weight: bold;
+            color: rgba(51, 51, 51, 1);
+            line-height: 18px;
             text-align: center;
-            margin-top:15px;
+            margin-top: 15px;
             padding-bottom: 26px;
         }
-        .leading_item_content{
-            height:500px;
+
+        .leading_item_content {
+            height: 500px;
         }
-        .leading_item_table{
-            width:200px;
+
+        .leading_item_table {
+            width: 200px;
             height: 66px;
             background: #D7DAE1;
-            margin-top:30px;
+            margin-top: 30px;
         }
-        .leading_item_table>ul{
+
+        .leading_item_table>ul {
             overflow: hidden;
         }
-        .leading_item_table>ul>li{
-            width:25%;
-            height:33px;
-            line-height:33px;
-            text-align:center;
-            font-weight:400;
-            box-sizing:border-box;
-            border:solid 1px #F3F4F6;
-            color:black;
-            background:#D7DAE1;
-            float:left;
+
+        .leading_item_table>ul>li {
+            width: 25%;
+            height: 33px;
+            line-height: 33px;
+            text-align: center;
+            font-weight: 400;
+            box-sizing: border-box;
+            border: solid 1px #F3F4F6;
+            color: black;
+            background: #D7DAE1;
+            float: left;
         }
-        .leading_item_char{
-            height:150px;
-            margin-top:20px;
+
+        .leading_item_char {
+            height: 150px;
+            margin-top: 20px;
         }
-        .leading_item_char_title{
-            font-weight:bold;
-            
+
+        .leading_item_char_title {
+            font-weight: bold;
+
             line-height: 18px;
             font-size: 12px;
         }
-        .leading_item_char_content{
-            font-weight:400;
-            color:rgba(51,51,51,1);
-            line-height:21px;
-            margin-top:10px;
-            font-size: 12px;
+
+        .leading_item_char_content {
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+            line-height: 18px;
+            margin-top: 10px;
         }
-        .explain_warpper{
-            width: 95%;
-            margin: 25px auto;
-            padding-bottom: 50px;
-            box-sizing: border-box;
-            background: linear-gradient(180deg,rgba(240,241,245,1) 0%,rgba(219,220,225,1) 100%);
-           overflow: hidden;
+
+
+
+        .Tendency .border {
+            height: 88.45%;
+            margin-top: -2px;
+            position: relative;
         }
-        .explain_item{
-            overflow: hidden;
-            padding: 15px 24px;
-            padding-bottom: 0;
-            box-sizing: border-box;
-            width:50%;
+
+        .Tendency .border .content {
+            width: 92%;
+            height: 92%;
+            margin: 0 auto;
+            position: absolute;
+            top: 2rem;
+            left: 0;
+            right: 0;
+        }
+
+        .Tendency .content .char {
+            background-color: rgba(0, 160, 233, 1);
+            padding: 8px;
+            font-size: 14px;
+            color: white;
+            font-family: "SourceHanSansCN-Bold";
+            font-weight: bold;
+            height: 23px;
             float: left;
         }
-        /* .explain_item:nth-child(3),.explain_item:nth-child(4){
-            padding: 0px 24px;
-            
-        } */
-        .explain_letter{
-            width:53px;
-            height:53px;
-            background:rgba(0,160,233,1);
-            color:white;
-            line-height: 53px;
+
+        .Tendency .content .jiao {
+            width: 0px;
+            height: 0px;
+            border-left: solid 15px rgba(0, 160, 233, 1);
+            border-top: solid 20px transparent;
+            border-bottom: solid 20px transparent;
+            float: left;
+            margin-left: -1px;
+        }
+
+        .Tendency .content .specific {
+            width: 100%;
+            height: 23%;
+            margin-top: 70px;
+            overflow: hidden;
+        }
+
+        .Tendency .content .specific .spe_l {
+            width: 49%;
+            height: 100%;
+            float: left;
+        }
+
+        .Tendency .content .specific .spe_l>p:nth-child(1) {
+            font-size: 24px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            padding: 0px;
+            width: 53px;
+            height: 53px;
             text-align: center;
-            font-size:24px !important;
-            font-weight: 600;
-            margin-bottom: 20px;
+            line-height: 2em;
+            border: 1px solid rgba(249, 198, 38, 1);
+            color: rgba(249, 198, 38, 1);
+            margin-top: 40px;
         }
-        .explain_content{
-            font-size:12px;
-         
-            font-weight:400;
-            color:rgba(54,54,56,1);
-            line-height:20px;
+
+        .Tendency .content .specific .spe_l>p:nth-child(2) {
+            font-size: 14px;
+            font-family: SourceHanSansCN-Normal;
+            font-weight: 400;
+            color: rgba(54, 54, 56, 1);
+            line-height: 18px;
+            margin-top: 25px;
         }
-        .explain_content>p{
-            font-weight:bold;
-            margin-top:20px;
-            margin-bottom: 8px;
+
+        .Tendency .content .specific .spe_line {
+            width: 1px;
+            height: 160px;
+            background-color: rgba(227, 228, 233, 1);
+            float: left;
+        }
+
+        .Tendency .content .specific .spe_r {
+            width: 49%;
+            height: 100%;
+            float: left;
+        }
+
+        .Tendency .content .specific .spe_r .sm_tit {
+            font-size: 14px;
+            font-weight: bold;
+            margin-left: 60px;
+            margin-top: 3px;
+        }
+
+        .Tendency .content .specific .spe_r .sper_con {
+            width: 60%;
+            overflow: hidden;
+            margin-top: 10px;
+            line-height: 20px;
+            margin-left: 60px;
+            margin-bottom: 10px;
+        }
+
+        .Tendency .specific .spe_r .sper_con>.num {
+            float: left;
+        }
+
+        .Tendency .specific .spe_r>p:last-child {
+            color: rgba(0, 160, 233, 1);
+            margin-top: 6px;
+            margin-left: 60px;
+            width: 100%;
+        }
+
+        .Tendency .content>p {
+            font-weight: bold;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .Tendency .content .general {
+            width: 100%;
+            height: 35%;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+
+        .Tendency .general .bgc {
+            width: 100%;
+            height: 38px;
+            background: url('./img/DISC_NEW_img_06.png') no-repeat center;
+            position: relative;
+        }
+
+        .Tendency .general .bgc>span {
+            font-size: 14px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 1);
+            line-height: 35px;
+            margin-left: 20px;
+            position: absolute;
+        }
+
+        .Tendency .general .bgc>span:nth-child(2),
+        .Tendency .general .bgc>span:nth-child(3) {
+            color: rgba(51, 51, 48, 1);
+            margin-left: 190px;
+            left: 80px;
+        }
+
+        .Tendency .general .bgc>span:nth-child(3) {
+            left: 302px;
+        }
+
+        .Tendency .general .strengths,
+        .Tendency .general .weaknesses {
+            margin-top: 20px;
+            float: left;
+            margin-left: 270px;
+            line-height: 20px;
+        }
+
+
+
+        .Tendency2 .border {
+            height: 88.45%;
+            margin-top: -2px;
+            position: relative;
+        }
+
+        .Tendency2 .border .content {
+            width: 92%;
+            height: 92%;
+            margin: 0 auto;
+            position: absolute;
+            top: 2rem;
+            left: 0;
+            right: 0;
+        }
+
+        .Tendency2 .content .char {
+            background-color: rgba(0, 160, 233, 1);
+            padding: 8px;
+            font-size: 14px;
+            color: white;
+            font-family: "SourceHanSansCN-Bold";
+            font-weight: bold;
+            height: 23px;
+            float: left;
+        }
+
+        .Tendency2 .content .jiao {
+            width: 0px;
+            height: 0px;
+            border-left: solid 15px rgba(0, 160, 233, 1);
+            border-top: solid 20px transparent;
+            border-bottom: solid 20px transparent;
+            float: left;
+            margin-left: -1px;
+        }
+
+        .Tendency2 .content .specific {
+            width: 100%;
+            height: 23%;
+            margin-top: 70px;
+            overflow: hidden;
+        }
+
+        .Tendency2 .content .specific .spe_l {
+            width: 49%;
+            height: 100%;
+            float: left;
+        }
+
+        .Tendency2 .content .specific .spe_l>p:nth-child(1) {
+            font-size: 24px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            padding: 0px;
+            width: 53px;
+            height: 53px;
+            text-align: center;
+            line-height: 2em;
+            border: 1px solid rgba(1, 122, 255, 1);
+            color: rgba(1, 122, 255, 1);
+            margin-top: 40px;
+        }
+
+        .Tendency2 .content .specific .spe_l>p:nth-child(2) {
+            font-size: 14px;
+            font-family: SourceHanSansCN-Normal;
+            font-weight: 400;
+            color: rgba(54, 54, 56, 1);
+            line-height: 18px;
+            margin-top: 25px;
+        }
+
+        .Tendency2 .content .specific .spe_line {
+            width: 1px;
+            height: 160px;
+            background-color: rgba(227, 228, 233, 1);
+            float: left;
+        }
+
+        .Tendency2 .content .specific .spe_r {
+            width: 49%;
+            height: 100%;
+            float: left;
+        }
+
+        .Tendency2 .content .specific .spe_r .sm_tit {
+            font-size: 14px;
+            font-weight: bold;
+            margin-left: 60px;
+            margin-top: 3px;
+        }
+
+        .Tendency2 .content .specific .spe_r .sper_con {
+            width: 60%;
+            overflow: hidden;
+            margin-top: 10px;
+            line-height: 20px;
+            margin-left: 60px;
+            margin-bottom: 10px;
+        }
+
+        .Tendency2 .specific .spe_r .sper_con>.num {
+            float: left;
+        }
+
+        .Tendency2 .specific .spe_r>p:last-child {
+            color: rgba(0, 160, 233, 1);
+            margin-top: 6px;
+            margin-left: 60px;
+            width: 100%;
+        }
+
+        .Tendency2 .content>p {
+            font-weight: bold;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .Tendency2 .content .general {
+            width: 100%;
+            height: 35%;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+
+        .Tendency2 .general .bgc {
+            width: 100%;
+            height: 38px;
+            background: url('./img/DISC_NEW_img_06.png') no-repeat center;
+            position: relative;
+        }
+
+        .Tendency2 .general .bgc>span {
+            font-size: 14px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 1);
+            line-height: 35px;
+            margin-left: 20px;
+            position: absolute;
+        }
+
+        .Tendency2 .general .bgc>span:nth-child(2),
+        .Tendency2 .general .bgc>span:nth-child(3) {
+            color: rgba(51, 51, 48, 1);
+            margin-left: 190px;
+            left: 80px;
+        }
+
+        .Tendency2 .general .bgc>span:nth-child(3) {
+            left: 302px;
+        }
+
+        .Tendency2 .general .strengths,
+        .Tendency2 .general .weaknesses {
+            margin-top: 20px;
+            float: left;
+            margin-left: 270px;
+            line-height: 20px;
+        }
+
+
+        .advice .border {
+            height: 88.45%;
+            margin-top: -2px;
+            position: relative;
+        }
+
+        .advice .border .content {
+            width: 92%;
+            height: 92%;
+            margin: 0 auto;
+            position: absolute;
+            top: 2rem;
+            left: 0;
+            right: 0;
+        }
+
+        .advice .content .char {
+            background-color: rgba(0, 160, 233, 1);
+            padding: 8px;
+            font-size: 14px;
+            color: white;
+            font-family: "SourceHanSansCN-Bold";
+            font-weight: bold;
+            height: 23px;
+            float: left;
+        }
+
+        .advice .content .jiao {
+            width: 0px;
+            height: 0px;
+            border-left: solid 15px rgba(0, 160, 233, 1);
+            border-top: solid 20px transparent;
+            border-bottom: solid 20px transparent;
+            float: left;
+            margin-left: -1px;
+        }
+
+        .advice .content>p {
+            line-height: 20px;
+            font-size: 14px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+        }
+
+        .advice .content .sm_tit {
+            font-size: 14px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            color: rgba(51, 51, 51, 1);
+            line-height: 18px;
+        }
+
+        .advice .content .soft .yuandian {
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
+            background-color: rgba(0, 160, 232, 1);
+            margin-top: 12px;
+        }
+
+        .advice .content .soft .hanzi {
+            margin-top: -13px;
+            margin-left: 15px;
+            font-size: 14px;
+            font-family: SourceHanSansCN-Bold;
+            color: rgba(51, 51, 51, 1);
+            line-height: 18px;
+        }
+
+
+
+        .advice2 .border {
+            height: 88.5%;
+            margin-top: -2px;
+            position: relative;
+        }
+
+        .advice2 .border .content {
+            width: 92%;
+            height: 92%;
+            margin: 0 auto;
+            position: absolute;
+            top: 2rem;
+            left: 0;
+            right: 0;
+        }
+
+        .advice2 .content p {
+            font-size: 14px;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+            line-height: 24px;
+        }
+
+        .advice2 .content .sm_tit {
+            font-size: 14px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            color: rgba(51, 51, 51, 1);
+            line-height: 18px;
+        }
+
+        .advice2 .content .soft .yuandian {
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
+            background-color: rgba(0, 160, 232, 1);
+            margin-top: 12px;
+        }
+
+        .advice2 .content .soft .hanzi {
+            margin-top: -13px;
+            margin-left: 15px;
+            font-size: 14px;
+            font-family: SourceHanSansCN-Bold;
+            color: rgba(51, 51, 51, 1);
+            line-height: 18px;
+        }
+
+        .advice2 .content .choose {
+            width: 100%;
+            background-color: rgba(243, 244, 246, 1);
+            height: 37px;
+            margin-top: 45px;
+            line-height: 3em;
+        }
+
+        .advice2 .content .choose>span {
+            font-size: 14px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            color: rgba(51, 51, 48, 1);
+            line-height: 18px;
+        }
+
+        .advice2 .content .yes {
+            margin-left: 113px;
+            float: left;
+            overflow: hidden;
+            margin-top: 25px;
+        }
+
+        .advice2 .content .no {
+            margin-left: 428px;
+            margin-top: 25px;
+        }
+
+
+        .advice3 .border {
+            height: 88.5%;
+            margin-top: -2px;
+            position: relative;
+        }
+
+        .advice3 .border .content {
+            width: 92%;
+            height: 92%;
+            margin: 0 auto;
+            position: absolute;
+            top: 2rem;
+            left: 0;
+            right: 0;
+        }
+
+        .advice3 .content p {
+            font-size: 14px;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+            line-height: 24px;
+        }
+
+        .advice3 .content .sm_tit {
+            font-size: 14px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            color: rgba(51, 51, 51, 1);
+            line-height: 18px;
+        }
+
+        .advice3 .content .soft .yuandian {
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
+            background-color: rgba(0, 160, 232, 1);
+            margin-top: 12px;
+        }
+
+        .advice3 .content .soft .hanzi {
+            margin-top: -13px;
+            margin-left: 15px;
+            font-size: 14px;
+            font-family: SourceHanSansCN-Bold;
+            color: rgba(51, 51, 51, 1);
+            line-height: 18px;
+        }
+
+        .advice3 .content .soft1>.yuandian {
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
+            background-color: rgba(0, 160, 232, 1);
+            margin-top: 12px;
+        }
+
+        .advice3 .content .soft1>.sm_tit {
+            margin-top: -13px;
+            margin-left: 16px;
+        }
+
+        .advice3 .content .soft1>.hanzi {
+            margin-top: -19px;
+            margin-left: 49px;
+            font-size: 14px;
+            font-family: SourceHanSansCN-Bold;
+            color: rgba(51, 51, 51, 1);
+            line-height: 18px;
+        }
+
+
+
+        .advice4 .border {
+            height: 88.5%;
+            margin-top: -2px;
+            position: relative;
+        }
+
+        .advice4 .border .content {
+            width: 92%;
+            height: 92%;
+            margin: 0 auto;
+            position: absolute;
+            top: 2rem;
+            left: 0;
+            right: 0;
+        }
+
+        .advice4 .content p {
+            font-size: 14px;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+            line-height: 24px;
+        }
+
+        .advice4 .content .sm_tit {
+            font-size: 14px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            color: rgba(51, 51, 51, 1);
+            line-height: 18px;
+        }
+
+        .advice4 .content .soft .yuandian {
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
+            background-color: rgba(0, 160, 232, 1);
+            margin-top: 12px;
+        }
+
+        .advice4 .content .soft .hanzi {
+            margin-top: -13px;
+            margin-left: 15px;
+            font-size: 14px;
+            font-family: SourceHanSansCN-Bold;
+            color: rgba(51, 51, 51, 1);
+            line-height: 18px;
+        }
+
+        .advice4 .content .choose {
+            width: 100%;
+            background-color: rgba(243, 244, 246, 1);
+            height: 37px;
+            margin-top: 45px;
+            line-height: 3em;
+        }
+
+        .advice4 .content .choose>span {
+            font-size: 14px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            color: rgba(51, 51, 48, 1);
+            line-height: 18px;
+        }
+
+        .advice4 .content .yes {
+            margin-left: 45px;
+            float: left;
+            overflow: hidden;
+            margin-top: 25px;
+        }
+
+        .advice4 .content .no {
+            margin-left: 510px;
+            margin-top: 25px;
+        }
+
+
+        .advice5 .border {
+            height: 88.5%;
+            margin-top: -2px;
+            position: relative;
+        }
+
+        .advice5 .border .content {
+            width: 92%;
+            height: 92%;
+            margin: 0 auto;
+            position: absolute;
+            top: 2rem;
+            left: 0;
+            right: 0;
+        }
+
+        .advice5 .content p {
+            font-size: 14px;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+            line-height: 24px;
+        }
+
+        .advice5 .content .sm_tit {
+            font-size: 14px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            color: rgba(51, 51, 51, 1);
+            line-height: 18px;
+        }
+
+        .advice5 .content .soft .yuandian {
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
+            background-color: rgba(0, 160, 232, 1);
+            margin-top: 12px;
+        }
+
+        .advice5 .content .soft .hanzi {
+            margin-top: -13px;
+            margin-left: 15px;
+            font-size: 14px;
+            font-family: SourceHanSansCN-Bold;
+            color: rgba(51, 51, 51, 1);
+            line-height: 18px;
+        }
+
+        .advice5 .content .soft1>.yuandian {
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
+            background-color: rgba(0, 160, 232, 1);
+            margin-top: 12px;
+        }
+
+        .advice5 .content .soft1>.sm_tit {
+            margin-top: -13px;
+            margin-left: 16px;
+        }
+
+        .advice5 .content .soft1>.hanzi {
+            margin-top: -19px;
+            margin-left: 49px;
+            font-size: 14px;
+            font-family: SourceHanSansCN-Bold;
+            color: rgba(51, 51, 51, 1);
+            line-height: 18px;
+        }
+
+        .advice5 .content .general {
+            width: 100%;
+            height: 35%;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+
+        .advice5 .general .bgc {
+            width: 100%;
+            height: 38px;
+            background: url('./img/DISC_NEW_img_07.png') no-repeat center;
+            position: relative;
+        }
+
+        .advice5 .general .bgc>span {
+            font-size: 14px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 1);
+            line-height: 35px;
+            margin-left: 20px;
+            position: absolute;
+        }
+
+        .advice5 .general .bgc>span:nth-child(2),
+        .advice5 .general .bgc>span:nth-child(3) {
+            color: rgba(51, 51, 48, 1);
+            margin-left: 190px;
+            left: 70px;
+        }
+
+        .advice5 .general .bgc>span:nth-child(3) {
+            left: 280px;
+        }
+
+        .advice5 .general .behavior,
+        .advice5 .general .perfect {
+            margin-top: 20px;
+            float: left;
+            margin-left: 260px;
+            line-height: 20px;
+        }
+
+
+        .strategy .border {
+            height: 88.45%;
+            margin-top: -2px;
+            position: relative;
+        }
+
+        .strategy .border .content {
+            width: 92%;
+            height: 92%;
+            margin: 0 auto;
+            position: absolute;
+            top: 2rem;
+            left: 0;
+            right: 0;
+        }
+
+        .strategy .content .char {
+            background-color: rgba(0, 160, 233, 1);
+            padding: 8px;
+            font-size: 14px;
+            color: white;
+            font-family: "SourceHanSansCN-Bold";
+            font-weight: bold;
+            height: 23px;
+            float: left;
+        }
+
+        .strategy .content .jiao {
+            width: 0px;
+            height: 0px;
+            border-left: solid 15px rgba(0, 160, 233, 1);
+            border-top: solid 20px transparent;
+            border-bottom: solid 20px transparent;
+            float: left;
+            margin-left: -1px;
+        }
+
+        .strategy .content .cross {
+            width: 100%;
+            height: 79%;
+            margin-top: 90px;
+            overflow: hidden;
+        }
+
+        .strategy .content .cross_x {
+            width: 100%;
+            height: 1px;
+            background-color: rgba(51, 51, 51, 1);
+            position: relative;
+            top: 50%;
+            z-index: 10;
+            float: left;
+        }
+
+        .strategy .content .cross_y {
+            width: 1px;
+            height: 100%;
+            background-color: rgba(51, 51, 51, 1);
+            position: relative;
+            left: 50%;
+            z-index: 10;
+            float: left;
+        }
+
+        .strategy .content .cross .cr {
+            width: 40%;
+            height: 39.5%;
+            float: left;
+            margin-left: 24px;
+            margin-top: 24px;
+            padding: 18px;
+        }
+
+        .strategy .content .cross .sm_tit {
+            font-size: 14px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            color: rgba(51, 51, 51, 1);
+            line-height: 18px;
+        }
+
+        .strategy .content .cross .sm_tit1 {
+            font-size: 14px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            color: rgba(51, 51, 51, 1);
+            line-height: 18px;
+            height: 40px;
+        }
+
+        .strategy .content .D {
+            color: rgba(244, 77, 54, 1) !important;
+        }
+
+        .strategy .content .C {
+            color: rgba(1, 122, 255, 1) !important;
+        }
+
+        .strategy .content .I {
+            color: rgba(249, 198, 38, 1) !important;
+        }
+
+        .strategy .content .S {
+            color: rgba(140, 220, 139, 1) !important;
+        }
+
+        .strategy .content .soft .yuandian {
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
+            background-color: rgba(0, 160, 232, 1);
+            margin-top: 12px;
+        }
+
+        .strategy .content .soft .hanzi {
+            margin-top: -13px;
+            margin-left: 15px;
+            font-size: 14px;
+            font-family: SourceHanSansCN-Bold;
+            color: rgba(51, 51, 51, 1);
+            line-height: 18px;
+        }
+
+
+
+        .strategy2 .border {
+            height: 88.45%;
+            margin-top: -2px;
+            position: relative;
+        }
+
+        .strategy2 .border .content {
+            width: 92%;
+            height: 92%;
+            margin: 0 auto;
+            position: absolute;
+            top: 2rem;
+            left: 0;
+            right: 0;
+        }
+
+        .strategy2 .content .char {
+            background-color: rgba(0, 160, 233, 1);
+            padding: 8px;
+            font-size: 14px;
+            color: white;
+            font-family: "SourceHanSansCN-Bold";
+            font-weight: bold;
+            height: 23px;
+            float: left;
+        }
+
+        .strategy2 .content .jiao {
+            width: 0px;
+            height: 0px;
+            border-left: solid 15px rgba(0, 160, 233, 1);
+            border-top: solid 20px transparent;
+            border-bottom: solid 20px transparent;
+            float: left;
+            margin-left: -1px;
+        }
+
+        .strategy2 .content .cross {
+            width: 100%;
+            height: 85%;
+            margin-top: 90px;
+            overflow: hidden;
+        }
+
+        .strategy2 .content .cross_x {
+            width: 100%;
+            height: 1px;
+            background-color: rgba(51, 51, 51, 1);
+            position: relative;
+            top: 50%;
+            z-index: 10;
+            float: left;
+        }
+
+        .strategy2 .content .cross_y {
+            width: 1px;
+            height: 100%;
+            background-color: rgba(51, 51, 51, 1);
+            position: relative;
+            left: 50%;
+            z-index: 10;
+            float: left;
+        }
+
+        .strategy2 .content .cross .cr {
+            width: 40%;
+            height: 39.5%;
+            float: left;
+            margin-left: 24px;
+            margin-top: 24px;
+            padding: 18px;
+        }
+
+        .strategy2 .content .cross .sm_tit {
+            font-size: 14px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            color: rgba(51, 51, 51, 1);
+            line-height: 18px;
+        }
+
+        .strategy2 .content .cross .sm_tit1 {
+            font-size: 14px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            color: rgba(51, 51, 51, 1);
+            line-height: 18px;
+            height: 40px;
+        }
+
+        .strategy2 .content .D {
+            color: rgba(244, 77, 54, 1) !important;
+        }
+
+        .strategy2 .content .C {
+            color: rgba(1, 122, 255, 1) !important;
+        }
+
+        .strategy2 .content .I {
+            color: rgba(249, 198, 38, 1) !important;
+        }
+
+        .strategy2 .content .S {
+            color: rgba(140, 220, 139, 1) !important;
+        }
+
+        .strategy2 .cross p {
+            font-size: 14px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+            line-height: 18px;
+        }
+
+
+
+        .develop .border {
+            height: 88.45%;
+            margin-top: -2px;
+            position: relative;
+        }
+
+        .develop .border .content {
+            width: 92%;
+            height: 92%;
+            margin: 0 auto;
+            position: absolute;
+            top: 2rem;
+            left: 0;
+            right: 0;
+        }
+
+        .develop .content .char {
+            background-color: rgba(0, 160, 233, 1);
+            padding: 8px;
+            font-size: 14px;
+            color: white;
+            font-family: "SourceHanSansCN-Bold";
+            font-weight: bold;
+            height: 23px;
+            float: left;
+        }
+
+        .develop .content .jiao {
+            width: 0px;
+            height: 0px;
+            border-left: solid 15px rgba(0, 160, 233, 1);
+            border-top: solid 20px transparent;
+            border-bottom: solid 20px transparent;
+            float: left;
+            margin-left: -1px;
+        }
+
+        .develop .content .cont_top, .develop .content .cont_bom{
+            width: 100%;
+            height: 45%;
+            margin-bottom: 60px;
+        }
+
+        .develop .content p {
+            font-size: 14px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+            line-height: 18px;
+        }
+
+        .develop .content .sm_tit {
+            font-weight: bold;
+        }
+
+        .develop .content .trait_list .num {
+            font-size: 14px;
+            font-family: SourceHanSansCN-Regular;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+            line-height: 18px;
+            margin-top: 12px;
+        }
+
+        .develop .content .trait_list .wenzi {
+            margin-top: -19px;
+            margin-left: 15px;
+            font-size: 14px;
+            font-family: SourceHanSansCN-Bold;
+            color: rgba(51, 51, 51, 1);
+            line-height: 18px;
         }
     </style>
 </head>
 
 <body body class="A4">
     <div id="app" v-cloak>
-    <section class="index sheet">
-        <img src="./img/DISC_NEW_picture01.png" style="margin-top:-10px;">
-        <div class="userInfo">
-            <ul>
-                <li>
-                    <span>姓名：</span>
-                    <span id="Name">张菊花</span>
-                </li>
-                <li>
-                    <span>性别：</span>
-                    <span id="Gender">女</span>
-                </li>
-                <li>
-                    <span>年龄：</span>
-                    <span id="Age">18岁</span>
-                </li><br>
-                <li>
-                    <span>测试时间：</span>
-                    <span id="Testtime"></span>
-                </li>
-            </ul>
-        </div>
-        <img src="./img/DISC_NEW_picture06.png" style="height: 10%;margin-top: -1px;">
-    </section>
-
-    <section class="introduction sheet">
-        <img src="./img/DISC_NEW_picture02.png" style="width: 101%; margin-top: -10px;" alt="">
-        <div class="border">
-            <div class="content">
-                <div class="lit-title">
-                    <div class="char">
-                            DISC理论介绍
-                    </div>
-                    <div class="jiao"></div>
-                    </div><br><br><br><br>
-                    <p>
-                        本测评是格略咨询基于威廉·马斯顿博士 DISC 人类行为语言理论、融合格略已有的能力模型和行为风格理论，将您在职业中的主导行为特征分为四种类型，分别为：
-                    </p>
-                     <ul class="DISC_content">
-                         <li>
-                             <div class="DISC_theoty">
-                                D-支配性（Dominance）
-                             </div>
-                             <p>
-                                代表在自认为不友好的环境中主动出击
-                             </p>
-                         </li>
-                         <li>
-                            <div class="DISC_theoty">
-                                    I-影响性（Influence）
-                            </div>
-                            <p>
-                                    代表在自认为友好的环境中主动表现
-                            </p>
-                        </li>
-                    </ul>
-                    <ul class="DISC_content">
-                        <li>
-                            <div class="DISC_theoty">
-                                    S-稳定性（Steadiness）
-                            </div>
-                            <p>
-                                    代表在自认为友好的环境中顺势而为
-                            </p>
-                        </li>
-                        <li>
-                            <div class="DISC_theoty">
-                                    C-遵从性（Compliance）
-                            </div>
-                            <p>
-                                    代表在自认为不友好的环境中被动顺应
-                            </p>
-                        </li>
-                    </ul>
-                   
-                <div class="lit-title">
-                    <div class="char">
-                        报告阅读建议
-                    </div>
-                    <div class="jiao"></div>
-                </div><br><br><br><br>
-                <p>
-                        本报告旨在体现您在职业中的主导行为特征（偏好），帮助您了解和分析您的职业个性，提供您与不同类型风格人物有效沟通的技巧，以及可能适合您的行为特征的职场发展建议。
-                </p>
-                <div class="Read_suggest">
-                        阅读时请注意以下几点
-                </div>
-                <p class="tit_num">1、</p>
-                <p class="tit_list">本报告对您的职业个性特征进行了详细描述，它能够帮助您拓展思路，接受更多的可能性，而非限制您的选择；</p>
-
-                <p class="tit_num">2、</p>
-                <p class="tit_list">报告结果（主导行为特征）没有“好”与“坏”之分，但不同特点对于不同的工作存在“适合”与“不适合”的区别，从而表现出具体场景下的优劣势； </p>
-
-                <p class="tit_num">3、</p>
-                <p class="tit_list">您的主导行为特征由成长环境、生活和工作经历决定，不要想象去改变它，但是我们可以在了解主导特征的基础上对某些特征进行补充和平衡，从而优化我们的决策，更有效地发挥潜力。</p>
+        <section class="index sheet">
+            <img src="./img/DISC_NEW_picture01.png" style="margin-top:-10px;">
+            <div class="userInfo">
+                <ul>
+                    <li>
+                        <span>姓名：</span>
+                        <span id="Name">张菊花</span>
+                    </li>
+                    <li>
+                        <span>性别：</span>
+                        <span id="Gender">女</span>
+                    </li>
+                    <li>
+                        <span>年龄：</span>
+                        <span id="Age">18岁</span>
+                    </li><br>
+                    <li>
+                        <span>测试时间：</span>
+                        <span id="Testtime"></span>
+                    </li>
+                </ul>
             </div>
-        </div>
+            <img src="./img/DISC_NEW_picture06.png" style="height: 10%;margin-top: -1mm;">
+        </section>
 
-        <img src="./img/DISC_NEW_picture07 (1).png" style="width: 101%" alt="">
-    </section>
+        <section class="Introduction sheet">
+            <img src="./img/DISC_NEW_picture02.png" alt="">
+            <div class="border">
+                <div class="content">
+                    <div class="cont_top">
+                        <div class="char">基本概念</div>
+                        <div class="jiao"></div><br><br><br><br>
+                        <p class="sm_tit">偏好</p>
+                        <p>我们从很小的时候就学会了要做什么，不要做什么，如何去做某些事情和如何不做某些事情。早年所学到的这一套虽说可以调整改变，但它却构成了我们如何看待世界以及如何行为做事的基础。在我们的行为喜好方面，情况也一样。我们工作的时候，总会有一种偏好，我们这样做会觉得很舒服，这往往是一种符合我们的自然天性和能力的事情。除非我们培养一种技能来纠正这种偏好，否则我们就会按照惯性一直这么做下去，不管出现什么情况也不改变。我们把这种行为模式称之为风格。虽说我们在日常工作中会采取以下四种风格，但一般都会有一种最基本的，即我们最倾向于采用的风格。本单元将帮助我们理解我们自己和其他人的基本风格，以及如何与大家一起更加高效率地工作。</p>
+                        <br>
+                        <p class="sm_tit">多样性</p>
+                        <p>所谓多样性，是指一个人在多大程度上能改变自己的行为以适应别人的需要或期待。具有多样性和灵活性可使你发挥你的工作风格的优势，并最大限度地缩小你的弱点的影响。</p>
 
-    <section class="results sheet">
-        <img src="./img/DISC_NEW_picture03_DISC.png" alt="">
-        <div class="border" style="height: 88.5%;">
-            <div class="iwedoing_content">
-                <div class="sample_lef">
-                    <div class="sample_charts" id="sample_charts"></div>
-                    <div class="sample_table">
-                        <ul>
-                            <li class="sample_table_title"></li>
-                            <li class="sample_table_title"></li>
-                            <li class="sample_table_title"></li>
-                            <li class="sample_table_title"></li>
-                            <li class="sample_table_char"></li>
-                            <li class="sample_table_char"></li>
-                            <li class="sample_table_char"></li>
-                            <li class="sample_table_char"></li>
-                        </ul>
+                        <div class="parsing">
+                            <div class="par_l">
+                                <p class="sm_tit" style="margin-bottom: 20px;">多样性方面差的人被认为是：</p>
+                                <p class="yuandian"></p>
+                                <p class="hanzi">很少对自己的表态和对他人做出的反应加以修正</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">只能在自己的“舒适区”工作 </p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">对人与人之间的差别不敏感 </p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">所做出的表态和反应基本上可以预料</p>
+                            </div>
+                            <div class="par_l" style="float:right">
+                                <p class="sm_tit" style="margin-bottom: 20px;">多样性方面强的人被认为是：</p>
+                                <p class="yuandian"></p>
+                                <p class="hanzi">经常会对自己的表态和对别人的反应作出修正</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">往往也能在自己的“非舒适区”工作 </p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">对人与人之间的差异敏感，对别人的需求能给予考虑 </p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">在作表态和反应时比较机动灵活</p>
+                            </div>
+                        </div><br><br>
+                        <p>表态和反应的灵活有助于缓和与他人的紧张关系，因此能使你的团队把精力集中在工作上，从而提高团队的工作效率。</p>
+                        <div class="parsing2">
+                            <p class="sm_tit" style="margin-bottom: 20px;">多样性技巧<i>(通过在以下三方面提高技巧，你能够提高你的多样性)</i></p>
+                            <p class="yuandian"></p>
+                            <p class="hanzi">风格界定 – 通过分析行为界定他人的工作风格 </p>
+                            <p class="yuandian"></p>
+                            <p class="hanzi">风格意识 – 熟知不同风格的需求和特点 </p>
+                            <p class="yuandian"></p>
+                            <p class="hanzi">风格调整 – 愿意并能够调整自己的作风以适应别人的需求和期待 </p>
+                        </div>
+                    </div>
+                    <div class="cont_bom">
+                        <div class="char">报告阅读建议</div>
+                        <div class="jiao"></div><br><br><br><br>
+                        <p>本报告旨在体现您在职业中的主导行为特征（偏好），帮助您了解和分析您的职业个性，提供您与不同类型风格人物有效沟通的技巧，以及可能适合您的行为特征的职场发展建议。</p>
+                        <div class="advice">阅读时注意以下几点</div><br>
+                        <p class="num">1、</p>
+                        <p class="hanzi" style="margin-top: -27px; margin-left: 22px;">本报告对您的职业个性特征进行了详细描述，它能够帮助您拓展思路，接受更多的可能性，而非限制您的选择；</p><br>
+
+                        <p class="num">2、</p>
+                        <p class="hanzi" style="margin-top: -27px; margin-left: 22px;">报告结果（主导行为特征）没有“好”与“坏”之分，但不同特点对于不同的工作存在“适合”与“不适合”的区别，从而表现出具体场景下的优劣势；</p><br>
+
+                        <p class="num">3、</p>
+                        <p class="hanzi" style="margin-top: -27px; margin-left: 22px;">您的主导行为特征由成长环境、生活和工作经历决定，不要想象去改变它，但是我们可以在了解主导特征的基础上对某些特征进行补充和平衡，从而优化我们的决策，更有效地发挥潜力。</p>
                     </div>
                 </div>
-                
-                <div class="sample_introduce">
-                    <div class="sample_introduce_title">
-                        您的主导行为特征：<span class='feature_char'>CSD</span>
+            </div>
+            <img src="./img/DISC_NEW_picture07.png" alt="">
+        </section>
+
+        <section class="WorkingStyle sheet">
+            <img src="./img/DISC_NEW_picture02（1）.png" alt="">
+            <div class="border">
+                <div class="content">
+                    <div class="char">您的主导工作风格</div>
+                    <div class="jiao"></div><br><br><br><br><br>
+                    <img src="./img/DISC_NEW_img _01.png" alt="">
+                    <div class="cont">
+                        <div class="cont_l">
+                            <p class="sm_tit">左上区</p><br>
+                            <p class="hanzi">该区域显示习惯于告知式、关注任务的人所容易采取的共同行为方式。我们把这些人的工作作风称之为D</p>
+                        </div>
+                        <div class="cont_l" style="float:right;">
+                            <p class="sm_tit">右上区</p><br>
+                            <p class="hanzi">该区域显示习惯于询问式、关注任务的人所容易采取的共同行为方式。我们把这些人的工作作风称之为C</p>
+                        </div>
                     </div>
-                    <div class="char">
-                            您的行为特征
+
+                    <div class="cont">
+                        <div class="cont_l">
+                            <p class="sm_tit">左下区</p><br>
+                            <p class="hanzi">该区域显示习惯于命令式、关注人的人所容易采取的共同行为方式。我们把这些人的工作作风称之为I</p>
+                        </div>
+                        <div class="cont_l" style="float:right;">
+                            <p class="sm_tit">右下区</p><br>
+                            <p class="hanzi">该区域显示习惯于询问式、关注人的人所容易采取的共同行为方式。我们把这些人的工作作风称之为S</p>
+                        </div>
                     </div>
+                </div>
+            </div>
+            <img src="./img/DISC_NEW_picture07（1）.png" alt="">
+        </section>
+
+        <section class="trait sheet">
+            <img src="./img/DISC_NEW_picture02（1）.png" alt="">
+            <div class="border">
+                <div class="content">
+                    <div class="char">您的工作风格特点</div>
+                    <div class="jiao"></div><br><br><br>
+                    <div class="explain_warpper">
+                        <div class="explain_item">
+                            <div class="explain_letter" style="color: rgba(244, 77, 54, 1);">
+                                D
+                            </div>
+                            <div class="explain_content">
+                                <p class="sm_title" style="margin-bottom: 36px;">考量一个人如何解决问题和应对挑战</p>
+                                <p style="margin-top: 16px;">强度：</p>
+
+                                <div class="text">
+                                    D 值越高，在试图解决困难和障碍方面所表现出的积极性和进取心就越强。 <br />
+
+                                    D 值越低，则说明此人在做出决策前越倾向于多搜集信息。
+                                </div>
+
+                                <p>当处于对抗性环境中时：</p>
+
+                                <div class="text2">
+                                    D 值高的人则会显得非常进取、积极。
+                                </div>
+
+                                <!-- &#9702  &#176 -->
+                                <p>情感：</p>
+                                <div class="text3">
+                                    D 因素用以考量一个人的易怒情感。<br>
+                                    D 值极高者极易生气发怒； <br>
+                                    D 值极低者不易生气发怒。
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="explain_item">
+                            <div class="explain_letter" style="color: rgba(1, 122, 255, 1);">
+                                C
+                            </div>
+                            <div class="explain_content">
+                                <p>待和制定的规章制度如考量一个人对他人的期待如何做出反应 </p>
+                                <p>强度：</p>
+
+                                <div class="text">
+                                    C 值越高，表明此人越能够遵守他人制定的规章制度。 <br>
+                                    C 值越低，表明此人更愿意挑战规章制度并寻求独立。
+                                </div>
+
+
+                                <p>当处于对抗性环境中时：</p>
+
+                                <div class="text2">
+                                    C 值越高的人则更容易反应消极。
+                                </div>
+
+                                <p>情感：</p>
+                                <div class="text3">
+                                    C 因素用以考量一个人的恐惧感； <br />
+                                    C 值越高，说明此人的恐惧动因越强； <br />
+                                    C 值越低，说明此人越无所畏惧。
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="explain_item">
+                            <div class="explain_letter" style="color:rgba(249, 198, 38, 1);">
+                                I
+                            </div>
+                            <div class="explain_content">
+                                <p>考量一个人影响和说服他人的能力</p>
+                                <p>强度：</p>
+
+                                <div class="text">
+                                    I 值越高，在影响他人的思维方式方面，就越善于言辞，具有说服力。
+                                    <br />
+                                    I 值越低，越倾向于用数据和事实来说明问题。
+                                </div>
+
+                                <p style="margin-top: 36px;">当处于对抗性环境中时：</p>
+
+                                <div class="text2">
+                                    I 值越高的人反应越积极，且倾向于通过协商达成共识
+                                </div>
+
+                                <p>情感：</p>
+                                <div class="text3">
+                                    I 因素用以考量一个人的乐观情感； <br />
+                                    I 值极高者情绪非常乐观； <br />
+                                    I 值低者则倾向于悲观。
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="explain_item">
+                            <div class="explain_letter" style="color:rgba(140, 220, 139, 1);">
+                                S
+                            </div>
+                            <div class="explain_content">
+                                <p>考量一个人开展工作、承担责任的快慢</p>
+                                <p>强度：</p>
+
+                                <div class="text">
+                                    S 值越高，越倾向于一次有始有终地完成某件任务。同样，他们对变化有较强的抵触心理。
+                                    <br />
+                                    S 值越低，工作节奏越快，希望变化的愿望越强烈。
+                                </div>
+
+
+                                <p>当处于对抗性环境中时：</p>
+
+                                <div class="text2">
+                                    S 值越高的人反应越消极。
+                                </div>
+
+                                <p style="margin-top: 36px;">情感：</p>
+                                <div class="text3">
+                                    S 用以考量一个人是否缺乏情绪； <br />
+                                    S 值越高，越少情绪化，内心越难解读； <br />
+                                    S 值越低，越情绪化，而且也越善于表达。
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="./img/DISC_NEW_picture07 （2）.png" alt="">
+        </section>
+
+        <section class="results sheet">
+            <img src="./img/DISC_NEW_picture02（1）.png" alt="">
+            <div class="border">
+                <div class="iwedoing_content">
+                    <div class="char">您的主导行为特征</div>
                     <div class="jiao"></div>
-                    <p class="sample_char"></p>
-                    <div class="charFlag">
-                        <div class="char ">
+                    <div class="sample_lef">
+                        <div class="sample_charts" id="sample_charts"></div>
+                        <div class="sample_table">
+                            <ul>
+                                <li class="sample_table_title">D</li>
+                                <li class="sample_table_title">I</li>
+                                <li class="sample_table_title">S</li>
+                                <li class="sample_table_title">C</li>
+                                <li class="sample_table_char">14.5</li>
+                                <li class="sample_table_char">15.75</li>
+                                <li class="sample_table_char">15.75</li>
+                                <li class="sample_table_char">17.75</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="sample_introduce">
+                        <div class="sample_introduce_title">
+                            您的主导行为特征：<span class='feature_char'>CSD</span>
+                        </div>
+                        <div class="char">
+                            您的行为特征
+                        </div>
+                        <div class="jiao"></div>
+                        <p class="sample_char">
+                            行事富有耐心，实事求是。通常体贴而谦逊有礼，与大多数人关系良好，但在必要的时候也能够立场分明。会仔细制定工作计划，同时始终充满着进取心。总是有选择性地结交朋友。习惯于先分析是否能够达到目标，然后才会坚定地去实施。以目标为导向，一旦对于任务的结果有着强烈的认同感，便会接受挑战而毫不畏缩，因此非常值得信赖。在面对内心冲突时，可能会显得更善于表达。
+                        </p>
+                        <div class="char" style="width:111px;">
                             您的优势与弱势
                         </div>
                         <div class="jiao"></div>
-                    </div>
-                    
-                    <p class="sample_char"></p>
-                    <div class="charFlag">
-                        <div class="char ">
+                        <p class="sample_char">
+                            细致耐心却又充满了果敢进取的意志。无畏挑战、毫不退缩，面对困境能够有逻辑地冷静分析，一旦下定决心，总是能够持之以恒直至达成。倾向于对工作与生活都采取同样的标准，追求“效率”与“质量”并重，更适合面向事实、复杂的程序或系统开展工作。相对的，有时候会显得固执，不易屈服，有时候可能会拒绝合作，对于自我的个人生活也通常所有保留。意志坚定，但也往往会顽固执拗，一旦认准死理要改变其想法就很困难。
+                        </p>
+                        <div class="char">
                             您的沟通风格
                         </div>
                         <div class="jiao"></div>
+                        <p class="sample_char">
+                            不会将人际关系作为关注的重点，可能仅仅就事论事，希望借助自己的力量去发现、去探索。通常采用“你问我答”的被动的方式进行沟通。面对外界的压力或困难，会希望更多地介入以直接施加影响，但是仍然只是会就事论事，轻易不会涉及到个人或者情感的方面。
+                        </p>
                     </div>
-                    
-                    <p class="sample_char"></p>
                 </div>
             </div>
-        </div>
-        <img src="./img/DISC_NEW_picture07（2）.png" style="width: 101%" alt="">
-    </section>
+            <img src="./img/DISC_NEW_picture07（3）.png" style="width: 101%" alt="">
+        </section>
 
-    <section class="sheet leading">
-        <img src="./img/DISC_NEW_picture03_DISC.png" alt="">
-        <div class="border" style="height: 88.5%;">
-            <div class="leading_wrapper">
-                <div class="leading_title">
+        <section class="leading sheet">
+            <img src="./img/DISC_NEW_picture02（1）.png" alt="">
+            <div class="border">
+                <div class="leading_wrapper">
+                    <div class="leading_title">
                         您的行为特征曲线图
+                    </div>
+                    <div class="leading_content">
+                        <div class="leading_item">
+                            <div class="leading_item_title">
+                                工作面具（图一）
+                            </div>
+                            <div class="leading_item_content" id="ChartWorkMask_Indicator"></div>
+                            <div class="leading_item_table">
+                                <ul>
+                                    <li class="leading_item_table_title">D</li>
+                                    <li class="leading_item_table_title">I</li>
+                                    <li class="leading_item_table_title">S</li>
+                                    <li class="leading_item_table_title">C</li>
+                                    <li class="leading_item_table_char leading_item_table_char1"></li>
+                                    <li class="leading_item_table_char leading_item_table_char1"></li>
+                                    <li class="leading_item_table_char leading_item_table_char1"></li>
+                                    <li class="leading_item_table_char leading_item_table_char1"></li>
+                                </ul>
+                            </div>
+                            <div class="leading_item_char">
+                                <div class="leading_item_char_title">
+                                    <p>工作面具</p>
+                                    <p>Work Mask</p>
+                                </div>
+                                <div class="leading_item_char_content">
+                                    是您在工作情境下的行为表现。这种行为模式是您在特定环境下理应呈现的理想“面具”，通常不被他人所知。
+                                </div>
+                            </div>
+                        </div>
+                        <div class="leading_item">
+                            <div class="leading_item_title">
+                                压力下的行为反应（图二）
+                            </div>
+                            <div class="leading_item_content" id="ChartBR_UnderStress_Indicator"></div>
+                            <div class="leading_item_table">
+                                <ul>
+                                    <li class="leading_item_table_title">D</li>
+                                    <li class="leading_item_table_title">I</li>
+                                    <li class="leading_item_table_title">S</li>
+                                    <li class="leading_item_table_title">C</li>
+                                    <li class="leading_item_table_char leading_item_table_char2"></li>
+                                    <li class="leading_item_table_char leading_item_table_char2"></li>
+                                    <li class="leading_item_table_char leading_item_table_char2"></li>
+                                    <li class="leading_item_table_char leading_item_table_char2"></li>
+                                </ul>
+                            </div>
+                            <div class="leading_item_char">
+                                <div class="leading_item_char_title">
+                                    <p>压力下的行为反应</p>
+                                    <p>Behavior under Pressure</p>
+                                </div>
+                                <div class="leading_item_char_content">
+                                    是您在压力情景下的行为表现。这种行为模式是您天生的、固有的，代表您最真实的内在动机和欲求，通常您也不自知。
+                                </div>
+                            </div>
+                        </div>
+                        <div class="leading_item">
+                            <div class="leading_item_title">
+                                自我形象（图三）
+                            </div>
+                            <div class="leading_item_content" id="ChartSelfImage_Indicator"></div>
+                            <div class="leading_item_table">
+                                <ul>
+                                    <li class="leading_item_table_title">D</li>
+                                    <li class="leading_item_table_title">I</li>
+                                    <li class="leading_item_table_title">S</li>
+                                    <li class="leading_item_table_title">C</li>
+                                    <li class="leading_item_table_char leading_item_table_char3"></li>
+                                    <li class="leading_item_table_char leading_item_table_char3"></li>
+                                    <li class="leading_item_table_char leading_item_table_char3"></li>
+                                    <li class="leading_item_table_char leading_item_table_char3"></li>
+                                </ul>
+                            </div>
+                            <div class="leading_item_char">
+                                <div class="leading_item_char_title">
+                                    <p>自我形象</p>
+                                    <p>Self-Image</p>
+                                </div>
+                                <div class="leading_item_char_content">
+                                    是您自己眼中的自己。这种行为模式相对稳定，是您来自过去的习得性反应与环境期待的结合，通常被他人和自己所熟知。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="leading_content">
-                    <div class="leading_item">
-                        <div class="leading_item_title">
-                            工作面具（图一）
+            </div>
+            <img src="./img/DISC_NEW_picture07（4）.png" alt="">
+        </section>
+
+        <section class="Tendency sheet">
+            <img src="./img/DISC_NEW_picture02（1）.png" alt="">
+            <div class="border">
+                <div class="content">
+                    <div class="char">您的具体行为倾向</div>
+                    <div class="jiao"></div>
+                    <div class="specific">
+                        <div class="spe_l">
+                            <p>I</p>
+                            <p>在顺利的环境中主动采取积极行动</p>
                         </div>
-                        <div class="leading_item_content" id="ChartWorkMask_Indicator"></div>
-                        <div class="leading_item_table">
-                            <ul>
-                                <li class="leading_item_table_title">D</li>
-                                <li class="leading_item_table_title">I</li>
-                                <li class="leading_item_table_title">S</li>
-                                <li class="leading_item_table_title">C</li>
-                                <li class="leading_item_table_char leading_item_table_char1"></li>
-                                <li class="leading_item_table_char leading_item_table_char1"></li>
-                                <li class="leading_item_table_char leading_item_table_char1"></li>
-                                <li class="leading_item_table_char leading_item_table_char1"></li>
-                            </ul>
+                        <div class="spe_line"></div>
+                        <div class="spe_r">
+                            <p class="sm_tit">外向，直率，乐观主义者</p>
+                            <div class="sper_con">
+                                <p class="num">1、</p>
+                                <p>情绪型</p>
+                                <p class="num">2、</p>
+                                <p>关注人</p>
+                                <p class="num">3、</p>
+                                <p>最大的担忧就是怕失去社会的承认</p>
+                                <p class="num">4、</p>
+                                <p>条理性差</p>
+                                <p class="num">5、</p>
+                                <p>乐观</p>
+                                <p class="num">6、</p>
+                                <p>总给人以鼓舞</p>
+                            </div>
+                            <p>影响: 善于表达，热情，情绪化，关心人，善于示范</p>
                         </div>
-                        <div class="leading_item_char">
-                            <div class="leading_item_char_title">
-                                <p>工作面具</p>
-                                <p>Work Mask</p>
-                            </div>
-                            <div class="leading_item_char_content">
-                                是您在工作情境下的行为表现。这种行为模式是您在特定环境下理应呈现的理想“面具”，通常不被他人所知。
-                            </div>
+
+                    </div>
+                    <p>高I值者的行为倾向</p>
+                    <div class="general">
+                        <div class="bgc">
+                            <span>一般特征</span>
+                            <span>强项</span>
+                            <span>弱项</span>
+                        </div>
+                        <div class="strengths">
+                            <p>外向，有个人魅力</p>
+                            <p>热心，友善</p>
+                            <p>善谈，善社交</p>
+                            <p>富有同情心，善于示范</p>
+                            <p>慷慨，真诚</p>
+                            <p>富有幽默感</p>
+                            <p>记得各种轶事</p>
+                            <p>热情，善于表达</p>
+                            <p>公众场合如鱼得水</p>
+                            <p>天真无邪</p>
+                            <p>永远生活在现</p>
+                        </div>
+                        <div class="weaknesses" style="margin-left: 102px;">
+                            <p>无约束，意志力差</p>
+                            <p>好动，幼稚</p>
+                            <p>条理性差，不出活</p>
+                            <p>不可依赖</p>
+                            <p>自我中心</p>
+                            <p>好夸大，好言谈</p>
+                            <p>胆怯，无安全感</p>
+                            <p>纠缠小事</p>
+                            <p>自我吹嘘，令人讨厌</p>
+                            <p>受环境影响</p>
+                            <p>易怒</p>
                         </div>
                     </div>
-                    <div class="leading_item">
-                        <div class="leading_item_title">
-                            压力下的行为反应（图二）
+
+                    <div class="general">
+                        <div class="bgc">
+                            <span>人际关系特征</span>
+                            <span>强项</span>
+                            <span>弱项</span>
                         </div>
-                        <div class="leading_item_content" id="ChartBR_UnderStress_Indicator"></div>
-                        <div class="leading_item_table">
-                            <ul>
-                                <li class="leading_item_table_title">D</li>
-                                <li class="leading_item_table_title">I</li>
-                                <li class="leading_item_table_title">S</li>
-                                <li class="leading_item_table_title">C</li>
-                                <li class="leading_item_table_char leading_item_table_char2"></li>
-                                <li class="leading_item_table_char leading_item_table_char2"></li>
-                                <li class="leading_item_table_char leading_item_table_char2"></li>
-                                <li class="leading_item_table_char leading_item_table_char2"></li>
-                            </ul>
+                        <div class="strengths">
+                            <p>行使有效的领导</p>
+                            <p>确立目标 </p>
+                            <p>让全家人都行动起来</p>
+                            <p>组织全家</p>
+                            <p>不太需要朋友 </p>
+                            <p>为集体行动而工作</p>
+                            <p>在紧急情况下表现出色</p>
                         </div>
-                        <div class="leading_item_char">
-                            <div class="leading_item_char_title">
-                                <p>压力下的行为反应</p>
-                                <p>Behavior under Pressure</p>
-                            </div>
-                            <div class="leading_item_char_content">
-                                是您在压力情景下的行为表现。这种行为模式是您天生的、固有的，代表您最真实的内在动机和欲求，通常您也不自知。
-                            </div>
+                        <div class="weaknesses" style="margin-left: 102px;">
+                            <p>趋于过分专断</p>
+                            <p>让家里过分忙碌 </p>
+                            <p>对不良表现没有耐心 </p>
+                            <p>不让孩子们休息</p>
+                            <p>好使用别人</p>
+                            <p>独立性太强</p>
+                            <p>不说“对不起” </p>
+                            <p>即使对了也不得人心 </p>
+                            <p>独占心强</p>
                         </div>
                     </div>
-                    <div class="leading_item">
-                        <div class="leading_item_title">
-                            自我形象（图三）
+                </div>
+            </div>
+            <img src="./img/DISC_NEW_picture07（5）.png" alt="">
+        </section>
+
+        <section class="Tendency sheet">
+            <img src="./img/DISC_NEW_picture02（1）.png" alt="">
+            <div class="border">
+                <div class="content">
+                    <div class="general">
+                        <div class="bgc">
+                            <span>职业特征</span>
+                            <span>强项</span>
+                            <span>弱项</span>
                         </div>
-                        <div class="leading_item_content" id="ChartSelfImage_Indicator"></div>
-                        <div class="leading_item_table">
-                            <ul>
-                                <li class="leading_item_table_title">D</li>
-                                <li class="leading_item_table_title">I</li>
-                                <li class="leading_item_table_title">S</li>
-                                <li class="leading_item_table_title">C</li>
-                                <li class="leading_item_table_char leading_item_table_char3"></li>
-                                <li class="leading_item_table_char leading_item_table_char3"></li>
-                                <li class="leading_item_table_char leading_item_table_char3"></li>
-                                <li class="leading_item_table_char leading_item_table_char3"></li>
-                            </ul>
+                        <div class="strengths">
+                            <p>自愿承担工作</p>
+                            <p>总想得出新的活动</p>
+                            <p>表面看起来很神气</p>
+                            <p>有创造性，丰富多彩</p>
+                            <p>有活力，热情洋溢</p>
+                            <p>开局花哨</p>
+                            <p>能激励大家参与</p>
                         </div>
-                        <div class="leading_item_char">
-                            <div class="leading_item_char_title">
-                                <p>自我形象</p>
-                                <p>Self-Image</p>
+                        <div class="weaknesses" style="margin-left: 102px;">
+                            <p>说多做少</p>
+                            <p>忘记自己的责任</p>
+                            <p>不能坚持到底</p>
+                            <p>很快就失去信心</p>
+                            <p>没有章法</p>
+                            <p>轻重缓急不清楚</p>
+                            <p>做决定感情用事</p>
+                            <p>容易分心</p>
+                            <p>时间浪费在说话上</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="./img/DISC_NEW_picture07（6）.png" alt="">
+        </section>
+
+        <section class="Tendency2 sheet">
+            <img src="./img/DISC_NEW_picture02（1）.png" alt="">
+            <div class="border">
+                <div class="content">
+                    <div class="char">您的具体行为倾向</div>
+                    <div class="jiao"></div>
+                    <div class="specific">
+                        <div class="spe_l">
+                            <p>C</p>
+                            <p>在不顺利的环境中主动采取积极行动</p>
+                        </div>
+                        <div class="spe_line"></div>
+                        <div class="spe_r">
+                            <p class="sm_tit">内向，挑剔的，说话温和</p>
+                            <div class="sper_con">
+                                <p class="num">1、</p>
+                                <p>完美主义，有自己的标准</p>
+                                <p class="num">2、</p>
+                                <p>敏感，容易伤感情</p>
+                                <p class="num">3、</p>
+                                <p>准确；刨根问底</p>
+                                <p class="num">4、</p>
+                                <p>需要许多种解释，问许多问题</p>
+                                <p class="num">5、</p>
+                                <p>最害怕批评，以及环境和条件的变化</p>
                             </div>
-                            <div class="leading_item_char_content">
-                                是您自己眼中的自己。这种行为模式相对稳定，是您来自过去的习得性反应与环境期待的结合，通常被他人和自己所熟知。
+                            <p>顺从: 有控制力，有分析力，顺从，有能力，认真，有才能</p>
+                        </div>
+                    </div>
+                    <p>高I值者的行为倾向</p>
+                    <div class="general">
+                        <div class="bgc">
+                            <span>一般特征</span>
+                            <span>强项</span>
+                            <span>弱项</span>
+                        </div>
+                        <div class="strengths">
+                            <p>分析型，理想主义</p>
+                            <p>完美主义，认真</p>
+                            <p>忠诚</p>
+                            <p>敏感</p>
+                            <p>能自我牺牲</p>
+                            <p>能自我约束</p>
+                            <p>严肃，目的性强</p>
+                            <p>有才能，有创造力</p>
+                            <p>有艺术细胞或有音乐才能</p>
+                            <p>有哲学头脑，有诗性</p>
+                            <p>欣赏美的东西</p>
+                        </div>
+                        <div class="weaknesses" style="margin-left: 102px;">
+                            <p>分析型，理想主义 </p>
+                            <p>完美主义，认真 </p>
+                            <p>条理性差，不出活</p>
+                            <p>不可依赖</p>
+                            <p>自我中心</p>
+                            <p>好夸大，好言谈</p>
+                            <p>胆怯，无安全感</p>
+                            <p>纠缠小事</p>
+                            <p>自我吹嘘，令人讨厌</p>
+                            <p>受环境影响</p>
+                            <p>易怒</p>
+                        </div>
+                    </div>
+
+                    <div class="general">
+                        <div class="bgc">
+                            <span>人际关系特征</span>
+                            <span>强项</span>
+                            <span>弱项</span>
+                        </div>
+                        <div class="strengths">
+                            <p>树立高标准</p>
+                            <p>凡事不马虎 </p>
+                            <p>孩子气</p>
+                            <p>鼓励受教育，肯定才能 </p>
+                            <p>交友谨慎 </p>
+                            <p>愿出头露面 </p>
+                            <p>避免引起注意</p>
+                        </div>
+                        <div class="weaknesses" style="margin-left: 102px;">
+                            <p>趋于过分专断</p>
+                            <p>让家里过分忙碌 </p>
+                            <p>对不良表现没有耐心 </p>
+                            <p>不让孩子们休息</p>
+                            <p>好使用别人</p>
+                            <p>独立性太强</p>
+                            <p>不说“对不起” </p>
+                            <p>即使对了也不得人心 </p>
+                            <p>独占心强</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="./img/DISC_NEW_picture07（7）.png" alt="">
+        </section>
+
+        <section class="Tendency2 sheet">
+            <img src="./img/DISC_NEW_picture02（1）.png" alt="">
+            <div class="border">
+                <div class="content">
+                    <div class="general">
+                        <div class="bgc">
+                            <span>职业特征</span>
+                            <span>强项</span>
+                            <span>弱项</span>
+                        </div>
+                        <div class="strengths">
+                            <p>善于安排</p>
+                            <p>完美主义，高标准</p>
+                            <p>讲究细节</p>
+                            <p>有创造性，丰富多彩</p>
+                            <p>有毅力，彻底</p>
+                            <p>有序，讲条理</p>
+                            <p>不铺张浪费</p>
+                            <p>看得出问题</p>
+                            <p>能有创造性的解决办法</p>
+                            <p>善始善终</p>
+                            <p>喜欢表格、图示、数字</p>
+                        </div>
+                        <div class="weaknesses" style="margin-left: 102px;">
+                            <p>善于安排</p>
+                            <p>完美主义，高标准</p>
+                            <p>讲究细节</p>
+                            <p>有创造性，丰富多彩</p>
+                            <p>有毅力，彻底</p>
+                            <p>有序，讲条理</p>
+                            <p>不铺张浪费</p>
+                            <p>看得出问题</p>
+                            <p>能有创造性的解决办法</p>
+                            <p>善始善终</p>
+                            <p>喜欢表格、图示、数字</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="./img/DISC_NEW_picture07（8）.png" alt="">
+        </section>
+
+        <section class="advice sheet">
+            <img src="./img/DISC_NEW_picture02（2）.png" alt="">
+            <div class="border">
+                <div class="content">
+                    <div class="char">I的风格调适</div>
+                    <div class="jiao"></div><br><br><br><br><br>
+                    <p class="sm_tit">认识高I值者</p><br>
+                    <p>高I值者从他们外向、能说会道、善于说服人的特点就可判定。他们一般比较乐观，往往总是看到事情的好的一面。他们基本上都是对人，对他们的问题，对他们的活动感兴趣。他们愿意为自己和别人的项目出力，但是可能忽略商业目标。</p><br><br>
+                    <p>高I值者在与人初次见面时，便拿出如同世交般的热情和人家亲近异常。他们会声称认识如何如何多的人，会甩出一连串的大人物的名字。他们往往凭一时冲动就做出决定或形成看法。他们在争论中会突然站到了对方的立场上，而自己却毫无意识。在平静稳定的状况下工作表现不错。</p><br><br>
+                    <p class="sm_tit">应变能力低下的I 值者</p><br>
+                    <p style="color: rgba(136, 136, 136, 1);">在面对压力时会呈现以下弱点：</p><br><br>
+                    <div class="soft" style="margin-bottom: 50px;">
+                        <p class="yuandian"></p>
+                        <p class="hanzi">更关注自己的大众形象，而不是实际的结果 </p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">过分自夸 </p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">明显的感情用事和冲动 </p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">自相矛盾的结论 </p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">只凭表面的分析就做出决定 </p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">对人的估价不切实际 </p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">对细节不关心 </p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">在计划和时间安排上有困难 </p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">浮浅 </p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">听取意见有选择性，心不在焉 </p>
+                    </div>
+                    <p class="sm_tit">高I值管理者</p><br>
+                    <p>作为高I值的管理者较友善，外向，性格有趣。他们与人的关系既亲切，面也广。他们爱运用自己的口才让下属们按他的想法行事。为不影响一个良好的局面，他们往往在约束下属方面不知所措。他们往往只凭对情况的表面分析就会匆匆得出结论或做出决定。应变力强的I型者，从他们的雄心勃勃、富有煽动性、热情和擅长戏剧表演，即可看出。而应变力弱的I型者，从他们好掌管事情、容易激动，纪律性差和比较自负即可看出。</p><br><br><br>
+                    <p class="sm_tit">高I值下属</p><br>
+                    <p>作为高I值的下属需要与其上司建立某种个人关系，这样他才能比较自如地做出实实在在的承诺。高I值者很需要介入管理过程之中，希望他们的上司让他们深度介入工作。高I值者关注未来目标和成就。他们的强项之一就是能用他们的说服力去动员大家把事情做好。他们喜爱需要许多人介入的工作。
+                    </p>
+                </div>
+            </div>
+            <img src="./img/DISC_NEW_picture07（9）.png" alt="">
+        </section>
+
+        <section class="advice2 sheet">
+            <img src="./img/DISC_NEW_picture02（2）.png" alt="">
+            <div class="border">
+                <div class="content">
+                    <p class="sm_tit">高I值者的一般表现</p><br>
+                    <div class="soft" style="margin-bottom: 50px;">
+                        <p class="yuandian"></p>
+                        <p class="hanzi">他们的办公室里往往张贴着一些证书、照片、奖状、奖杯、剪报之类的“陈列品 ”</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">可能格外地热情</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">可能会过分热心，对任何建议都答应</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">似乎有兴趣，而真要做决定时又拖延不决</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">通常穿着时髦</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">一般总显得非常专业化</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">愿意对你表现出友善，非常会交际</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">不会给你很多的时间</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">说话时有很多肢体动作和手势</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">会讲故事和奇闻逸事</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">善解人意</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">握手重（上下晃动）</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">行动冲动</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">不太注意细节</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">有时显得肤浅、轻率</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">积极，非常健谈</p>
+                    </div>
+                    <p class="sm_tit">如何加强与高I值者的良性互动</p><br><br>
+                    <p style="color:rgba(136, 136, 136, 1);">高I值者希望得到：</p>
+                    <p> 社会尊重和接受，免于处理细节，有人说话，对其能力的肯定，激励和影响他人的机会</p>
+                    <div class="choose">
+                        <span style="margin-left: 113px;">要</span>
+                        <span style="margin-left: 296px;">不要</span>
+                    </div>
+                    <div class="yes">
+                        <p>营造一个良好友善的工作环境</p>
+                        <p>让他们大谈自己的想法和感觉</p>
+                        <p>帮助他们把言谈转变为行动</p>
+                        <p>附和并证明其建议准确</p>
+                        <p>给他们社会活动的时间</p>
+                        <p>不要纠缠细节</p>
+                        <p>以书面形式呈递细节</p>
+                        <p>表示参与的愿望</p>
+                        <p>对完成任务要给予奖励</p>
+                    </div>
+                    <div class="no">
+                        <p>取消社交时间</p>
+                        <p>垄断谈话</p>
+                        <p>忽略他们的想法和成就</p>
+                        <p>直接告诉他们该干什么</p>
+                        <p>把他们与团队隔离</p>
+                    </div>
+                </div>
+            </div>
+            <img src="./img/DISC_NEW_picture07（10）.png" alt="">
+        </section>
+
+        <section class="advice3 sheet">
+            <img src="./img/DISC_NEW_picture02（2）.png" alt="">
+            <div class="border">
+                <div class="content">
+                    <p class="sm_tit">高I值者在分析信息时一般会</p><br>
+                    <div class="soft" style="margin-bottom: 70px;">
+                        <p class="yuandian"></p>
+                        <p class="hanzi">思想不集中</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">忽略重要的事实或细节</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">解决问题有创造性</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">打断别人说话</p>
+                    </div>
+
+                    <p class="sm_tit">他们希望别人这样对待他们</p><br>
+                    <div class="soft1" style="margin-bottom: 70px;">
+                        <p class="yuandian"></p>
+                        <p class="sm_tit">态度 </p>
+                        <p class="hanzi"> – 准时，长时间握手，紧握，微笑，直接的对视。个人兴趣高于生意。热情，外向，交流，不要急忙介入生意 </p>
+
+                        <p class="yuandian"></p>
+                        <p class="sm_tit">关系</p>
+                        <p class="hanzi"> –
+                            在拉关系和社交上多花时间。要运用手势，脸部表情，声音的抑扬顿挫，讲故事、笑话、个人经历；不要三言两语，冷冰冰，不苟言笑，死板或过分地关注任务。要引起和保持他们的注意，你得找准你所能支持的梦想和直觉
+                        </p>
+
+                        <p class="yuandian"></p>
+                        <p class="sm_tit">重点</p>
+                        <p class="hanzi"> – 社会需要，介入参与。征询他们的意见，感觉，见解和想法。一定要花时间弄清楚他们的目标是什么 </p>
+
+                        <p class="yuandian"></p>
+                        <p class="sm_tit">陈述</p>
+                        <p class="hanzi"> – 要从人的角度去讨论任务。解释你的任务目标时，要强调它对人有利，能增进关系，能满足情感需要 </p>
+
+                        <p class="yuandian"></p>
+                        <p class="sm_tit">获取承诺</p>
+                        <p class="hanzi four"> – 从任务和人两个角度去获得承诺。展示目前的好处将延续至将来。为出色表现提供具体、直接和额外的奖励。在适当时机提及他们认为是重要或显赫的人物</p>
+                    </div>
+
+                    <p class="sm_tit">与此类性格人交往时，如何调节你的行动的小建议</p><br>
+                    <div class="soft" style="margin-bottom: 70px;">
+                        <p class="yuandian"></p>
+                        <p class="hanzi">非常认真的承认他们的贡献，给他们的成功以看得见的表彰</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">讨论时不要着急，寻找那些使双方都得到刺激的想法</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">高I值者不喜欢在争论中失败，所以不要争论，而要去探讨双方都感兴趣、有热情的解决办法</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">当你们达成一致时，把关系到什么、何时、谁来做、以及如何做等具体细节都弄妥。再明确一遍你们在这些具体问题上都认识一致了</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">用书面形式把你们同意的事情写下，即便表面上无此必要。</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">记住，高I值者只是在他们能够并想做的时候才会行动</p>
+                    </div>
+                </div>
+            </div>
+            <img src="./img/DISC_NEW_picture07（11）.png" alt="">
+        </section>
+
+        <section class="advice sheet">
+            <img src="./img/DISC_NEW_picture02（2）.png" alt="">
+            <div class="border">
+                <div class="content">
+                    <div class="char">C的风格调适</div>
+                    <div class="jiao"></div><br><br><br><br><br>
+                    <p class="sm_tit">认识高C值</p><br>
+                    <p>高C值者可由他们小心翼翼和比较保守的特性来识别。他们敏感，希望得到别人的欣赏，因而在大多数情况下，他们会顺势应时地避免冲突，很少故意触怒别人。这种人的感情很容易挫伤，他们往往把对他们工作的反馈意见算到自己的头上。他们最害怕做错了什么，因而在工作中会极度认真仔细，做决定也缓慢。他们往往把这种严格的标准用来律己，久而久之，使得他们对自己的评价很低。</p><br><br>
+                    <p>高C值者努力争取一种稳定、有序的生活，他们在个人生活和业务领域中都比较遵守规程。他们擅长系统性的思维和工作，有条不紊、中矩中规。他们做事精细，注意细节，一般都喜欢坚持曾经让他们获得成功的方法。</p><br><br>
+                    <p class="sm_tit">应变能力低下的C 值者</p><br>
+                    <p style="color: rgba(136, 136, 136, 1);">在面对压力时会呈现以下弱点：</p><br><br>
+                    <div class="soft" style="margin-bottom: 50px;">
+                        <p class="yuandian"></p>
+                        <p class="hanzi">依赖上司，在没有先例的情况下行动犹豫不决 </p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">受程序和方式方法的约束，陷进具体的细节之中 </p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">不愿负责，推诿责任 </p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">在做出变革之前要求得到完备透彻的解释 </p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">为避免争议会放弃立场，受到威胁时采取守势 </p>
+                    </div>
+                    <p class="sm_tit">高C值管理者</p><br>
+                    <p>高C型的管理者比较愿意在事实、逻辑和连续性思维基础之上作出决定。因此，他们在说服人和发挥领导作用时大多是不带偏见，能够不感情用事、实事求是地陈述材料。应变能力强的高C型严肃、勤奋、持之以恒、严格、准确；而应变能力低的高C型则显得拘谨乏味、吹毛求疵、优柔寡断和挑剔。</p><br><br><br>
+                    <p class="sm_tit">高C值下属</p><br>
+                    <p>高C型下属喜欢与事实、数据、逻辑打交道，思维有序。他们在与喜欢个人参与或把工作关系个人化的上司相处时，会有不舒服的感觉。那些特别关注人际关系或处理紧急事物的经理人会使他们倍感沮丧。高C型下属在完成项目时需要完备的数据材料和充裕的时间。一旦完成，事情往往都是无可挑剔。他们通常不会当场允诺，而是需要时间对数据独自进行分析，得出符合逻辑的结论后才决定。
+                    </p>
+                </div>
+            </div>
+            <img src="./img/DISC_NEW_picture07（12）.png" alt="">
+        </section>
+
+        <section class="advice4 sheet">
+            <img src="./img/DISC_NEW_picture02（2）.png" alt="">
+            <div class="border">
+                <div class="content">
+                    <p class="sm_tit">高C值者的一般表现</p><br>
+                    <div class="soft" style="margin-bottom: 50px;">
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">办公室清洁整齐</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">守时，往往在你到达之前已经读完了你所呈送的材料</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">有礼貌，有外交手腕；会提出非常具体琐细的问题</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">似乎缺乏表情</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">或许不会表达同情</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">对你的来访有准备</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">可能会陷入细节</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">没有先例不会行动</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">受到威胁会采取守势</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">为避免争议而放弃立场</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">非常系统化，讲究逻辑</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">仔细而顺从</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">有点完美主义</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">有时显得没主意</p>
+                    </div>
+                    <p class="sm_tit">加强与高C值者的良性互动</p><br><br>
+                    <p style="color:rgba(136, 136, 136, 1);">高C值者希望得到：</p>
+                    <p>自主性和独立性，一个可以控制把握的工作环境，承诺和担保，具体的期待和目标，明确的工作有计划的变革</p>
+                    <div class="choose">
+                        <span style="margin-left: 45px;">要</span>
+                        <span style="margin-left: 445px;">不要</span>
+                    </div>
+                    <div class="yes">
+                        <p>与他们一道系统全面地审核推荐 </p>
+                        <p>向他们担保不会发生突如其来的事情</p>
+                        <p>给他们一个明确的工作要求，使之了解他们在整个计划中所处地位 </p>
+                        <p>在提供解释时要耐心，坚持己见，灵活圆通</p>
+                    </div>
+                    <div class="no">
+                        <p>取消社交时间</p>
+                        <p>垄断谈话</p>
+                        <p>忽略他们的想法和成就</p>
+                        <p>直接告诉他们该干什么</p>
+                        <p>把他们与团队隔离</p>
+                    </div>
+                    <p class="sm_tit" style="margin-top: 25px;">高C值者在分析信息时一般会</p><br>
+                    <div class="soft" style="margin-bottom: 50px;">
+                        <p class="yuandian"></p>
+                        <p class="hanzi">过分小心谨慎和保守</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">避免作出决定，特别是当他们认为有风险</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">陷入具体的细节之中</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">时善于处理麻烦</p>
+                    </div>
+                </div>
+            </div>
+            <img src="./img/DISC_NEW_picture07（13）.png" alt="">
+        </section>
+
+        <section class="advice5 sheet">
+            <img src="./img/DISC_NEW_picture02（2）.png" alt="">
+            <div class="border">
+                <div class="content">
+                    <p class="sm_tit">他们希望别人这样对待他们</p><br>
+                    <div class="soft1" style="margin-bottom: 40px;">
+                        <p class="yuandian"></p>
+                        <p class="sm_tit">态度 </p>
+                        <p class="hanzi"> – 准时，长时间握手，紧握，微笑，直接的对视。个人兴趣高于生意。热情，外向，交流，不要急忙介入生意 </p>
+
+                        <p class="yuandian"></p>
+                        <p class="sm_tit">关系</p>
+                        <p class="hanzi"> –
+                            在拉关系和社交上多花时间。要运用手势，脸部表情，声音的抑扬顿挫，讲故事、笑话、个人经历；不要三言两语，冷冰冰，不苟言笑，死板或过分地关注任务。要引起和保持他们的注意，你得找准你所能支持的梦想和直觉
+                        </p>
+
+                        <p class="yuandian"></p>
+                        <p class="sm_tit">重点</p>
+                        <p class="hanzi"> – 社会需要，介入参与。征询他们的意见，感觉，见解和想法。一定要花时间弄清楚他们的目标是什么 </p>
+
+                        <p class="yuandian"></p>
+                        <p class="sm_tit">陈述</p>
+                        <p class="hanzi"> – 要从人的角度去讨论任务。解释你的任务目标时，要强调它对人有利，能增进关系，能满足情感需要 </p>
+
+                        <p class="yuandian"></p>
+                        <p class="sm_tit">获取承诺</p>
+                        <p class="hanzi four"> – 从任务和人两个角度去获得承诺。展示目前的好处将延续至将来。为出色表现提供具体、直接和额外的奖励。在适当时机提及他们认为是重要或显赫的人物</p>
+                    </div>
+
+                    <p class="sm_tit">与此类性格人交往时，如何调节你的行动的小建议</p><br>
+                    <div class="soft" style="margin-bottom: 70px;">
+                        <p class="yuandian"></p>
+                        <p class="hanzi">非常认真的承认他们的贡献，给他们的成功以看得见的表彰</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">讨论时不要着急，寻找那些使双方都得到刺激的想法</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">高I值者不喜欢在争论中失败，所以不要争论，而要去探讨双方都感兴趣、有热情的解决办法</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">当你们达成一致时，把关系到什么、何时、谁来做、以及如何做等具体细节都弄妥。再明确一遍你们在这些具体问题上都认识一致了</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">用书面形式把你们同意的事情写下，即便表面上无此必要。</p>
+
+                        <p class="yuandian"></p>
+                        <p class="hanzi">记住，高I值者只是在他们能够并想做的时候才会行动</p>
+                    </div>
+
+                    <div class="general">
+                        <div class="bgc">
+                            <span>显著的行为方式及其调整</span>
+                            <span>显著的行为方式</span>
+                            <span>需要改善的行为是要努力做到</span>
+                        </div>
+                        <div class="behavior">
+                            <p>做书面记录</p>
+                            <p>严谨 </p>
+                            <p>很谨慎地表达感情</p>
+                            <p>询问信息/细节</p>
+                        </div>
+                        <div class="perfect" style="margin-left: 98px;">
+                            <p>从全局把握问题</p>
+                            <p>更独立</p>
+                            <p>当细节不重要的时候，不要太关注细节</p>
+                            <p>能够剪除不必要的细节来提高效率</p>
+                            <p>处理冲突时更加直截了当</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="./img/DISC_NEW_picture07（14）.png" alt="">
+        </section>
+
+        <section class="strategy sheet">
+            <img src="./img/DISC_NEW_picture02（3）.png" alt="">
+            <div class="border">
+                <div class="content">
+                    <div class="char">团队中不同类型的辨识</div>
+                    <div class="jiao"></div>
+                    <div class="cross">
+                        <div class="cross_x"></div>
+                        <div class="cross_y"></div>
+
+                        <div class="cross_D cr">
+                            <p class="sm_tit D">高D值</p><br>
+                            <p class="sm_tit1">即使遇到反对意见或充满敌意的局面，仍然有动力来取得成果</p>
+                            <div class="soft">
+                                <p class="yuandian"></p>
+                                <p class="hanzi">获得成果</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">积极采取行动</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">挑战自己和别人</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">做出决定</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi four">质疑现状</p>
+                            </div>
+                        </div>
+                        <div class="cross_C cr">
+                            <p class="sm_tit C">高C值</p><br>
+                            <p class="sm_tit1">服从政策和标准以避免错误、冲突和危险</p>
+                            <div class="soft">
+                                <p class="yuandian"></p>
+                                <p class="hanzi">关注细节</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">保证质量，遵守指示</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">监督和控制</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">提高质量和工作标准</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi four">发现事实，评估风</p>
+                            </div>
+                        </div>
+                        <div class="cross_I cr">
+                            <p class="sm_tit I">高I值</p><br>
+                            <p class="sm_tit1">影响人们采取积极有效的行动</p>
+                            <div class="soft">
+                                <p class="yuandian"></p>
+                                <p class="hanzi">激励他人行动</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">激发热情</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">建立人际关系</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">留下良好印象</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi four">传播乐观主义</p>
+                            </div>
+                        </div>
+                        <div class="cross_S cr">
+                            <p class="sm_tit S">高S值</p><br>
+                            <p class="sm_tit1">以一贯的方式稳步工作以取得预期的成果</p>
+                            <div class="soft">
+                                <p class="yuandian"></p>
+                                <p class="hanzi">发展专业技能</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">致力于目前的工作</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">缜密地完成工作</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">保持连贯性</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi four">坚持不懈</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <img src="./img/DISC_NEW_picture07_DISC.png" alt="">
-    </section>
+            <img src="./img/DISC_NEW_picture07（15）.png" alt="">
+        </section>
 
-    <section class="sheet leading">
-        <img src="./img/DISC_NEW_picture04_DISC (1).png" alt="">
-        <div class="border">
-            <div class="explain_warpper">
-                <div class="explain_item">
-                    <div class="explain_letter">
-                        D
+        <section class="strategy2 sheet">
+            <img src="./img/DISC_NEW_picture02（3）.png" alt="">
+            <div class="border">
+                <div class="content">
+                    <div class="char">团队中不同类型管理者的沟通策略</div>
+                    <div class="jiao"></div>
+                    <div class="cross">
+                        <div class="cross_x"></div>
+                        <div class="cross_y"></div>
+
+                        <div class="cross_D cr">
+                            <p class="sm_tit D">高D值管理者</p><br>
+                            <p>倾向于在不请教他人或不考虑对他人的影响时快速做出决定。喜欢迅速掌握局面。他们有一种统筹一切、愿意负责、敢说敢当的架势。短暂寒暄之后，他们会立即进入工作正题，决不肯多花时间与别人建立融洽的关系。由于高D值者做决定时只依靠较少的信息，他们一般也只给别人很少的信息。人们一般认为“高D高应变能力者”坚决、高效、果断、务实。而“高D低应变能力者”则是一种催逼督命、粗暴专断、感情冷漠的人。</p>
+                            <br><br>
+                            <p>自我意识很强的高D值管理者应通过改进行为来获取更好的成果并获得最大化的成功。</p>
+                        </div>
+                        <div class="cross_C cr">
+                            <p class="sm_tit C">高C值管理者</p><br>
+                            <p>对他人较严格，期望他人像自己一样细心而且逻辑严谨，这种方式有时会产生冲突。高C型的经理人比较愿意在事实、逻辑和连续性思维基础之上作出决定。因此，他们在说服人和发挥领导作用时大多是不带偏见，能够不感情用事、实事求是地陈述材料。应变能力强的高C型严肃、勤奋、持之以恒、严格、准确；而应变能力低的高C型则显得拘谨乏味、吹毛求疵、优柔寡断和挑剔。</p>
+                            <br><br>
+                            <p>开明的高C值管理者应通过改进行为来确保每个人都有足够的弹性空间，都能按照自己的方式做到最佳表现。 </p>
+                        </div>
+                        <div class="cross_I cr">
+                            <p class="sm_tit I">高I值管理者</p><br>
+                            <p>很少考虑到他们对别人的影响。他们会通过与别人交谈，运用其个人魅力、眼神交流和身体接触等方式与每个人建立私人关系，这种方式有时会遭到拒绝。作为高I值的经理人比较友善，外向，性格有趣。他们与人的关系既亲切，面也广。他们爱运用自己的口才让下属们按他的想法行事。为不影响一个良好的局面，他们往往在约束下属方面不知所措。他们往往只凭对情况的表面分析就会匆匆得出结论或做出决定。应变力强的I型者，从他们的雄心勃勃、富有煽动性、热情和擅长戏剧表演，即可看出。而应变力弱的I型者，从他们好掌管事情、容易激动，纪律性差和比较自负即可看出。</p>
+                            <br><br>
+                            <p>自制的高I值管理者应通过改进行为来获得作为领导者应有的尊敬。</p>
+                        </div>
+                        <div class="cross_S cr">
+                            <p class="sm_tit S">高S值管理者</p><br>
+                            <p>倾向于重视惯例和连贯性，
+                                即使它们有时候是不合时宜的。这种程式化的回答会导致别人置疑现状并制造不安全感。作为高S值的经理人几乎为所有的同行和下属喜爱，他们肯帮忙，友善，热心肠，人见人爱。他们喜欢团体行事，运用关系来影响作业。应变能力强的S型被人认为是靠得住的，好说话，好心，肯帮忙；而应变能力差的S型则被认为顺从、懦弱和听话。</p>
+                            <br><br>
+                            <p>一旦他们有能力改变，自信的高S值管理者应通过改进行为来为专业化的工作搭建稳定的平台。</p>
+                        </div>
                     </div>
-                    <div class="explain_content">
-                        <p class="sm_title">考量一个人如何解决问题和应对挑战</p> 
-                        <p style="margin-top: 16px;">强度：</p>
-                        
-                        <div class="text">
-                            D 值越高，在试图解决困难和障碍方面所表现出的积极性和进取心就越强。<br/>
-                        
-                            D 值越低，则说明此人在做出决策前越倾向于多搜集信息。 
-                        </div>
-                        
-                        <p>当处于对抗性环境中时：</p>
-                        
-                        <div class="text2">
-                            D 值高的人则会显得非常进取、积极。
-                        </div>
-                        
-                        <!-- &#9702  &#176 -->
-                        <p>情感：</p>
-                        <div class="text3">
-                            D 因素用以考量一个人的易怒情感。<br/>
-                            D 值极高者极易生气发怒； <br/>
-                            D 值极低者不易生气发怒。 
-                        </div>
-                        
-                    </div>    
-                    
-                </div>
-                <div class="explain_item">
-                    <div class="explain_letter">
-                        C
-                    </div>
-                    <div class="explain_content">
-                        <p>考量一个人对他人的期待和制定的规章制度如何做出反应</p> 
-                        <p>强度：</p>
-                        
-                        <div class="text">
-                            C 值越高，表明此人越能够遵守他人制定的规章制度。
-                            <br/> 
-                            C 值越低，表明此人更愿意挑战规章制度并寻求独立。 
-                        </div>
-                        
-                       
-                        <p>当处于对抗性环境中时：</p>
-                        
-                        <div class="text2">
-                            C 值越高的人则更容易反应消极。
-                        </div>
-                        
-                        <p>情感：</p>
-                        <div class="text3">
-                            C 因素用以考量一个人的恐惧感； <br/>
-                            C 值越高，说明此人的恐惧动因越强； <br/>
-                            C 值越低，说明此人越无所畏惧。
-                        </div>
-                        
-                    </div>    
-                    
-                </div>
-                <div class="explain_item">
-                    <div class="explain_letter">
-                        I
-                    </div>
-                    <div class="explain_content">
-                        <p>考量一个人影响和说服他人的能力</p>    
-                        <p>强度：</p>
-                        
-                        <div class="text">
-                            I 值越高，在影响他人的思维方式方面，就越善于言辞，具有说服力。
-                            <br/> 
-                            I 值越低，越倾向于用数据和事实来说明问题。
-                        </div>
-                        
-                        <p>当处于对抗性环境中时：</p>
-                        
-                        <div class="text2">
-                            I 值越高的人反应越积极，且倾向于通过协商达成共识
-                        </div>
-                        
-                        <p>情感：</p>
-                        <div class="text3">
-                            I 因素用以考量一个人的乐观情感； <br/>
-                            I 值极高者情绪非常乐观； <br/>
-                            I 值低者则倾向于悲观。
-                        </div>
-                        
-                    </div>    
-                    
-                </div>
-                <div class="explain_item">
-                    <div class="explain_letter">
-                        S
-                    </div>
-                    <div class="explain_content">
-                        <p>考量一个人开展工作、承担责任的快慢</p>    
-                        <p>强度：</p>
-                        
-                        <div class="text">
-                            S 值越高，越倾向于一次有始有终地完成某件任务。同样，他们对变化有较强的抵触心理。
-                            <br/> 
-                            S 值越低，工作节奏越快，希望变化的愿望越强烈。
-                        </div>
-                       
-                       
-                        <p>当处于对抗性环境中时：</p>
-                        
-                        <div class="text2">
-                            S 值越高的人反应越消极。
-                        </div>
-                       
-                        <p>情感：</p>
-                        <div class="text3">
-                            S 用以考量一个人是否缺乏情绪；  <br/>
-                            S 值越高，越少情绪化，内心越难解读； <br/>
-                            S 值越低，越情绪化，而且也越善于表达。
-                        </div>
-                        
-                    </div>    
-                    
                 </div>
             </div>
-        </div>
-        <img src="./img/DISC_NEW_picture04_DISC (2).png" alt="">
-    </section>
+            <img src="./img/DISC_NEW_picture07（16）.png" alt="">
+        </section>
 
-    <section class="sheet">
-        <img src="./img/DISC_NEW_picture05.png" alt=""> 
-    </section>
-</div>
+        <section class="strategy sheet">
+            <img src="./img/DISC_NEW_picture02（3）.png" alt="">
+            <div class="border">
+                <div class="content">
+                    <div class="char">团队中不同类型同事的沟通策略</div>
+                    <div class="jiao"></div>
+                    <div class="cross">
+                        <div class="cross_x"></div>
+                        <div class="cross_y"></div>
+
+                        <div class="cross_D cr">
+                            <p class="sm_tit1">与力量型（D型）一起行动：讲究效率和积极务实</p>
+
+                            <div class="soft">
+                                <p class="yuandian"></p>
+                                <p class="hanzi">承认他们是天生的领导者</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">表示支持他们的意愿和目标</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">从务实的角度考虑</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">坚持双向沟通</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi four">要具有训练有素、高效率的素质</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">方案分析简洁明确，便于选择</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">开门见山、直切主题</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">重结果与机会、不要拘泥于过程与形式</p>
+                            </div>
+                        </div>
+                        <div class="cross_C cr">
+                            <p class="sm_tit1">与完美型(C型)一起统筹: 做事要周到精细、准备充分</p>
+                            <div class="soft">
+                                <p class="yuandian"></p>
+                                <p class="hanzi">要知道他们敏感且容易受到伤害</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">提出周到、有条不紊的办法</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">具体实践诺言</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">更细致、更精确和理智</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">列出任何计划的长、短处</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">不要越轨、遵循规章制度</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">整洁是非常必要的</p>
+                            </div>
+                        </div>
+                        <div class="cross_I cr">
+                            <p class="sm_tit1">与活泼型（I型）一起快乐：表现出对他们个人有兴趣</p>
+                            <div class="soft">
+                                <p class="yuandian"></p>
+                                <p class="hanzi">对他们的观点和看法，甚至梦想表示支持</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">理解他们说话不会三思</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">容忍离经叛道、新奇的行为</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">要热情随和、潇洒大方一些</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">协助他们提高形象</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">细节琐事不让他们过多参与</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">要懂得他们是善意的</p>
+                            </div>
+                        </div>
+                        <div class="cross_S cr">
+                            <p class="sm_tit1">与和平型(S型)一起轻松: 使自己成为一个热心真诚的人</p>
+                            <div class="soft">
+                                <p class="yuandian"></p>
+                                <p class="hanzi">要懂得他们需要直接的推动</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">帮助他们订立目标并争取回报</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">迫使他们做决定</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">主动表示对他们情感的关注</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">不要急于获得信任</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">有异见时，从感情角度去谈</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">放慢节奏、从拘礼节</p>
+
+                                <p class="yuandian"></p>
+                                <p class="hanzi">积极地听，鼓励他们说</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="./img/DISC_NEW_picture07（17）.png" alt="">
+        </section>
+
+        <section class="develop sheet">
+            <img src="./img/DISC_NEW_picture02（4）.png" alt="">
+            <div class="border">
+                <div class="content">
+                    <div class="cont_top">
+                        <div class="char">I型&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                        <div class="jiao"></div><br><br><br><br><br>
+                        <p class="sm_tit">I 型人的职场特质</p><br>
+                        <div class="trait_list" style="margin-bottom: 40px;">
+                            <p class="num">1.</p>
+                            <p class="wenzi">希望有舞台得到掌声。 </p>
+
+                            <p class="num">2.</p>
+                            <p class="wenzi">与人互动接触。 </p>
+
+                            <p class="num">3. </p>
+                            <p class="wenzi">能发挥口语表达能力。 </p>
+
+                            <p class="num">4.</p>
+                            <p class="wenzi">工作气氛愉快。 </p>
+
+                            <p class="num">5.</p>
+                            <p class="wenzi">有轻松的工作环境。 </p>
+
+                            <p class="num">6.</p>
+                            <p class="wenzi">重视员工的休闲规划。 </p>
+
+                            <p class="num">7.</p>
+                            <p class="wenzi">允许一些天马行空的想法 </p>
+                        </div>
+                        <p class="sm_tit">I 型的人适合从事</p><br>  
+                        <p>教育训练、演艺人员、大众传播、设计师、广告创意、媒体、销售、客户服务、节目制作、公共关系、娱乐事业、营销企划、柜台接待、旅游事业。</p>
+                    </div>
+
+                    <div class="cont_bom">
+                        <div class="char">C型&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                        <div class="jiao"></div><br><br><br><br><br>
+                        <p class="sm_tit">C型人的职场特质</p><br>
+                        <div class="trait_list" style="margin-bottom: 40px;">
+                            <p class="num">1.</p>
+                            <p class="wenzi">要求高质量、追求完美、不断改善。 </p>
+
+                            <p class="num">2.</p>
+                            <p class="wenzi">重视规划、顺序、流程及制度。  </p>
+
+                            <p class="num">3. </p>
+                            <p class="wenzi">喜欢谨慎的思考后才做出行动。 </p>
+
+                            <p class="num">4.</p>
+                            <p class="wenzi">擅于修正别人的论点。 </p>
+
+                            <p class="num">5.</p>
+                            <p class="wenzi">注重事实的正确性及数据的完整。 </p>
+
+                            <p class="num">6.</p>
+                            <p class="wenzi">可以独立作业，在实验室、研究室、图书馆里面可能会有他们的踪迹。 </p>
+
+                            <p class="num">7.</p>
+                            <p class="wenzi">有能力处理繁复的书面信息。 </p>
+                        </div>
+                        <p class="sm_tit">C型的人适合从事</p><br>
+                        <p>艺术家、 作家、导演、程序设计师、投资理财人员、管理顾问、编辑、经营企划专员、土地开发、法务、稽核、成本控制、会计、精算师、银行办事员、证券分析师、科技公司的品管、流程、研发人员.........</p>
+                    </div>
+                </div>
+            </div>
+            <img src="./img/DISC_NEW_picture07（18）.png" alt="">
+        </section>
+
+        <section class="sheet">
+            <img src="./img/DISC_NEW_picture05.png" alt="">
+        </section>
+    </div>
 </body>
 
 </html>
@@ -867,342 +3045,232 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src="http://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
 
-
-
-<script type="text/javascript">
-   
-    let start= {
-        init:function(){
-            this.resquest();
+<script>
+    let opt1 = {
+        title: {
+            text: null
         },
-        people_result_id:null,
-        resquest:function(){
-            
-            let _this = this;
-            this.people_result_id= this.GetQueryString('people_result_id');
-            $.ajax({
-                // url:'http://admin.yx.iwedoing.com/api/client/v1/front/report/data/',
-                url:'http://assess.admin.iwedoing.com/api/client/v1/front/report/data/',
-                type:'POST',
-                data:{
-                    people_result_id: this.people_result_id,
-                    // people_result_id:636856,
-                    report_type_id:'DISC_NEW'
-                },
-                dataType:'json',
-                success:function(res){
-                    let data =res;
-                    // console.log(res)
-                    if(data.code==0){
-                        let data = res.detail.report_data
-                        _this.AddDom(data);
-                    }else{
-                        alert('请求数据有误')
-                    }
-                }
-            })
+        chart: {
+            backgroundColor: '#F3F4F6',
+            animation: false
         },
-        GetQueryString(name){
-            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
-            var r = window.location.search.substr(1).match(reg); //获取url中"?"符后的字符串并正则匹配
-            var context = ""; 
-            if (r != null) 
-                context = r[2]; 
-            reg = null; 
-            r = null; 
-            return context == null || context == "" || context == "undefined" ? "" : context; 
-        },
-        AddDom(data){
-            // console.log(data.disc)
-            this.sampleCharts(data.msg.ChartSelfImage_Indicator);
-            this.maskwork(data.msg.ChartWorkMask_Indicator);
-            this.selfIm(data.msg.ChartSelfImage_Indicator);
-            this.anti(data.msg.ChartBR_UnderStress_Indicator);
-            $('#Gender').text(data.msg.Sex)
-            $('#Name').text(data.msg.Name)
-            $('#Testtime').text(data.msg.CompleteTime)
-            $('#Age').text(data.msg.Age)
-            $('.feature_char').eq(0).text(data.disc.ChartSelfImage_Indicator[0])
-            $('.sample_char').eq(0).text(data.disc.ChartSelfImage_Indicator[1][1])
-            $('.sample_char').eq(1).text(data.disc.ChartSelfImage_Indicator[1][3])
-            $('.sample_char').eq(2).text(data.disc.ChartSelfImage_Indicator[1][5])
-            // console.log(data.disc.ChartWorkMask_Indicator.hasOwnProperty("下移位"))
-            if(data.disc.ChartWorkMask_Indicator.hasOwnProperty("下移位")){
-
-            }
-            $.each(data.disc.ChartSelfImage_Indicator,(key,value)=>{
-                if(value=='下移位'){
-                    $('.charFlag').css('display','none')
-                }else if(value=='上移位'){
-                    $('.charFlag').css('display','node')
-                }
-            })
-
-            $.each(data.msg.ChartSelfImage_Indicator,(index,res)=>{
-                $('.sample_table_title').eq(index).text(res.name)
-                $('.sample_table_char').eq(index).text(res.score)
-            })
-           
-        },
-        CraetenewArr:function(arr){
-            let data={
-                arr:[],
-                ave:0,
-                to:0,
-                from:0
-            }
-            arr.map(item=>{
-                data.arr.push(item.finally)
-                data.ave += item.finally
-            })
-            var max = Math.max.apply(null, data.arr);
-            var min = Math.min.apply(null, data.arr)
-            data.ave = Number((max+min)/2).toFixed(2)
-            data.to =  (Number(data.ave)+2).toFixed(2)
-            data.from =  (Number(data.ave)-2).toFixed(2)
-            return data
-        },
-        anti:function(res){
-            let arr = this.CraetenewArr(res)
-           
-            $.each(res,(key,item)=>{   
-                $('.leading_item_table_char2').eq(key).text(item.score)
-            })
-            let Data = {
-                title: {
-                    text: null
-                },
-                chart:{
-                    backgroundColor:'#F3F4F6',
-                    animation: false
-                },
-                yAxis: { //y坐标
-                    title:{
-                        text:''
-                    },
-                    tickPositions: [0, 29],
-                    gridLineWidth: 1,   
-                    labels: {
-                        enabled: false
-                    },
-                    gridLineDashStyle: 'longdash', 
-                    plotLines:[{
-                        color:'#333',            //线的颜色，定义为红色
-                        dashStyle:'longdashdot',//标示线的样式，默认是solid（实线），这里定义为长虚线
-                        value:14.5,               //定义在哪个值上显示标示线，这里是在x轴上刻度为3的值处垂直化一条线
-                        width:1                 //标示线的宽度，2px
-                    }],
-                    plotBands: [{
-                        from: 16.5,
-                        to: 12.5,
-                        color: 'rgba(68, 170, 213, 0.2)',
-                        
-                    }]
-                },
-                legend:{
-                    enabled:false
-                },
-                xAxis: {
-                    categories: ['D', 'I', 'S', 'C'],  
-                    tickPixelInterval: 'on',
-                
-                },
-                plotOptions: {
-                    series: {
-                    animation: false
-                    }
-                },
-                series: [{ //图表数据
-                name: '职业特征值',
-                data:arr.arr,
-                
-                }],
-                credits: { //去掉版权logo
+        yAxis: { //y坐标
+            title: {
+                text: ''
+            },
+            labels: {
                 enabled: false
-                }
-            }
-            Highcharts.chart(document.querySelector('#ChartBR_UnderStress_Indicator'), Data);
+            },
+            gridLineWidth: 1,
+            gridLineDashStyle: 'longdash',
+            plotLines: [{
+                color: '#333',            //线的颜色，定义为红色
+                dashStyle: 'longdashdot',//标示线的样式，默认是solid（实线），这里定义为长虚线
+                value: 14.5,                //定义在哪个值上显示标示线，这里是在x轴上刻度为3的值处垂直化一条线
+                width: 1                 //标示线的宽度，2px
+            }],
+            plotBands: [{
+                from: 16.5,
+                to: 12.5,
+                color: 'rgba(68, 170, 213, 0.2)',
+
+            }]
+
         },
-        selfIm:function(res){
-            let arr = this.CraetenewArr(res)
-            // console.log(arr)
-            $.each(res,(key,item)=>{   
-                $('.leading_item_table_char3').eq(key).text(item.score)
-            })
-            
-            let Data = {
-                title: {
-                    text: null
-                },
-                chart:{
-                    backgroundColor:'#F3F4F6',
-                    animation: false
-                },
-                yAxis: { //y坐标
-                    title:{
-                        text:''
-                    },
-                    tickPositions: [0, 29],
-                    labels: {
-                        enabled: false
-                    },
-                    gridLineWidth: 1,   
-                    gridLineDashStyle: 'longdash', 
-                    plotLines:[{
-                        color:'#333',            //线的颜色，定义为红色
-                        dashStyle:'longdashdot',//标示线的样式，默认是solid（实线），这里定义为长虚线
-                        value:14.5,                //定义在哪个值上显示标示线，这里是在x轴上刻度为3的值处垂直化一条线
-                        width:1                 //标示线的宽度，2px
-                    }],
-                    plotBands: [{
-                        from: 16.5,
-                        to: 12.5,
-                        color: 'rgba(68, 170, 213, 0.2)',
-                        
-                    }]
-                },
-                legend:{
-                    enabled:false
-                },
-                plotOptions: {
-                    series: {
-                    animation: false
-                    }
-                },
-                xAxis: {
-                    categories: ['D', 'I', 'S', 'C'],  
-                    tickPixelInterval: 'on',
-                
-                },
-                series: [{ //图表数据
-                name: '职业特征值',
-                data:arr.arr,
-                
-                }],
-                credits: { //去掉版权logo
-                enabled: false
-                }
-            }
-            Highcharts.chart(document.querySelector('#ChartSelfImage_Indicator'), Data);
+        legend: {
+            enabled: false
         },
-        maskwork:function(res){
-            let arr = this.CraetenewArr(res)
-            $.each(res,(key,item)=>{   
-                $('.leading_item_table_char1').eq(key).text(item.score)
-            })
-            let Data = {
-                title: {
-                    text: null
-                },
-                chart:{
-                    backgroundColor:'#F3F4F6',
-                    animation: false
-                },
-                yAxis: { //y坐标
-                    title:{
-                        text:''
-                    },
-                    labels: {
-                        enabled: false
-                    },
-                    tickPositions: [0, 29],
-                    gridLineWidth: 1,  
-                    gridLineDashStyle: 'longdash', 
-                    plotLines:[{
-                        color:'#333',            //线的颜色，定义为红色
-                        dashStyle:'longdashdot',//标示线的样式，默认是solid（实线），这里定义为长虚线
-                        value:14.5,                //定义在哪个值上显示标示线，这里是在x轴上刻度为3的值处垂直化一条线
-                        width:1                 //标示线的宽度，2px
-                    }],
-                    plotBands: [{
-                        from: 16.5,
-                        to: 12.5,
-                        color: 'rgba(68, 170, 213, 0.2)',
-                        
-                    }]
-                },
-                legend:{
-                    enabled:false
-                },
-                xAxis: {
-                    categories: ['D', 'I', 'S', 'C'],  
-                    tickPixelInterval: 'on',
-                
-                },
-                plotOptions: {
-                    series: {
-                    animation: false
-                    }
-                },
-                series: [{ //图表数据
-                name: '职业特征值',
-                data:arr.arr,
-                
-                }],
-                credits: { //去掉版权logo
-                enabled: false
-                }
+        plotOptions: {
+            series: {
+                animation: false
             }
-            Highcharts.chart(document.querySelector('#ChartWorkMask_Indicator'), Data);
         },
-        sampleCharts:function(res){
-           
-            let arr = this.CraetenewArr(res);
-            // console.log(arr)
-            let Data = {
-                title: {
-                    text: null
-                },
-                chart:{
-                    backgroundColor:'#F3F4F6',
-                },
-                yAxis: { //y坐标
-                    title:{
-                        text:''
-                    },
-                    labels: {
-                        enabled: false
-                    },
-                    tickPositions: [0, 29],
-                    gridLineWidth: 1,   
-                    gridLineDashStyle: 'longdash', 
-                    plotLines:[{
-                        color:'#333',            //线的颜色，定义为红色
-                        dashStyle:'longdashdot',//标示线的样式，默认是solid（实线），这里定义为长虚线
-                        value:14.5,                //定义在哪个值上显示标示线，这里是在x轴上刻度为3的值处垂直化一条线
-                        width:1                 //标示线的宽度，2px
-                    }],
-                    plotBands: [{
-                        from: 16.5,
-                        to: 12.5,
-                        color: 'rgba(68, 170, 213, 0.2)',
-                        
-                    }]
-                },
-                legend:{
-                    enabled:false
-                },
-                plotOptions: {
-                    series: {
-                    animation: false
-                    }
-                },
-                xAxis: {
-                    categories: ['D', 'I', 'S', 'C'],  
-                    tickPixelInterval: 'on',
-                
-                },
-                series: [{ //图表数据
-                name: '职业特征值',
-                data:arr.arr,
-                
-                }],
-                credits: { //去掉版权logo
-                enabled: false
-                }
-            }
-            Highcharts.chart(document.querySelector('#sample_charts'), Data);
+        xAxis: {
+            categories: ['D', 'I', 'S', 'C'],
+            tickPixelInterval: 'on',
+
         },
+        series: [{ //图表数据
+            name: '职业特征值',
+            data: [10, 15, 12, 18],
+
+        }],
+        credits: { //去掉版权logo
+            enabled: false
+        }
     }
-    start.init();
+    Highcharts.chart(document.querySelector('#sample_charts'), opt1);
+
+
+    let opt2 = {
+        title: {
+            text: null
+        },
+        chart: {
+            backgroundColor: '#F3F4F6',
+            animation: false
+        },
+        yAxis: { //y坐标
+            title: {
+                text: ''
+            },
+            labels: {
+                enabled: false
+            },
+            gridLineWidth: 1,
+            gridLineDashStyle: 'longdash',
+            plotLines: [{
+                color: '#333',            //线的颜色，定义为红色
+                dashStyle: 'longdashdot',//标示线的样式，默认是solid（实线），这里定义为长虚线
+                value: 14.5,                //定义在哪个值上显示标示线，这里是在x轴上刻度为3的值处垂直化一条线
+                width: 1                 //标示线的宽度，2px
+            }],
+            plotBands: [{
+                from: 16.5,
+                to: 12.5,
+                color: 'rgba(68, 170, 213, 0.2)',
+
+            }]
+
+        },
+        legend: {
+            enabled: false
+        },
+        plotOptions: {
+            series: {
+                animation: false
+            }
+        },
+        xAxis: {
+            categories: ['D', 'I', 'S', 'C'],
+            tickPixelInterval: 'on',
+
+        },
+        series: [{ //图表数据
+            name: '职业特征值',
+            data: [10, 15, 12, 18],
+
+        }],
+        credits: { //去掉版权logo
+            enabled: false
+        }
+    }
+    Highcharts.chart(document.querySelector('#ChartWorkMask_Indicator'), opt2);
+
+
+    let opt3 = {
+        title: {
+            text: null
+        },
+        colors: ['rgba(48, 193, 90, 1)'],
+        chart: {
+            backgroundColor: '#F3F4F6',
+            animation: false
+        },
+        yAxis: { //y坐标
+            title: {
+                text: ''
+            },
+            labels: {
+                enabled: false
+            },
+            gridLineWidth: 1,
+            gridLineDashStyle: 'longdash',
+            plotLines: [{
+                color: '#333',            //线的颜色，定义为红色
+                dashStyle: 'longdashdot',//标示线的样式，默认是solid（实线），这里定义为长虚线
+                value: 14.5,                //定义在哪个值上显示标示线，这里是在x轴上刻度为3的值处垂直化一条线
+                width: 1                 //标示线的宽度，2px
+            }],
+            plotBands: [{
+                from: 16.5,
+                to: 12.5,
+                color: 'rgba(68, 170, 213, 0.2)',
+
+            }]
+
+        },
+        legend: {
+            enabled: false
+        },
+        plotOptions: {
+            series: {
+                animation: false
+            }
+        },
+        xAxis: {
+            categories: ['D', 'I', 'S', 'C'],
+            tickPixelInterval: 'on',
+
+        },
+        series: [{ //图表数据
+            name: '职业特征值',
+            data: [10, 15, 12, 18],
+
+        }],
+        credits: { //去掉版权logo
+            enabled: false
+        }
+    }
+    Highcharts.chart(document.querySelector('#ChartBR_UnderStress_Indicator'), opt3);
+
+
+    let opt4 = {
+        title: {
+            text: null
+        },
+        colors: ['rgba(163, 137, 212, 1)'],
+        chart: {
+            backgroundColor: '#F3F4F6',
+            animation: false
+        },
+        yAxis: { //y坐标
+            title: {
+                text: ''
+            },
+            labels: {
+                enabled: false
+            },
+            gridLineWidth: 1,
+            gridLineDashStyle: 'longdash',
+            plotLines: [{
+                color: '#333',            //线的颜色，定义为红色
+                dashStyle: 'longdashdot',//标示线的样式，默认是solid（实线），这里定义为长虚线
+                value: 14.5,                //定义在哪个值上显示标示线，这里是在x轴上刻度为3的值处垂直化一条线
+                width: 1                 //标示线的宽度，2px
+            }],
+            plotBands: [{
+                from: 16.5,
+                to: 12.5,
+                color: 'rgba(68, 170, 213, 0.2)',
+
+            }]
+
+        },
+        legend: {
+            enabled: false
+        },
+        plotOptions: {
+            series: {
+                animation: false
+            }
+        },
+        xAxis: {
+            categories: ['D', 'I', 'S', 'C'],
+            tickPixelInterval: 'on',
+
+        },
+        series: [{ //图表数据
+            name: '职业特征值',
+            data: [10, 15, 12, 18],
+
+        }],
+        credits: { //去掉版权logo
+            enabled: false
+        }
+    }
+    Highcharts.chart(document.querySelector('#ChartSelfImage_Indicator'), opt4);
+
+
+
 </script>
