@@ -213,6 +213,74 @@
             margin-left: -1px;
         }
 
+        .WorkingStyle .content .workstyle {
+            width: 100%;
+            height: 607px;
+        }
+
+        .WorkingStyle .content .workstyle>p {
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .WorkingStyle .content .workstyle .works{
+            width: 100%;
+            height: 94%;
+            margin-top: 20px;
+            background: url('./img/DISC_NEW_img _01.png') center no-repeat #f3f4f6;
+            position: relative;
+        }
+
+        .WorkingStyle .content .works>p {
+            font-size: 14px;
+            position: absolute;
+        }
+
+        .WorkingStyle .content .works>div {
+            width: 101px;
+            height: 101px;
+            position: absolute;
+            font-size: 40px;
+            font-family: SourceHanSansCN-Bold;
+            font-weight: bold;
+            line-height: 2.5em;
+            text-align: center;
+        }
+
+        .invalid {
+            border: 1px solid #ccc !important;
+            color: #ccc !important;
+        }
+
+        .WorkingStyle .content .works .D {
+            border: 1px solid rgba(244, 77, 54, 1);
+            color: rgba(244, 77, 54, 1);
+            left: 27%;
+            top: 20%;
+        }
+
+        .WorkingStyle .content .works .C {
+            border: 1px solid rgba(1, 122, 255, 1);
+            color: rgba(1, 122, 255, 1);
+            top: 20%;
+            right: 27%;
+        }
+
+        .WorkingStyle .content .works .I {
+            border: 1px solid rgba(249, 198, 38, 1);
+            color: rgba(249, 198, 38, 1);
+            left: 27%;
+            bottom: 20%;
+        }
+
+        .WorkingStyle .content .works .S {
+            border: 1px solid rgba(140, 220, 139, 1);
+            color: rgba(140, 220, 139, 1);
+            bottom: 20%;
+            right: 27%;
+        }
+
         .WorkingStyle .content .cont {
             width: 98%;
             height: 10%;
@@ -1723,14 +1791,27 @@
             </div>
             <img src="./img/DISC_NEW_picture07.png" alt="">
         </section>
-
+      
         <section class="WorkingStyle sheet">
             <img src="./img/DISC_NEW_picture02（1）.png" alt="">
             <div class="border">
                 <div class="content">
                     <div class="char">您的主导工作风格</div>
                     <div class="jiao"></div><br><br><br><br><br>
-                    <img src="./img/DISC_NEW_img _01.png" alt="">
+                    <!-- <img src="./img/DISC_NEW_img _01.png" alt=""> -->
+                    <div class="workstyle">
+                        <p>四中基本的工作作风</p>
+                        <div class="works">
+                            <p style="top: 20px;left: 46%;">关注任务</p>
+                            <p style="top: 48.5%;left: 60px;">告知式</p>
+                            <p style="top: 48.5%;right: 60px;">询问式</p>
+                            <p style="left: 47%;bottom: 20px;">关注人</p>
+                            <div class="D invalid">D</div>
+                            <div class="C">C</div>
+                            <div class="I">I</div>
+                            <div class="S">S</div>
+                        </div>
+                    </div>
                     <div class="cont">
                         <div class="cont_l">
                             <p class="sm_tit">左上区</p><br>
@@ -3060,72 +3141,6 @@
 
 
 <script>
-    // let results=null;
-    // class StartRequest {
-    //     constructor(){
-    //         // this.data=null;
-    //         this.data = '';
-
-    //     }
-
-    //     request(cl){
-
-    //         let _this =this;
-    //         $.ajax({
-    //             url:'http://admin.yx.iwedoing.com/api/client/v1/front/report/data/',
-    //             // url: 'http://assess.admin.iwedoing.com/api/client/v1/front/report/data/',
-    //             type: 'POST',
-    //             data: {
-    //                 // people_result_id: people_result_id,
-    //                 people_result_id:633523,
-    //                 report_type_id: 'DISC_NEW'
-    //             },
-    //             dataType: 'json',
-    //             success: function (res) {
-    //                 let data = res;
-    //                 if (data.code == 0) {
-    //                     let newData = res.detail.report_data;
-    //                     _this.data = newData
-    //                     results =newData
-    //                     console.log(newData)
-
-    //                     cl(_this.data)
-
-    //                 } else {
-    //                     alert('请求数据有误')
-    //                 }
-    //             }
-    //         })
-
-    //     }
-    //     Adddom(data){
-    //        return data
-    //     }
-    // }
-
-    // class StartDOM extends StartRequest {
-    //     //构造继承
-    //     constructor (data){
-    //         super(data);
-    //         this.data = data
-    //         this.callback = null;
-    //     }
-    //     //只做数据处理和渲染方法
-    //     Init(cl){
-    //         console.log(cl)
-    //         super.request(cl);
-
-    //     }
-
-
-    // }
-
-
-    // var s = new StartDOM()
-
-    // s.Init(s.Adddom(results))
-
-
     $.ajax({
         url: 'http://admin.yx.iwedoing.com/api/client/v1/front/report/data/',
         // url: 'http://assess.admin.iwedoing.com/api/client/v1/front/report/data/',
@@ -3167,12 +3182,7 @@
         $('.sample_char').eq(2).text(data.disc.ChartSelfImage_Indicator[1][5])
 
 
-        console.log(data.msg.ChartBR_UnderStress_Indicator)
-
-        // AddEchart1();
-        // AddEchart2();
-        // AddEchart3();
-        // AddEchart4();
+        // console.log(data.msg.ChartBR_UnderStress_Indicator)
     }
 
     function CraetenewArr(arr) {

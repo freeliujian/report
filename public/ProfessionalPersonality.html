@@ -38,7 +38,7 @@
 		}
 
         .index .userInfo {
-            height: 18%;
+            height:277px;
             background: linear-gradient(to right, #e4e2e3, white);
             margin-top: -2px;
         }
@@ -123,19 +123,16 @@
         }   
         
         .introduction .border {
-            height: 89.3%;
+            /* height: 87.5%; */
             margin-top: -2px;
-            position: relative;
+            overflow: hidden;
         }
 
         .introduction .content {
             width: 90%;
             height: 90%;
             margin: 0 auto;
-            position: absolute;
-            top: 2rem;
-            left: 0;
-            right: 0;   
+            
         }
         
         .introduction .content p {
@@ -228,7 +225,7 @@
 
 
         .results .border,.leading .border {
-            height: 86.1%;
+            /* height: 86.1%; */
             margin-top: -2px;
             position: relative;
         }
@@ -336,7 +333,7 @@
             line-height:21px;
             float:left;
             margin-top:16px;
-            margin-bottom:30px;
+            margin-bottom:13px;
         }
         .leading_wrapper{
             padding: 0 37px;
@@ -413,7 +410,6 @@
             float:left;
         }
         .leading_item_char{
-            height:150px;
             margin-top:20px;
         }
         .leading_item_char_title{
@@ -445,10 +441,7 @@
             width:50%;
             float: left;
         }
-        /* .explain_item:nth-child(3),.explain_item:nth-child(4){
-            padding: 0px 24px;
-            
-        } */
+        
         .explain_letter{
             width:53px;
             height:53px;
@@ -471,6 +464,22 @@
             font-weight:bold;
             margin-top:20px;
             margin-bottom: 8px;
+        }
+
+        .results {
+            position: relative;
+        }
+
+        .leading {
+            position: relative;
+        }
+
+        .index {
+            position: relative;
+        }
+
+        .introduction {
+            position: relative;
         }
     </style>
 </head>
@@ -499,7 +508,8 @@
                 </li>
             </ul>
         </div>
-        <img src="./img/Simple_DISC_NEW_picture06.png" style="height: 10%;margin-top: -1px;">
+        <img src="./img/Simple_DISC_NEW_picture06.png" style="position: absolute;
+        bottom: 0px;">
     </section>
 
     <section class="introduction sheet">
@@ -575,12 +585,13 @@
             </div>
         </div>
 
-        <img src="./img/Simple_DISC_NEW_picture07 (1).png" style="width: 101%" alt="">
+        <img src="./img/Simple_DISC_NEW_picture07 (1).png" style="width: 101%;    position: absolute;
+        bottom: 0px;" alt="">
     </section>
 
     <section class="results sheet">
         <img src="./img/Simple_DISC_NEW_picture03_DISC.png" alt="">
-        <div class="border" style="height: 88.5%;">
+        <div class="border">
             <div class="iwedoing_content">
                 <div class="sample_lef">
                     <div class="sample_charts" id="sample_charts"></div>
@@ -626,12 +637,13 @@
                 </div>
             </div>
         </div>
-        <img src="./img/Simple_DISC_NEW_picture07（2）.png" style="width: 101%" alt="">
+        <img src="./img/Simple_DISC_NEW_picture07(2).png" style="width: 101%;      position: absolute;
+        bottom: 0px;z-index:10;"/>
     </section>
 
     <section class="sheet leading">
         <img src="./img/Simple_DISC_NEW_picture03_DISC.png" alt="">
-        <div class="border" style="height: 88.5%;">
+        <div class="border" style="height: 79%;">
             <div class="leading_wrapper">
                 <div class="leading_title">
                         您的行为特征曲线图
@@ -721,12 +733,13 @@
                 </div>
             </div>
         </div>
-        <img src="./img/Simple_DISC_NEW_picture07_DISC.png" alt="">
+        <img src="./img/Simple_DISC_NEW_picture07_DISC.png" alt="" style="position: absolute;
+        bottom: 0px;">
     </section>
 
     <section class="sheet leading">
         <img src="./img/Simple_DISC_NEW_picture04_DISC (1).png" alt="">
-        <div class="border">
+        <div class="border" style="    height: 86%;    margin-top: -10px;">
             <div class="explain_warpper">
                 <div class="explain_item">
                     <div class="explain_letter">
@@ -853,7 +866,8 @@
                 </div>
             </div>
         </div>
-        <img src="./img/Simple_DISC_NEW_picture04_DISC (2).png" alt="">
+        <img src="./img/Simple_DISC_NEW_picture04_DISC (2).png" alt="" style="position: absolute;
+        bottom: 0px;">
     </section>
 
     <section class="sheet">
@@ -886,7 +900,7 @@
                 type:'POST',
                 data:{
                     people_result_id: this.people_result_id,
-                    // people_result_id:636856,
+                    // people_result_id:633523,
                     report_type_id:'DISC_NEW'
                 },
                 dataType:'json',
