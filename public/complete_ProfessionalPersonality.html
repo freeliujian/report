@@ -253,32 +253,24 @@
             color: #ccc !important;
         }
 
-        .WorkingStyle .content .works .D {
-            border: 1px solid rgba(244, 77, 54, 1);
-            color: rgba(244, 77, 54, 1);
-            left: 27%;
-            top: 20%;
+        .red {
+            border: 1px solid rgba(244, 77, 54, 1) !important;
+            color: rgba(244, 77, 54, 1) !important;
         }
 
-        .WorkingStyle .content .works .C {
-            border: 1px solid rgba(1, 122, 255, 1);
-            color: rgba(1, 122, 255, 1);
-            top: 20%;
-            right: 27%;
+        .blue {
+            border: 1px solid rgba(1, 122, 255, 1) !important;
+            color: rgba(1, 122, 255, 1) !important;
         }
 
-        .WorkingStyle .content .works .I {
-            border: 1px solid rgba(249, 198, 38, 1);
-            color: rgba(249, 198, 38, 1);
-            left: 27%;
-            bottom: 20%;
+        .yellow {
+            border: 1px solid rgba(249, 198, 38, 1) !important;
+            color: rgba(249, 198, 38, 1) !important;
         }
 
-        .WorkingStyle .content .works .S {
-            border: 1px solid rgba(140, 220, 139, 1);
-            color: rgba(140, 220, 139, 1);
-            bottom: 20%;
-            right: 27%;
+        .gueed {
+            border: 1px solid rgba(140, 220, 139, 1) !important;
+            color: rgba(140, 220, 139, 1) !important;
         }
 
         .WorkingStyle .content .cont {
@@ -435,7 +427,6 @@
             border-left: solid 15px rgba(0, 160, 233, 1);
             border-top: solid 20px transparent;
             border-bottom: solid 20px transparent;
-            /* float: left; */
             margin-left: 130px;
         }
 
@@ -1798,7 +1789,6 @@
                 <div class="content">
                     <div class="char">您的主导工作风格</div>
                     <div class="jiao"></div><br><br><br><br><br>
-                    <!-- <img src="./img/DISC_NEW_img _01.png" alt=""> -->
                     <div class="workstyle">
                         <p>四中基本的工作作风</p>
                         <div class="works">
@@ -1806,10 +1796,10 @@
                             <p style="top: 48.5%;left: 60px;">告知式</p>
                             <p style="top: 48.5%;right: 60px;">询问式</p>
                             <p style="left: 47%;bottom: 20px;">关注人</p>
-                            <div class="D invalid">D</div>
-                            <div class="C">C</div>
-                            <div class="I">I</div>
-                            <div class="S">S</div>
+                            <div class="letter D" style="left: 27%;top: 20%;">D</div>
+                            <div class="letter C" style="top: 20%;right: 27%;">C</div>
+                            <div class="letter I" style="left: 27%;bottom: 20%;">I</div>
+                            <div class="letter S" style="bottom: 20%;right: 27%;">S</div>
                         </div>
                     </div>
                     <div class="cont">
@@ -1846,7 +1836,7 @@
                     <div class="jiao"></div><br><br><br>
                     <div class="explain_warpper">
                         <div class="explain_item">
-                            <div class="explain_letter" style="color: rgba(244, 77, 54, 1);">
+                            <div class="explain_letter letter1" style="color: rgba(244, 77, 54, 1);">
                                 D
                             </div>
                             <div class="explain_content">
@@ -1877,7 +1867,7 @@
 
                         </div>
                         <div class="explain_item">
-                            <div class="explain_letter" style="color: rgba(1, 122, 255, 1);">
+                            <div class="explain_letter letter1" style="color: rgba(1, 122, 255, 1);">
                                 C
                             </div>
                             <div class="explain_content">
@@ -1907,7 +1897,7 @@
 
                         </div>
                         <div class="explain_item">
-                            <div class="explain_letter" style="color:rgba(249, 198, 38, 1);">
+                            <div class="explain_letter letter1" style="color:rgba(249, 198, 38, 1);">
                                 I
                             </div>
                             <div class="explain_content">
@@ -1937,7 +1927,7 @@
 
                         </div>
                         <div class="explain_item">
-                            <div class="explain_letter" style="color:rgba(140, 220, 139, 1);">
+                            <div class="explain_letter letter1" style="color:rgba(140, 220, 139, 1);">
                                 S
                             </div>
                             <div class="explain_content">
@@ -3181,8 +3171,65 @@
         $('.sample_char').eq(1).text(data.disc.ChartSelfImage_Indicator[1][3])
         $('.sample_char').eq(2).text(data.disc.ChartSelfImage_Indicator[1][5])
 
+        let ChartSelfImage = data.disc.ChartSelfImage_Indicator[0]
 
-        // console.log(data.msg.ChartBR_UnderStress_Indicator)
+        console.log(ChartSelfImage)
+
+        let TypeArr = ChartSelfImage.split('')
+
+        console.log(TypeArr)
+        
+
+        console.log(TypeArr.includes('I'))
+
+        if(TypeArr.includes('D') == false) {
+            $('.letter').eq(0).addClass('invalid')
+        } else {
+            $('.letter').eq(0).addClass('red')
+        }
+
+        if(TypeArr.includes('C') == false) {
+            $('.letter').eq(1).addClass('invalid')
+        } else {
+            $('.letter').eq(1).addClass('blue')
+        }
+
+        if(TypeArr.includes('I') == false) {
+            $('.letter').eq(2).addClass('invalid')
+        } else {
+            $('.letter').eq(2).addClass('yellow')
+        }
+
+        if(TypeArr.includes('S') == false) {
+            $('.letter').eq(3).addClass('invalid')
+        } else {
+            $('.letter').eq(3).addClass('gueed')
+        }
+
+
+        if(TypeArr.includes('D') == false) {
+            $('.letter1').eq(0).addClass('invalid')
+        } else {
+            $('.letter1').eq(0).addClass('red')
+        }
+
+        if(TypeArr.includes('C') == false) {
+            $('.letter1').eq(1).addClass('invalid')
+        } else {
+            $('.letter1').eq(1).addClass('blue')
+        }
+
+        if(TypeArr.includes('I') == false) {
+            $('.letter1').eq(2).addClass('invalid')
+        } else {
+            $('.letter1').eq(2).addClass('yellow')
+        }
+
+        if(TypeArr.includes('S') == false) {
+            $('.letter1').eq(3).addClass('invalid')
+        } else {
+            $('.letter1').eq(3).addClass('gueed')
+        }
     }
 
     function CraetenewArr(arr) {
